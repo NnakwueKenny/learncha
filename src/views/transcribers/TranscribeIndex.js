@@ -14,7 +14,7 @@ const TranscribeIndex = () => {
             </h2>
         </div>
         <div className='py-8'>
-            Content here
+            Content here...
         </div>
     </section>
   )
