@@ -136,7 +136,7 @@ const Resources = () => {
                 <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-cyan-500 text-4xl pb-4'>Dictionary</h3>
                 <div className='flex flex-col md:flex-row gap-4 px-6 py-4 rounded-xl shadow'>
                     <div className='w-full h-full flex bg-red-500 object-fit'>
-                        <video autoPlay loop muted className='w-full h-64 md:h-80' alt='' src='https://player.vimeo.com/external/300147703.sd.mp4?s=3ec31705ac7066978354d56073383435ccd34e07&profile_id=164&oauth2_token_id=57447761' />
+                        <img src='https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=600' />
                     </div>
                     <div className='w-full text-center py-4'>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus
