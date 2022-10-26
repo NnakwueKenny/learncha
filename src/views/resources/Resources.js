@@ -1,9 +1,19 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 
 const Resources = () => {
+
+
+    useEffect(() => {
+        let speakData = new SpeechSynthesisUtterance();
+        speakData.volume = 1; // From 0 to 1
+        speakData.rate = 1; // From 0.1 to 10
+        speakData.pitch = 2; // From 0 to 2
+        speakData.lang = 'en';
+        speechSynthesis.cancel();
+    }, []);
 
   return (
     <section className="promo flex flex-col items-center justify-center w-full pb-6">

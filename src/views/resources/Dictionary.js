@@ -9,7 +9,8 @@ const Dictionary = () => {
   const [isSuccess, setIsSuccess] = useState('');
   const [searchValue, setSearchValue] = useState('');
   const [word, setWord] = useState([]);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
   const searchWord = () => {
     console.log(searchValue)
@@ -46,21 +47,34 @@ const Dictionary = () => {
     .catch(err => console.log(err));
   };
 
-  const speak = () => {
-    if (searchValue) {
-      let speakData = new SpeechSynthesisUtterance();
-      speakData.volume = 1; // From 0 to 1
-      speakData.rate = 1; // From 0.1 to 10
-      speakData.pitch = 2; // From 0 to 2
-      speakData.text = searchValue;
-      speakData.lang = 'en';
+  const speak = (value) => {
+    let speakData = new SpeechSynthesisUtterance();
+    speakData.volume = 1; // From 0 to 1
+    speakData.rate = 1; // From 0.1 to 10
+    speakData.pitch = 2; // From 0 to 2
+    speakData.lang = 'en';
+
+    if (value === 'speakWord') {
+      if (searchValue) {
+        speakData.text = searchValue;
+      }
       speechSynthesis.speak(speakData);
+    } else if (value === 'speakDefinition') {
+      console.log('Hello');
+      setIsSpeaking(true)
+      if(word.length > 0) {
+        speakData.text = word;
+      }
+      speechSynthesis.speak(speakData);
+    } else {
+      setIsSpeaking(false);
+      speechSynthesis.cancel();
     }
   }
 
-  // useEffect(() => {
-  //   console.log(searchWord);
-  // },[searchValue])
+  useEffect(() => {
+    speak('reload');
+  }, [searchValue]);
 
   return (
     <section className="promo flex flex-col items-center justify-center w-full pb-6">
@@ -86,9 +100,19 @@ const Dictionary = () => {
                 </form>
                 { isSuccess &&
                   <div className='py-3 text-xl w-full flex justify-center'>
-                      <div className='flex px-4 w-full max-w-sm lg:max-w-lg justify-between'>
-                        <span>{searchValue}</span>
-                        <button onClick={() => speak()} className='hover:text-green-500 text-2xl'><i className='fa fa-microphone'></i></button>
+                      <div className='flex px-8 w-full max-w-2xl justify-between'>
+                        <div className='flex justify-center items-center'>
+                          <button onClick={() => speak('speakWord')} className='hover:text-green-500 text-2xl pr-2'><i className='fa fa-microphone'></i></button>
+                          <span>{searchValue}</span>
+                        </div>
+                        <div>
+                          {
+                            isSpeaking?
+                            <button onClick={() => speak('stop')} className='hover:text-green-500'><i className='fa fa-pause'></i></button>
+                            :
+                            <button onClick={() => speak('speakDefinition')} className='hover:text-green-500'><i className='fa fa-play'></i></button>
+                          }
+                        </div>
                       </div>
                   </div>
                 }

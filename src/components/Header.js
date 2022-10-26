@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header id="header">
       <div className='flex justify-end items-center w-full'>
-        <a className='menu_trigger top-0 m-4 sm:m-5 w-full'></a>
+        <a className='menu_trigger top-0 m-8 mt-10 sm:m-5 w-full'></a>
       </div>
       <div className="left-part"></div>
       <a id="logo" href="index.html"></a>

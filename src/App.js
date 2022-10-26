@@ -22,6 +22,7 @@ function App() {
 	useEffect(() => {
         AOS.init();
       }, []);
+
 	  const { grade } = useParams();
 	return (
 		<div  className='scroll-smooth'>
