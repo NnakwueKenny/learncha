@@ -1,74 +1,77 @@
-import React from 'react'
+import React from 'react';
+import child_1 from '../images/child_1.png';
+import child_2 from '../images/child_2.png';
+import child_3 from '../images/child_3.png';
 
 const Hero = () => {
   return (
     <div className='border-t-2 md:border-none border-red-400 rounded-t-xl pt-5 px-2 sm:px-3'>
         <section className="promo pb-8">
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
-                <ul className="slider grid lg:grid-cols-2 gap-4 md:gap-8 lg:gap-10 max-w-6xl">
+                <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
 
-                    <li className='flex border-2 border-red-400 p-2 border-dashed rounded-full overflow-hidden'>
-                        <div className='w-full rounded-full md:rounded-r-none lg:rounded-full overflow-hidden'>
-                            <img className='w-full h-full' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                        <div className='w-full h-full overflow-hidden'>
+                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_3}/>
                         </div>
-                        <div className="absolute top-0 left-0 md:static lg:absolute h-full w-full">
+                        <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
-                                <h1><a href="#" className='animate animate-pulse'>Games for kids</a></h1>
-                                <p className='text-white md:text-gray-400 lg:text-white text-center mb-6'>
+                                <h1><a href="#" className='animate animate-pulse text-red-500'>Games for kids</a></h1>
+                                <p className='text-white text-gray-600 text-center mb-6'>
                                     Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
                         </div>
                     </li>
-
-                    <li className='flex border-2 border-red-400 p-2 border-dashed rounded-full overflow-hidden'>
-                        <div className="absolute top-0 left-0 md:static lg:absolute h-full w-full">
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                        <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
-                                <h1><a href="#" className='animate animate-pulse'>Education for Kids</a></h1>
-                                <p className='text-white md:text-gray-400 lg:text-white text-center mb-8'>
-                                    Discouraging your child to spend their screen time playing educational
-                                    Video games for kids in various subjects but can also help transform them into lifelong learners
+                                <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
+                                <p className='text-white text-gray-600 text-center mb-6'>
+                                Discouraging your child to spend their screen time playing educational
+                                Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
                         </div>
-                        <div className='w-full rounded-full md:rounded-l-none lg:rounded-full overflow-hidden'>
-                            <img className='w-full h-full' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                        <div className='w-full h-full overflow-hidden'>
+                        <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_2}/>
                         </div>
                     </li>
 
-                    <li className='flex border-2 border-red-400 p-2 border-dashed rounded-full overflow-hidden'>
-                        <div className='w-full rounded-full md:rounded-r-none lg:rounded-full overflow-hidden'>
-                            <img className='w-full h-full' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                        <div className='w-full h-full overflow-hidden'>
+                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_1}/>
                         </div>
-                        <div className="absolute top-0 left-0 md:static lg:absolute h-full w-full">
+                        <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
-                                <h1><a href="#" className='animate animate-pulse'>Climate Challenge</a></h1>
-                                <p className='text-white md:text-gray-400 lg:text-white text-center mb-8'>
-                                    Discouraging your child to spend their screen time playing educational
-                                    Video games for kids in various subjects but can also help transform them into lifelong learners
+                                <h1><a href="#" className='animate animate-pulse text-red-500'>Climate Challenge</a></h1>
+                                <p className='text-white text-gray-600 text-center mb-6'>
+                                Discouraging your child to spend their screen time playing educational
+                                Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
                         </div>
                     </li>
 
-                    <li className='flex border-2 border-red-400 p-2 border-dashed rounded-full overflow-hidden'>
-                        <div className="absolute top-0 left-0 md:static lg:absolute h-full w-full">
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                        <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
-                                <h1><a href="#" className='animate animate-pulse'>Weather Updates</a></h1>
-                                <p className='text-white md:text-gray-400 lg:text-white text-center mb-8'>
-                                    Discouraging your child to spend their screen time playing educational
-                                    Video games for kids in various subjects but can also help transform them into lifelong learners
+                                <h1><a href="#" className='animate animate-pulse text-red-500'>Weather Updates</a></h1>
+                                <p className='text-white text-gray-600 text-center mb-6'>
+                                Discouraging your child to spend their screen time playing educational
+                                Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
                         </div>
-                        <div className='w-full rounded-full md:rounded-l-none lg:rounded-full overflow-hidden'>
-                            <img className='w-full h-full' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                        <div className='w-full h-full overflow-hidden'>
+                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
                         </div>
                     </li>
+                    
                 </ul>
             </div>
         </section>

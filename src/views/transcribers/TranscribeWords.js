@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from './components/Head';
 import Loader from './components/Loader';
 import MainHead from './components/MainHead';
+import Nav from './components/Nav'
 
 const numToWords = require('../../modules/numToEnglish');
 
@@ -144,15 +145,16 @@ const TranscribeWords = () => {
       </div>
       <div className='flex justify-center w-full h-screen py-5'>
         <div className='w-full max-w-4xl pb-6 px-4'>
-          <Head title='Transcribe Words' color='text-cyan-500'/>
-          <div className='border-2 border-dashed border-cyan-500 px-3 py-2 rounded-3xl h-full w-full'>
-            <div className='flex flex-col justify-center items-center h-full w-full bg-gray-100 rounded-xl p-2 '>
+          <Head title='Transcribe Words' color='text-yellow-500'/>
+          <div className='border-2 border-dashed border-yellow-500 px-3 py-2 rounded-3xl h-full w-full'>
+            <div className='relative flex flex-col justify-center items-center h-full w-full bg-yellow-100 rounded-xl p-2 '>
+              <Nav backwardLink='/transcribers' forwardLink='/transcribers/transcribe-sentences' color='gray-400' hoverColor='yellow'/>
               {
                 isLoading?
                 <Loader />
                 :
                 <div style={{fontFamily: 'Gochi Hand'}} className='flex flex-col justify-around text-center h-full py-20'>
-                  <div className='text-3xl md:text-4xl md:text-5xl font-bold text-cyan-500'>{word}</div>
+                  <div className='text-3xl md:text-4xl md:text-5xl font-bold text-yellow-500'>{word}</div>
                   <div className={`${isCorrect? 'text-green-500': 'text-red-500'} text-3xl`}>{answer}</div>
                 </div>
               }
@@ -176,7 +178,7 @@ const TranscribeWords = () => {
                   </div>
                 </div>
                 <div className='flex justify-center w-full'>
-                  <button style={{fontFamily: 'Gochi Hand'}} onClick={() => { getNewLevel() }} disabled={`${isCorrect? '': 'disabled'}`} className={`py-2 w-full max-w-[200px] md:max-w-[250px] border-2 border-dashed border-${isCorrect? 'cyan-500 text-cyan-500': 'gray-500 text-gray-500'} rounded-xl  text-2xl font-semibold`} >Next</button>
+                  <button style={{fontFamily: 'Gochi Hand'}} onClick={() => { getNewLevel() }} disabled={`${isCorrect? '': 'disabled'}`} className={`py-2 w-full max-w-[200px] md:max-w-[250px] border-2 border-dashed border-${isCorrect? 'yellow-500 text-yellow-500': 'gray-500 text-gray-500'} rounded-xl  text-2xl font-semibold`} >Next</button>
                 </div>
               </div>
             </div>

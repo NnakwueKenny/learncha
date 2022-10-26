@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from './components/Head';
 import Loader from './components/Loader';
 import MainHead from './components/MainHead';
+import Nav from './components/Nav';
 
 const numToWords = require('../../modules/numToEnglish');
 
@@ -149,7 +150,8 @@ const TranscribeNumber = () => {
         <div className='w-full max-w-4xl pb-6 px-4'>
           <Head title='Transcribe Numbers' color='text-cyan-500'/>
           <div className='border-2 border-dashed border-cyan-500 px-3 py-2 rounded-3xl h-full w-full'>
-            <div className='flex flex-col justify-center items-center h-full w-full bg-gray-100 rounded-xl p-2 '>
+            <div className='relative flex flex-col justify-center items-center h-full w-full bg-gray-100 rounded-xl p-2 '>
+				<Nav backwardLink='/transcribers' forwardLink='/transcribers/transcribe-alphabets' color='cyan' hoverColor='cyan'/>
               {
                 isLoading?
                 <Loader />

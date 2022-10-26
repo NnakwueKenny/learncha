@@ -164,7 +164,7 @@ a, a:visited, a:focus, a:active {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 a.btn,
 input.btn[type=submit] {

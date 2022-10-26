@@ -3,11 +3,10 @@ import React from 'react'
 const Intro = () => {
   return (
     <>
-      <div className='w-full max-w-5xl px-5'>
-          <h2 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-xl text-center'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus
-              itaque culpa soluta, optio, deserunt, officia voluptas labore assumenda? Aspernatur, libero. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit (...)
+      <div className='w-full max-w-5xl px-5 pt-4'>
+          <h2 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-2xl text-center'>
+              Teaching kids to read out numbers, alphabets, words and even learn to speak
+              in new formed sentences just got better. Let's jump into Learncha Transcribers and start learning (...)
           </h2>
       </div>
     </>

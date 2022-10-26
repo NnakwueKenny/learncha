@@ -71,7 +71,7 @@ const TranscribeAlphabets = () => {
                                 <Loader />
                                 :
                                 <div className="relative flex flex-col justify-around h-full text-white">
-                                    <Nav />
+                                    <Nav backwardLink='/transcribers' forwardLink='/transcribers/transcribe-words' color='cyan' />
                                     <div style={{fontFamily: 'Gochi Hand'}} className='flex justify-center items-center capitalize text-5xl w-full text-yellow-400'>
                                         {word}
                                     </div>
