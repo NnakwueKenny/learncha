@@ -17,6 +17,10 @@ import TranscribeAlphabets from './views/transcribers/TranscribeAlphabet';
 import Books from './views/resources/Books';
 import Dictionary from './views/resources/Dictionary';
 import BookGrade from './views/resources/BookGrade';
+import ClimateIndex from './views/climate/ClimateIndex';
+import ClimateLogin from './views/climate/ClimateLogin';
+import ClimateRegister from './views/climate/ClimateRegister';
+import PrivateRoute from './views/climate/PrivateRoute';
 
 function App() {
 	useEffect(() => {
@@ -46,6 +50,13 @@ function App() {
 						<Route path="/transcribers/transcribe-words" element={<TranscribeWords />} />
 						<Route path="/transcribers/transcribe-sentences" element={<TranscribeSentence />} />
 						<Route path="/transcribers/transcribe-alphabets" element={<TranscribeAlphabets />} />
+
+						{/* Climate Routes */}
+						<Route path="/climate" element={<ClimateIndex />} />
+						<Route path="/climate/login" element={<ClimateLogin />} />
+						<Route path="/climate/register" element={<ClimateRegister />} />
+
+						{/* <PrivateRoute path="/climate" component={<ClimateIndex />} /> */}
 
 						{/* Games Routes */}
 					</Routes>
