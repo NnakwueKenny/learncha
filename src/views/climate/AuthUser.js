@@ -5,10 +5,8 @@ const AuthUser = () => {
     console.log(fromLocal);
 
     if ( fromLocal != null) {
-        console.log('returning: ', fromLocal);
         return true
     } else {
-        console.log('returning: ', fromLocal);
         return false;
     }
 }
