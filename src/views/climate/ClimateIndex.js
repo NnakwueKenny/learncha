@@ -91,8 +91,8 @@ const ClimateIndex = () => {
 
             <div class="md:mx-10 py-8 flex flex-col items-center" id="causes">
                 <div class="md:mb-0 mb-5">
-                    <h2 class="text-center font-orbitron uppercase text-red-400 font-semibold pb-5">causes of climate change?</h2>
-                    <p class=" text-justify text-gray-400 text-center md:px-10">Since the Industrial Revolution, human activities have released large
+                    <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-3xl md:text-4xl uppercase text-yellow-500 font-semibold pb-5">causes of climate change?</h2>
+                    <p class=" text-center text-gray-400 text-center w-full max-w-4xl pb-6">Since the Industrial Revolution, human activities have released large
                     amounts of carbon dioxide and other greenhouse
                     gases into the atmosphere, which has changed the earth’s climate. Natural processes, such as changes in the
                     sun's energy
@@ -102,16 +102,16 @@ const ClimateIndex = () => {
 
                 </div>
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 px-4 w-full max-w-5xl">
-                    <div class="cause-card flex flex-col justify-start">
-                        <h3 class="font-semibold pb-3 text-blue-400">Heat-trapping Greenhouse Gases And The Earth's Climate</h3>
+                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                        <h3 class="font-semibold pb-3 text-yellow-500">Heat-trapping Greenhouse Gases And The Earth's Climate</h3>
                         <p className='text-justify'>Concentrations of the key greenhouse gases have all increased since the Industrial Revolution due to
                         human activities.
                         Carbon dioxide, methane, and nitrous oxide concentrations are now more abundant in the earth’s atmosphere
                         than any time
                         in the last 800,000 years.</p>
                     </div>
-                    <div class="cause-card">
-                        <h3 class="font-semibold pb-3 text-blue-400">Reflectivity or Absorption of the Sun’s Energy</h3>
+                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                        <h3 class="font-semibold pb-3 text-yellow-500">Reflectivity or Absorption of the Sun’s Energy</h3>
                         <p className='text-justify'>Activities such as agriculture, road construction, and deforestation can change the reflectivity of the
                         earth's surface,
                         leading to local warming or cooling. This effect is observed in heat islands, which are urban centers that
@@ -120,8 +120,8 @@ const ClimateIndex = () => {
                         pavement, and
                         roofs tend to reflect less sunlight than natural surfaces.</p>
                     </div>
-                    <div class="cause-card">
-                        <h3 class="font-semibold pb-3 text-blue-400">Changes in the Earth’s Orbit and Rotation</h3>
+                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                        <h3 class="font-semibold pb-3 text-yellow-500">Changes in the Earth’s Orbit and Rotation</h3>
                         <p className='text-justify'>Changes in the earth’s orbit and its axis of rotation have had a big impact on climate in the past. For
                         example, the
                         amount of summer sunshine on the Northern Hemisphere, which is affected by changes in the planet’s orbit,
@@ -131,8 +131,8 @@ const ClimateIndex = () => {
                         ages), as well as shorter interglacial periods (periods between ice ages) of relatively warmer
                         temperatures</p>
                     </div>
-                    <div class="cause-card">
-                        <h3 class="font-semibold pb-3 text-blue-400">Changes in the Earth’s Reflectivity</h3>
+                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                        <h3 class="font-semibold pb-3 text-yellow-500">Changes in the Earth’s Reflectivity</h3>
                         <p className='text-justify'>The amount of sunlight that is absorbed or reflected by the planet depends on the earth’s surface and
                         atmosphere. Dark
                         objects and surfaces, like the ocean, forests, and soil, tend to absorb more sunlight. Light-colored
