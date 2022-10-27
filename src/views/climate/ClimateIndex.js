@@ -89,11 +89,10 @@ const ClimateIndex = () => {
                 </div>
             </div>
 
-            <div class="md:mx-10 md:my-20" id="causes">
-                <div class="md:grid md:grid-cols-3 items-center mx-10 mt-20">
+            <div class="md:mx-10 py-8 flex flex-col items-center" id="causes">
                 <div class="md:mb-0 mb-5">
                     <h2 class="text-center font-orbitron uppercase text-red-400 font-semibold pb-5">causes of climate change?</h2>
-                    <p class="text-red-400 text-center md:px-10">Since the Industrial Revolution, human activities have released large
+                    <p class=" text-justify text-gray-400 text-center md:px-10">Since the Industrial Revolution, human activities have released large
                     amounts of carbon dioxide and other greenhouse
                     gases into the atmosphere, which has changed the earth’s climate. Natural processes, such as changes in the
                     sun's energy
@@ -102,11 +101,10 @@ const ClimateIndex = () => {
                     over the last century.</p>
 
                 </div>
-                <div class="col-span-2">
-                    <div class="grid md:grid-cols-2 text-sm gap-5">
-                    <div class="cause-card">
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8 px-4 w-full max-w-5xl">
+                    <div class="cause-card flex flex-col justify-start">
                         <h3 class="font-semibold pb-3 text-blue-400">Heat-trapping Greenhouse Gases And The Earth's Climate</h3>
-                        <p>Concentrations of the key greenhouse gases have all increased since the Industrial Revolution due to
+                        <p className='text-justify'>Concentrations of the key greenhouse gases have all increased since the Industrial Revolution due to
                         human activities.
                         Carbon dioxide, methane, and nitrous oxide concentrations are now more abundant in the earth’s atmosphere
                         than any time
@@ -114,7 +112,7 @@ const ClimateIndex = () => {
                     </div>
                     <div class="cause-card">
                         <h3 class="font-semibold pb-3 text-blue-400">Reflectivity or Absorption of the Sun’s Energy</h3>
-                        <p>Activities such as agriculture, road construction, and deforestation can change the reflectivity of the
+                        <p className='text-justify'>Activities such as agriculture, road construction, and deforestation can change the reflectivity of the
                         earth's surface,
                         leading to local warming or cooling. This effect is observed in heat islands, which are urban centers that
                         are warmer
@@ -124,7 +122,7 @@ const ClimateIndex = () => {
                     </div>
                     <div class="cause-card">
                         <h3 class="font-semibold pb-3 text-blue-400">Changes in the Earth’s Orbit and Rotation</h3>
-                        <p>Changes in the earth’s orbit and its axis of rotation have had a big impact on climate in the past. For
+                        <p className='text-justify'>Changes in the earth’s orbit and its axis of rotation have had a big impact on climate in the past. For
                         example, the
                         amount of summer sunshine on the Northern Hemisphere, which is affected by changes in the planet’s orbit,
                         appears to be
@@ -135,7 +133,7 @@ const ClimateIndex = () => {
                     </div>
                     <div class="cause-card">
                         <h3 class="font-semibold pb-3 text-blue-400">Changes in the Earth’s Reflectivity</h3>
-                        <p>The amount of sunlight that is absorbed or reflected by the planet depends on the earth’s surface and
+                        <p className='text-justify'>The amount of sunlight that is absorbed or reflected by the planet depends on the earth’s surface and
                         atmosphere. Dark
                         objects and surfaces, like the ocean, forests, and soil, tend to absorb more sunlight. Light-colored
                         objects and
@@ -145,64 +143,61 @@ const ClimateIndex = () => {
                         climate change in
                         the past, often acting as feedbacks to other processes.</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="md:px-10" id="faq">
+                <p style={{fontFamily: 'Gochi Hand'}} class="text-center font-orbitron uppercase text-red-400 font-semibold pb-5 text-3xl md:text-5xl">frequently asked questions
+                </p>
+                <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10">
+                    <div data-aos="flip-right" class="cause-card border-t shadow-md hover:shadow-lg rounded-xl p-6 cursor-pointer">
+                        <h3 class="text-xl text-center font-semibold pb-3 text-red-400">How is climate change affecting animals?</h3>
+                        <p className='text-justify'>Changing climates directly and indirectly cause stress to animals across the world. Many species are
+                        approaching—or have
+                        already reached—the limit of where they can go to find hospitable climates. In the polar regions, animals like
+                        polar
+                        bears that live on polar ice are now struggling to survive as that ice melts.</p>
+
+                        <p className='text-justify'>
+                        It’s not just how climate change affects an animal directly; it’s about how the warming climate affects the
+                        ecosystem
+                        and food chain that animal has adapted to. In the U.S. and Canada, moose are struggling due to an increase in
+                        ticks and
+                        parasites that are surviving the shorter, milder winters.</p>
+                    </div>
+                    <div data-aos="flip-right" class="cause-card border-t shadow-md hover:shadow-lg rounded-xl p-6 cursor-pointer">
+                        <h3 class="text-xl text-center font-semibold pb-3 text-red-400">How is climate change affecting people?</h3>
+                        <p className='text-justify'>From straining agricultural systems to making regions less habitable, climate change is affecting people
+                        everywhere. You
+                        may have noticed how weather patterns near you are shifting or how more frequent and severe storms are
+                        developing in the
+                        spring. Maybe your community is experiencing more severe flooding or wildfires.</p>
+
+                        <p className='text-justify'>
+                        Many areas are even experiencing “sunny day flooding” as rising sea levels cause streets to flood during high
+                        tides. In
+                        Alaska, some entire coastal communities are being moved because the sea level has risen to the point where
+                        their
+                        original location is no longer habitable.</p>
+                    </div>
+                    <div data-aos="flip-right" class="cause-card border-t shadow-md hover:shadow-lg rounded-xl p-6 cursor-pointer">
+                        <h3 class="text-xl text-center font-semibold pb-3 text-red-400">How is climate change affecting farms and our food?</h3>
+                        <p className='text-justify'>Climate change is disrupting weather patterns, leading to more extreme and frequent droughts and flooding
+                        events that
+                        directly threaten harvests. The warming climate is contributing to rising populations of insect pests that eat
+                        a higher
+                        share of crop yields.</p>
+                        <p className='text-justify'>
+                        In the Midwestern United States, more frequent and intense rains have caused devastating spring flooding,
+                        which
+                        delays—and sometimes prevents—planting activities. These impacts make it more difficult for farmers to grow
+                        crops and
+                        sustain their livelihoods.</p>
                     </div>
                 </div>
-                </div>
             </div>
 
-            <div class="md:mx-10 md:my-20" id="faq">
-                <p class="text-center font-orbitron text-3xl uppercase py-10 font-semibold text-red-400">frequently asked questions
-                </p>
-                <div class="md:grid grid-cols-3 gap-4 mx-10 md:space-y-0 space-y-5">
-                <div class="cause-card">
-                    <h3 class="font-semibold pb-3 text-blue-400">How is climate change affecting animals?</h3>
-                    <p>Changing climates directly and indirectly cause stress to animals across the world. Many species are
-                    approaching—or have
-                    already reached—the limit of where they can go to find hospitable climates. In the polar regions, animals like
-                    polar
-                    bears that live on polar ice are now struggling to survive as that ice melts.</p>
-
-                    <p>
-                    It’s not just how climate change affects an animal directly; it’s about how the warming climate affects the
-                    ecosystem
-                    and food chain that animal has adapted to. In the U.S. and Canada, moose are struggling due to an increase in
-                    ticks and
-                    parasites that are surviving the shorter, milder winters.</p>
-                </div>
-                <div class="cause-card">
-                    <h3 class="font-semibold pb-3 text-blue-400">How is climate change affecting people?</h3>
-                    <p>From straining agricultural systems to making regions less habitable, climate change is affecting people
-                    everywhere. You
-                    may have noticed how weather patterns near you are shifting or how more frequent and severe storms are
-                    developing in the
-                    spring. Maybe your community is experiencing more severe flooding or wildfires.</p>
-
-                    <p>
-                    Many areas are even experiencing “sunny day flooding” as rising sea levels cause streets to flood during high
-                    tides. In
-                    Alaska, some entire coastal communities are being moved because the sea level has risen to the point where
-                    their
-                    original location is no longer habitable.</p>
-                </div>
-                <div class="cause-card">
-                    <h3 class="font-semibold pb-3 text-blue-400">How is climate change affecting farms and our food?</h3>
-                    <p>Climate change is disrupting weather patterns, leading to more extreme and frequent droughts and flooding
-                    events that
-                    directly threaten harvests. The warming climate is contributing to rising populations of insect pests that eat
-                    a higher
-                    share of crop yields.</p>
-
-                    <p>
-                    In the Midwestern United States, more frequent and intense rains have caused devastating spring flooding,
-                    which
-                    delays—and sometimes prevents—planting activities. These impacts make it more difficult for farmers to grow
-                    crops and
-                    sustain their livelihoods.</p>
-                </div>
-                </div>
-            </div>
-
-            <div class="md:mx-10 md:my-20" id="solutions">
+            <div class="md:mx-10 mb-6" id="solutions">
                 <div class="items-center mx-10 mt-20 space-y-5">
                 <div class="">
                     <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center font-orbitron uppercase text-blue-500 font-semibold pb-5 text-3xl md:text-5xl">solutions to climate
@@ -306,46 +301,46 @@ const ClimateIndex = () => {
                 <img src={rangoli} class="absolute bottom-0 right-0 w-32 md:block hidden" alt=""
                 data-aos="zoom-in" />
             </div>
-            <div style={{fontFamily: 'Gochi Hand'}}  class="md:mx-10 w-full max-w-5xl pb-8 md:mb-10" id="faq">
+            <div style={{fontFamily: 'Gochi Hand'}}  class="flex flex-col w-full max-w-6xl pb-8 md:mb-10" id="faq">
                 <p class="text-center font-orbitron text-3xl md:text-4xl uppercase py-10 font-semibold text-red-400">more on climate</p>
-                <div class="md:grid grid-cols-3 gap-5 md:gap-8 md:space-y-0 space-y-5">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 p-5 md:px-8">
                     <div class="rounded-xl shadow-md hover:shadow-2xl" data-aos="zoom-in">
-                        <iframe  style={{fontFamily: 'Gochi Hand'}} height="315" src="https://www.youtube.com/embed/jAa58N4Jlos" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe  style={{fontFamily: 'Gochi Hand'}} height="315" src="https://www.youtube.com/embed/jAa58N4Jlos" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                         </iframe>
                     </div>
                     <div class="" data-aos="zoom-in">
-                        <iframe height="315" src="https://www.youtube.com/embed/G4H1N_yXBiA" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe height="315" src="https://www.youtube.com/embed/G4H1N_yXBiA" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                         </iframe>
                     </div>
                     <div class="" data-aos="zoom-in">
-                        <iframe height="315" src="https://www.youtube.com/embed/Sv7OHfpIRfU" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe height="315" src="https://www.youtube.com/embed/Sv7OHfpIRfU" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                         </iframe>
                     </div>
                     <div class="" data-aos="zoom-in">
-                        <iframe height="315" src="https://www.youtube.com/embed/tykLKCT7DyY" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe height="315" src="https://www.youtube.com/embed/tykLKCT7DyY" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                         </iframe>
                     </div>
                     <div class="" data-aos="zoom-in">
-                        <iframe height="315" src="https://www.youtube.com/embed/cn9PhiDJp-A" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe height="315" src="https://www.youtube.com/embed/cn9PhiDJp-A" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                         </iframe>
                     </div>
                     <div class="" data-aos="zoom-in">
-                        <iframe height="315" src="https://www.youtube.com/embed/JgvDuLcL4yQ" class="w-full rounded-lg md:mx-0 mx-5"
+                        <iframe height="315" src="https://www.youtube.com/embed/JgvDuLcL4yQ" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
