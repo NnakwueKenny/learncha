@@ -24,7 +24,7 @@ const GamesIndex = () => {
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-red-400 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-red-400 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Transcribe Alphabets</h3>
+                        <h3>L4 Game</h3>
                     </div>
                     <Link to='/transcribers/transcribe-alphabets'>
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/1337382/pexels-photo-1337382.jpeg?auto=compress&cs=tinysrgb&w=600' />

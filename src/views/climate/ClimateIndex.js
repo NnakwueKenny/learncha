@@ -28,7 +28,6 @@ const ClimateIndex = () => {
         <div class="relative w-full max-w-7xl h-full flex flex-col items-center justify-start gap-6 mt-4 mb-4 md:mb-6 border-2 border-red-400 border-dashed rounded-3xl overflow-hidden">
             <div class="py-5 md:px-20 flex md:flex-row flex-col md:justify-between items-center absolute w-full top-0 bg-red-400 z-[20]">
                 <div id="Clock" class="text-white text-xl font-semibold font-orbitron">Climate</div>
-                <div id="Clock" class="text-white text-xl font-semibold font-orbitron">Climate</div>
             
                 <div id="Weather" class="text-white"><a href="../awareness/addons/weather.html"><i
                     class="fa-solid fa-cloud-sun-rain fa-2x"></i></a></div>
@@ -39,18 +38,7 @@ const ClimateIndex = () => {
                     <a data-smooth href="#solutions">Solutions</a>
                 </div>
             </div>
-
-            <div class="md:h-screen w-full" id="home">
-                <div class="grid md:grid-cols-2 items-center md:mt-20 pt-20 w-full">
-                    <div class="uppercase font-orbitron md:text-5xl text-3xl font-bold text-red-400 text-center bg-green-500">
-                    <span className="mov"></span>
-                        <a data-smooth href="#climate" class="block mt-5 animate-pulse"><i class="fa-solid fa-angles-down"></i></a>
-                    </div>
-                    {/*<div class="px-4 py-6"><img className='w-full animate-bounce' src={climateImage_1} alt="" /></div>*/}
-                </div>
-            </div>
-            <div className='flex flex-col items-center w-full'>
-                <div class="top-pink-border w-full"></div>
+            <div className='flex flex-col items-center w-full pt-20'>
                 <div class="w-full bg-gray-50" id="climate">
                     <div class="grid md:grid-cols-2 gap-16 items-center py-8 md:py-12 lg:py-16 px-6 md:px-8 lg:px-12">
                         <div class="">
@@ -67,7 +55,7 @@ const ClimateIndex = () => {
                             </a>
                         </div>
                         <div class="">
-                            <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8" class="w-full rounded-lg"
+                            <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8?&autoplay=1" class="w-full rounded-lg"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -292,7 +280,7 @@ const ClimateIndex = () => {
                 <p class="text-center font-orbitron text-3xl md:text-4xl uppercase py-10 font-semibold text-red-400">more on climate</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 p-5 md:px-8">
                     <div class="rounded-xl shadow-md hover:shadow-2xl" data-aos="zoom-in">
-                        <iframe  style={{fontFamily: 'Gochi Hand'}} height="315" src="https://www.youtube.com/embed/jAa58N4Jlos" class="w-full rounded-lg"
+                        <iframe  style={{fontFamily: 'Gochi Hand'}} height="315" src="https://www.youtube.com/embed/jAa58N4Jlos?&autoplay=1" class="w-full rounded-lg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
