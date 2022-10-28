@@ -7,7 +7,7 @@ import Nav from './components/Nav';
 const numToWords = require('../../modules/numToEnglish');
 
 const TranscribeNumber = () => {
-  const [level, setLevel] = useState(1);
+  	const [level, setLevel] = useState(1);
 	const [totalCorrect, setTotalCorrect] = useState(0);
 	const [isNext, setIsNext] = useState(false);
 	const [isCorrect, setIsCorrect] = useState('');
@@ -16,7 +16,9 @@ const TranscribeNumber = () => {
 	const [speech, setSpeech] = useState('');
 	const [numInWords, setNumInWords] = useState('');
 	const [answer, setAnswer] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  	const [isLoading, setIsLoading] = useState(false);
+
+	const [isTalking, setISTalking] = useState(false);
 
 	const fetchNumbers = async () => {
 		// console.log('Fetching word from database updated!');
@@ -58,10 +60,12 @@ const TranscribeNumber = () => {
 		recognition.start();
 		recognition.onstart = () => {
 			console.log("starting listening, speak in microphone");
+			setISTalking(true);
 		}
 		recognition.onspeechend = () => {
 			console.log("stopped listening");
 			recognition.stop();
+			setISTalking(false);
 		}
 		recognition.onresult = async (result) => {
 			response = result.results[0][0].transcript;
@@ -178,7 +182,12 @@ const TranscribeNumber = () => {
                   }
                   </div>
                   <div>
-                    <button disabled={`${isNext ? 'disabled': ''}`} className={`text-4xl ${isNext? 'text-gray-500': 'animate-pulse text-red-400'}`} onClick={() => recordSpeech()}><i className='fa fa-microphone'></i></button>
+                    {
+						isTalking?
+						<button disabled={`${isNext ? 'disabled': ''}`} className={`text-4xl ${isNext? 'text-gray-500': 'animate-pulse text-red-400'}`} onClick={() => recordSpeech()}><i className='fa fa-microphone'></i></button>
+						:
+						<button disabled={`${isNext ? 'disabled': ''}`} className={`text-4xl ${isNext? 'text-gray-500': 'text-green-500'}`} onClick={() => recordSpeech()}><i className='fa fa-microphone'></i></button>
+					}
                   </div>
                 </div>
                 <div className='flex justify-center w-full'>
@@ -193,4 +202,4 @@ const TranscribeNumber = () => {
   )
 }
 
-export default TranscribeNumber
+export default TranscribeNumber;
