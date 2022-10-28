@@ -5,6 +5,7 @@ import React from 'react';
 import GameData from './GameData';
 import Header from './components/Header';
 import WinConfetti from './components/WinConfetti';
+import GamesHeader from '../components/GamesHeader';
 
 const ImagoQuadIndex = () => {
   AOS.init();     // Initializing 'Animate on scroll
@@ -395,7 +396,8 @@ const ImagoQuadIndex = () => {
   }
 
   return (
-      <div className='App flex flex-col h-screen overflow-y-auto'>
+      <div style={{fontFamily: 'Gochi Hand'}} className='App flex flex-col h-screen overflow-y-auto relative'>
+        <GamesHeader title='Games' />
         <Header
           togglePlay = {togglePlay}
           gameLevel = {gameValues.gameLevel}
@@ -497,7 +499,7 @@ const ImagoQuadIndex = () => {
         {/* NextLevel SECTION STARTS HERE*/}
           {
             gameValues.nextLevel &&
-            <div className='NextLevel flex flex-col h-full justify-center'>
+            <div className='NextLevel flex flex-col h-full w-full items-center justify-center'>
               <div className='flex flex-col justify-between w-full h-4/5 max-w-3xl'>
                 <div className='text-green-500 text-xl font-semibold'><span>Level Passed</span></div>
                 <div

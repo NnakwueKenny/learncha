@@ -23,6 +23,7 @@ import ClimateRegister from './views/climate/ClimateRegister';
 // import PrivateRoute from './views/climate/PrivateRoute';
 import GamesIndex from './views/games/GamesIndex';
 import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
+import ClimateChallenge from './views/climate/ClimateChallenge';
 
 function App() {
 	useEffect(() => {
@@ -30,7 +31,7 @@ function App() {
       }, []);
 
 	const { grade } = useParams();
-	
+
 	return (
 		<div  className='scroll-smooth'>
 			<div id='wrapper' className='homepage'>
@@ -58,6 +59,7 @@ function App() {
 						<Route path="/climate" element={<ClimateIndex />} />
 						<Route path="/climate/login" element={<ClimateLogin />} />
 						<Route path="/climate/register" element={<ClimateRegister />} />
+						<Route path="/climate/challenge" element={<ClimateChallenge />} />
 
 						{/* <PrivateRoute path="/climate" component={<ClimateIndex />} /> */}
 

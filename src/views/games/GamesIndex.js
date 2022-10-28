@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import Intro from '../climate/components/Intro'
 import MainHead from '../transcribers/components/MainHead';
 
-import imago_quad from './images/imago_quad.png'
+import imago_quad from './images/imago_quad.png';
 
 const GamesIndex = () => {
+
   return (
     <section className="promo flex flex-col items-center justify-center w-full pb-6">
-        <MainHead title='Transcribers' />
+        <MainHead title='Games' />
         <Intro />
         <div className='w-full flex max-w-5xl'>
             <div class="dvdr"></div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import ClimateHeader from './components/ClimateHeader';
 import { useNavigate } from "react-router-dom";
-import AuthUser from './AuthUser';
 import Intro from './components/Intro';
 
 // import climateImage_1 from  './images/climate1.svg';
@@ -19,40 +18,32 @@ import rainforest from './images/rainforest.png';
 import ocean from './images/ocean.png';
 import plastic from './images/plastic.png';
 import rangoli from './images/rangoli.png';
-const ClimateIndex = () => {
-    const isActiveUser = AuthUser();
-    const navigate = useNavigate();
 
-    useEffect(() => {
-        if (!isActiveUser) {
-            console.log('returning: ', isActiveUser);
-            navigate("/climate/login");
-        }
-    });
-    
+const ClimateIndex = () => {
 
   return (
     <section className="promo relative w-full flex flex-col items-center py-4x">
         <ClimateHeader title='Climate'/>
-        <Intro />
+        {/*<Intro />*/}
         <div class="relative w-full max-w-7xl h-full flex flex-col items-center justify-start gap-6 mt-4 mb-4 md:mb-6 border-2 border-red-400 border-dashed rounded-3xl overflow-hidden">
             <div class="py-5 md:px-20 flex md:flex-row flex-col md:justify-between items-center absolute w-full top-0 bg-red-400 z-[20]">
-                <div id="Clock" class="text-white text-xl font-semibold font-orbitron"></div>
+                <div id="Clock" class="text-white text-xl font-semibold font-orbitron">Climate</div>
+                <div id="Clock" class="text-white text-xl font-semibold font-orbitron">Climate</div>
             
                 <div id="Weather" class="text-white"><a href="../awareness/addons/weather.html"><i
                     class="fa-solid fa-cloud-sun-rain fa-2x"></i></a></div>
                 <div class="nav space-x-5 flex font-semibold text-base text-white font-orbitron">
-                <Link data-smooth to="/climate">Home</Link>
-                <a data-smooth href="#causes">Causes</a>
-                <a data-smooth href="#faq">FAQ</a>
-                <a data-smooth href="#solutions">Solutions</a>
+                    <Link data-smooth to="/climate">Home</Link>
+                    <a data-smooth href="#causes">Causes</a>
+                    <a data-smooth href="#faq">FAQ</a>
+                    <a data-smooth href="#solutions">Solutions</a>
                 </div>
             </div>
 
             <div class="md:h-screen w-full" id="home">
                 <div class="grid md:grid-cols-2 items-center md:mt-20 pt-20 w-full">
-                    <div class="uppercase font-orbitron md:text-5xl text-3xl font-bold text-red-400 text-center bg-green-500"><span
-                        className="mov"></span>
+                    <div class="uppercase font-orbitron md:text-5xl text-3xl font-bold text-red-400 text-center bg-green-500">
+                    <span className="mov"></span>
                         <a data-smooth href="#climate" class="block mt-5 animate-pulse"><i class="fa-solid fa-angles-down"></i></a>
                     </div>
                     {/*<div class="px-4 py-6"><img className='w-full animate-bounce' src={climateImage_1} alt="" /></div>*/}
@@ -61,25 +52,22 @@ const ClimateIndex = () => {
             <div className='flex flex-col items-center w-full'>
                 <div class="top-pink-border w-full"></div>
                 <div class="w-full bg-gray-50" id="climate">
-                    <div class="grid md:grid-cols-2 items-center py-8 md:py-12 px-6">
+                    <div class="grid md:grid-cols-2 gap-16 items-center py-8 md:py-12 lg:py-16 px-6 md:px-8 lg:px-12">
                         <div class="">
                             <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-3xl md:text-4xl uppercase text-red-400 font-semibold pb-5">what is climate change?</h2>
-                            <p class="text-red-400 text-center md:px-10 px-5">Climate change involves significant changes in average
-                            conditions—such as temperature,
-                            precipitation, wind
-                            patterns, and other aspects of climate—that occur over years, decades, centuries, or longer. Climate change
-                            involves
-                            longer-term trends, such as shifts toward warmer, wetter, or drier conditions. These trends can be caused by
-                            natural
-                            variability in climate over time, as well as human activities that add greenhouse gases to the atmosphere like
-                            burning fossil
-                            fuels for energy.</p>
-                            <a data-smooth href="#climate" class="block text-5xl font-bold text-red-400 text-center mt-5 animate-pulse"><i
-                                class="fa-solid fa-angles-down"></i></a>
-
+                            <p class="text-center px-5">
+                                Climate change involves significant changes in average conditions—such as temperature,
+                                precipitation, wind patterns, and other aspects of climate—that occur over years, decades,
+                                centuries, or longer. Climate change involves longer-term trends, such as shifts toward warmer,
+                                wetter, or drier conditions. These trends can be caused by natural variability in climate over
+                                time, as well as human activities that add greenhouse gases to the atmosphere like burning fossil fuels for energy.
+                            </p>
+                            <a data-smooth href="#climate" class="block text-5xl font-bold text-red-400 text-center mt-5 animate-pulse">
+                                <i class="fa-solid fa-angles-down"></i>
+                            </a>
                         </div>
                         <div class="">
-                            <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8" class="w-full rounded-lg md:mx-0 mx-5"
+                            <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8" class="w-full rounded-lg"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -91,8 +79,8 @@ const ClimateIndex = () => {
 
             <div class="md:mx-10 py-8 flex flex-col items-center" id="causes">
                 <div class="md:mb-0 mb-5">
-                    <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-3xl md:text-4xl uppercase text-yellow-500 font-semibold pb-5">causes of climate change?</h2>
-                    <p class=" text-center text-gray-400 text-center w-full max-w-4xl pb-6 md:pb-10 text-justify">Since the Industrial Revolution, human activities have released large
+                    <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-2xl md:text-4xl xl:text-5xl uppercase text-yellow-500 font-semibold pb-5">causes of climate change?</h2>
+                    <p class=" text-center text-gray-400 text-center w-full max-w-4xl pb-6 md:pb-10 px-5 text-justify">Since the Industrial Revolution, human activities have released large
                     amounts of carbon dioxide and other greenhouse
                     gases into the atmosphere, which has changed the earth’s climate. Natural processes, such as changes in the
                     sun's energy
@@ -269,8 +257,7 @@ const ClimateIndex = () => {
                         <img src={ocean} alt="" class="w-16 mb-5" />
                         <h3 class="font-semibold pb-3 text-blue-400">Protect the oceans</h3>
                         <p className='text-justify'>Oceans also absorb large amounts of carbon dioxide from the atmosphere, which helps to keep our climate
-                        stable. But many
-                        are overfished, used for oil and gas drilling or threatened by deep sea mining.</p>
+                        stable. But many are overfished, used for oil and gas drilling or threatened by deep sea mining.</p>
                     </div>
                     <div class="card shadow-md hover:shadow-lg rounded-lg p-4" data-aos="zoom-in">
                         <img src={plastic} alt="" class="w-16 mb-5" />
@@ -292,9 +279,9 @@ const ClimateIndex = () => {
                 challenging
                 yourself to be a solution to climate change</p>
                 <div class="flex items-center justify-center">
-                <a href="../challenge/index.html"
+                <Link to="/climate/challenge"
                     class="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
-                    challenge</a>
+                    challenge</Link>
                 </div>
                 <img src={rangoli} class="absolute top-0 left-0 w-32 md:block hidden" alt=""
                 data-aos="zoom-in" />

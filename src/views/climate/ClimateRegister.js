@@ -114,7 +114,7 @@ const ClimateRegister = () => {
                     </div>
                 }
                 <div class='pb-4'>
-                    <span>Already a user? <Link class='text-red-400 font-semibold px-2' to='/climate/register'> register</Link></span>
+                    <span>Already a user? <Link class='text-red-400 font-semibold px-2' to='/climate/login'> Login</Link></span>
                 </div>
                 <button onClick={() => register()} type="button" id='register-btn' disabled={`${isLoading? 'disabled': ''}`} class="flex items-center justify-center gap-2 text-white bg-red-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-md w-full sm:w-auto px-5 py-2.5 text-center">
                     Register

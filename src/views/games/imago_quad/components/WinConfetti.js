@@ -5,10 +5,12 @@ import Confetti from 'react-confetti'
 const WinConfetti = () => {
   const { width, height } = useWindowSize();
   return (
-    <Confetti
-      width={width}
-      height={height}
-    />
+    <div className='absolute top-0 left-0'>
+      <Confetti
+        width={width}
+        height={height}
+      />
+    </div>
   )
 }
 export default WinConfetti;

@@ -50,7 +50,7 @@ const ClimateLogin = () => {
                 setLoginMessage('User successfully signed in');
                 localStorage.setItem('accessToken', JSON.stringify(data.access_token));
                 setTimeout(() => {
-                    navigate('/climate');
+                    navigate('/climate/challenge');
                 }, 2000);
             } else if (statusCode === 403) {
                 setLoginMessage('Invalid Credentials!');
