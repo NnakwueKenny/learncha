@@ -128,7 +128,7 @@ const ImagoQuadIndex = () => {
 
     if (target.classList.contains('input-btn')) {
       if (target.classList.contains('hint')) {
-        if (currentCoinQuantity >= 20) {
+        if (currentCoinQuantity >= 5) {
           let counter = 0;
           while (currentOutputDisplayArray.length <= currentGameItemClass.length) {
             let holder;
@@ -185,7 +185,7 @@ const ImagoQuadIndex = () => {
               break;
             }
           }
-          currentCoinQuantity -= 20;
+          currentCoinQuantity -= 5;
         } else {
           alert('Insufficient coins!')
         }
