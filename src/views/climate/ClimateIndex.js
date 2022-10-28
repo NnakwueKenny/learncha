@@ -58,12 +58,12 @@ const ClimateIndex = () => {
                     {/*<div class="px-4 py-6"><img className='w-full animate-bounce' src={climateImage_1} alt="" /></div>*/}
                 </div>
             </div>
-            <div className='md:my-20 flex flex-col items-center w-full'>
+            <div className='flex flex-col items-center w-full'>
                 <div class="top-pink-border w-full"></div>
                 <div class="w-full bg-gray-50" id="climate">
-                    <div class="grid md:grid-cols-2 items-center">
+                    <div class="grid md:grid-cols-2 items-center py-8 md:py-12 px-6">
                         <div class="">
-                            <h2 class="text-center font-orbitron uppercase text-red-400 font-semibold pb-5">what is climate change?</h2>
+                            <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-3xl md:text-4xl uppercase text-red-400 font-semibold pb-5">what is climate change?</h2>
                             <p class="text-red-400 text-center md:px-10 px-5">Climate change involves significant changes in average
                             conditions—such as temperature,
                             precipitation, wind
@@ -92,7 +92,7 @@ const ClimateIndex = () => {
             <div class="md:mx-10 py-8 flex flex-col items-center" id="causes">
                 <div class="md:mb-0 mb-5">
                     <h2 style={{fontFamily: 'Gochi Hand'}} class="text-center text-3xl md:text-4xl uppercase text-yellow-500 font-semibold pb-5">causes of climate change?</h2>
-                    <p class=" text-center text-gray-400 text-center w-full max-w-4xl pb-6">Since the Industrial Revolution, human activities have released large
+                    <p class=" text-center text-gray-400 text-center w-full max-w-4xl pb-6 md:pb-10 text-justify">Since the Industrial Revolution, human activities have released large
                     amounts of carbon dioxide and other greenhouse
                     gases into the atmosphere, which has changed the earth’s climate. Natural processes, such as changes in the
                     sun's energy
@@ -102,7 +102,7 @@ const ClimateIndex = () => {
 
                 </div>
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 px-4 w-full max-w-5xl">
-                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                    <div data-aos="zoom-in" class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
                         <h3 class="font-semibold pb-3 text-yellow-500">Heat-trapping Greenhouse Gases And The Earth's Climate</h3>
                         <p className='text-justify'>Concentrations of the key greenhouse gases have all increased since the Industrial Revolution due to
                         human activities.
@@ -110,7 +110,7 @@ const ClimateIndex = () => {
                         than any time
                         in the last 800,000 years.</p>
                     </div>
-                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                    <div data-aos="zoom-in" class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
                         <h3 class="font-semibold pb-3 text-yellow-500">Reflectivity or Absorption of the Sun’s Energy</h3>
                         <p className='text-justify'>Activities such as agriculture, road construction, and deforestation can change the reflectivity of the
                         earth's surface,
@@ -120,7 +120,7 @@ const ClimateIndex = () => {
                         pavement, and
                         roofs tend to reflect less sunlight than natural surfaces.</p>
                     </div>
-                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                    <div data-aos="zoom-in" class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
                         <h3 class="font-semibold pb-3 text-yellow-500">Changes in the Earth’s Orbit and Rotation</h3>
                         <p className='text-justify'>Changes in the earth’s orbit and its axis of rotation have had a big impact on climate in the past. For
                         example, the
@@ -131,7 +131,7 @@ const ClimateIndex = () => {
                         ages), as well as shorter interglacial periods (periods between ice ages) of relatively warmer
                         temperatures</p>
                     </div>
-                    <div class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
+                    <div data-aos="zoom-in" class="cause-card flex flex-col justify-start py-4 px-6 rounded-lg shadow-md hover:shadow-lg border-t">
                         <h3 class="font-semibold pb-3 text-yellow-500">Changes in the Earth’s Reflectivity</h3>
                         <p className='text-justify'>The amount of sunlight that is absorbed or reflected by the planet depends on the earth’s surface and
                         atmosphere. Dark
@@ -149,7 +149,7 @@ const ClimateIndex = () => {
             <div class="md:px-10" id="faq">
                 <p style={{fontFamily: 'Gochi Hand'}} class="text-center font-orbitron uppercase text-red-400 font-semibold pb-5 text-3xl md:text-5xl">frequently asked questions
                 </p>
-                <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10">
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 px-6">
                     <div data-aos="flip-right" class="cause-card border-t shadow-md hover:shadow-lg rounded-xl p-6 cursor-pointer">
                         <h3 class="text-xl text-center font-semibold pb-3 text-red-400">How is climate change affecting animals?</h3>
                         <p className='text-justify'>Changing climates directly and indirectly cause stress to animals across the world. Many species are

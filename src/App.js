@@ -20,14 +20,17 @@ import BookGrade from './views/resources/BookGrade';
 import ClimateIndex from './views/climate/ClimateIndex';
 import ClimateLogin from './views/climate/ClimateLogin';
 import ClimateRegister from './views/climate/ClimateRegister';
-import PrivateRoute from './views/climate/PrivateRoute';
+// import PrivateRoute from './views/climate/PrivateRoute';
+import GamesIndex from './views/games/GamesIndex';
+import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
 
 function App() {
 	useEffect(() => {
         AOS.init();
       }, []);
 
-	  const { grade } = useParams();
+	const { grade } = useParams();
+	
 	return (
 		<div  className='scroll-smooth'>
 			<div id='wrapper' className='homepage'>
@@ -59,6 +62,8 @@ function App() {
 						{/* <PrivateRoute path="/climate" component={<ClimateIndex />} /> */}
 
 						{/* Games Routes */}
+						<Route path="/games" element={<GamesIndex />} />
+						<Route path="/games/imago_quad" element={<ImagoQuadIndex />} />
 					</Routes>
 
 				</div>
