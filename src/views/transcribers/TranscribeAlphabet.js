@@ -63,8 +63,8 @@ const TranscribeAlphabets = () => {
         </div>
         <div className='flex justify-center w-full h-screen py-5'>
             <div className='w-full max-w-4xl pb-6 px-4'>
-                <Head title='Transcribe Alphabets' color='text-cyan-500' />
-                <div className='border-2 border-dashed border-cyan-500 px-3 py-2 rounded-3xl h-full w-full'>
+                <Head title='Transcribe Alphabets' color='text-red-400' />
+                <div className='border-2 border-dashed border-red-400 px-3 py-2 rounded-3xl h-full w-full'>
                     <div className='flex flex-col justify-center items-center h-full w-full bg-red-400 rounded-xl p-2 '>
                         {
                             isLoading ?
