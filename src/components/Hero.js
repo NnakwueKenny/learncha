@@ -5,12 +5,19 @@ import child_2 from '../images/child_2.png';
 import child_3 from '../images/child_3.png';
 import child_4 from '../images/homeclimate.jpg';
 import games from '../images/games.jpg';
+import cartoonWeather from '../images/cartoon-weather.jpg';
+import welcomeVideo from '../videos/welcomeVideo.mp4';
 
 const Hero = () => {
   return (
     <div className='border-t-2 md:border-none border-red-400 rounded-t-xl pt-5 px-2 sm:px-3'>
         <section className="promo pb-8">
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
+                <div className='w-full'>
+                    <video autoplay muted loop>
+                        <source src={welcomeVideo} type="video/mp4" />
+                    </video>
+                </div>
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
@@ -71,7 +78,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src="https://pixabay.com/get/g0ca4b43bbafef9309cf10f7f558b5906d532a5f93b4728fcbe32d0830bc9cc00a5b5a40a93426f06688b70dde7f0f73bdb91eaca2c4984e4c6fa4330a67d69a166ad3adfb79b174ff1f6f2a46f75bd51_1280.jpg"/>
+                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src={cartoonWeather}/>
                         </div>
                     </li>
                     
@@ -111,173 +118,6 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
-            <div class="top-pink-border"></div>
-            <div class="event-wrap">
-                <div class="block-event">
-                    <div class="upcoming-event">
-                        <h2>December’s upcoming event</h2>
-                        <div class="event-description">
-                            <h3><a href="#">Libero tempore cum soluta nobis est eligendi optio cumque nihil</a></h3>
-                            <div class="metadata">
-                                <time datetime="2014-04-17T09:00">17.04.14 
-                                <span>09:00 AM</span></time>
-                                <span>Lorem ipsum dolor</span>
-                            </div>
-                            <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                            <a class="btn yellow" href="#">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="widget-calendar">
-                        <table class="event-calendar">
-                            <thead>
-                            <tr>
-                                <th scope="col" class="controls"><span class="prev-mn"><a href="#">-</a></span></th>
-                                <th scope="col" colspan="5" class="month">December 2022</th>
-                                <th scope="col" class="controls"><span class="next-mn"><a href="#">-</a></span></th>
-                            </tr>
-                            <tr>
-                                <th scope="col" title="Monday">Mon</th>
-                                <th scope="col" title="Tuesday">Tue</th>
-                                <th scope="col" title="Wednesday">Wed</th>
-                                <th scope="col" title="Thursday">Thu</th>
-                                <th scope="col" title="Friday">Fri</th>
-                                <th scope="col" title="Saturday">Sat</th>
-                                <th scope="col" title="Sunday">Sun</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><div class="cell-wrap another-day">31</div></td><td><div class="cell-wrap">1</div></td><td><div class="cell-wrap">2</div></td><td><div class="cell-wrap">3</div></td><td><div class="cell-wrap">4</div></td><td><div class="cell-wrap">5</div></td>
-                                <td><div class="cell-wrap archival sun">
-                                        <a href="#">6</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-06T09:00">06.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><div class="cell-wrap">7</div></td><td><div class="cell-wrap">8</div></td>
-                                <td><div class="cell-wrap archival wed">
-                                        <a href="#">9</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-09T09:00">09.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">10</div></td><td><div class="cell-wrap">11</div></td>
-                                <td><div class="cell-wrap archival sat">
-                                        <a href="#">12</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-12T09:00">12.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">13</div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="cell-wrap">14</div></td><td><div class="cell-wrap">15</div></td><td><div class="cell-wrap">16</div></td>
-                                <td><div class="cell-wrap upcoming thu">
-                                        <a href="#">17</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-17T09:00">17.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">18</div></td><td><div class="cell-wrap">19</div></td><td><div class="cell-wrap">20</div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="cell-wrap">21</div></td>
-                                <td><div class="cell-wrap upcoming tue">
-                                        <a href="#">22</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-22T09:00">22.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">23</div></td><td><div class="cell-wrap">24</div></td>
-                                <td><div class="cell-wrap upcoming fri">
-                                        <a href="#">25</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-25T09:00">25.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">26</div></td><td><div class="cell-wrap">27</div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="cell-wrap upcoming mon">
-                                        <a href="#">28</a>
-                                        <div class="tooltip">
-                                            <div class="event-tooltip">
-                                                <h4>Libero tempore cum soluta nobis est eligendi optio</h4>
-                                                <div class="metadata">
-                                                    <time datetime="2014-04-28T09:00">28.04.14 
-                                                    <span>09:00 AM</span></time>
-                                                    <span class="place">Lorem ipsum dolor</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat ipsum dui, quis posuere urna fermentum nec. Aliquam erat volutpat.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><div class="cell-wrap">29</div></td><td><div class="cell-wrap">30</div></td><td><div class="cell-wrap another-day">1</div></td><td><div class="cell-wrap another-day">2</div></td><td><div class="cell-wrap another-day">3</div></td><td><div class="cell-wrap another-day">4</div></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="legend"><span class="upcoming">Upcoming event</span><span class="archival">Archival event</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-pink-border"></div>
                 <div class="widget-boxes news">
                     <h2>Updates</h2>
                     <div className='grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-4'>
