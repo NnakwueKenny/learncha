@@ -9,6 +9,7 @@ import cartoonWeather from '../images/cartoon-weather.jpg';
 import welcomeVideo from '../videos/welcomeVideo.mp4';
 import welcomeVideoBg from '../images/welcomeVideoBg.png';
 import lego from '../images/lego.jpeg';
+import stem from '../images/stem.jpg';
 
 const Hero = () => {
   return (
@@ -16,10 +17,10 @@ const Hero = () => {
         <section className="promo pb-8">
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <div className='w-full relative'>
-                    <video className='w-full z-50' autoplay loop>
+                    <video className='w-full h-full z-50' autoplay loop>
                         <source src={welcomeVideo} type="video/mp4" />
                     </video>
-                    <div className='absolute top-0 left-0 h-full w-full z-10'><img className='h-full w-full' alt='' src={welcomeVideoBg} /></div>
+                    {/* <div className='absolute top-0 left-0 h-full w-full z-10'><img className='h-full w-full' alt='' src={welcomeVideoBg} /></div> */}
                 </div>
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
 
@@ -33,11 +34,11 @@ const Hero = () => {
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                     Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
                                 </p>
-                                <a className="btn red" href="#">Learn more</a>
+                                <a className="btn red" ><Link to='/games'>Learn more</Link></a>
                             </div>
                         </div>
                     </li>
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
@@ -45,7 +46,7 @@ const Hero = () => {
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
-                                <a className="btn red" href="#">Learn more</a>
+                                <a className="btn red"><Link to='/resources'>Learn more</Link></a>
                             </div>
                         </div>
                         <div className='w-full h-full overflow-hidden'>
@@ -53,8 +54,8 @@ const Hero = () => {
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
-                        <div className='w-full h-[850px] md:h-full overflow-hidden bg-center md:py-40 md:rounded-l-full' style={{backgroundImage: `url(${child_4})`}}>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                        <div className='w-full h-[850px] md:h-full overflow-hidden bg-center md:py-40 md:rounded-2xl' style={{backgroundImage: `url(${child_4})`}}>
                             c
                         </div>
                         <div className="h-full w-full">
@@ -64,12 +65,12 @@ const Hero = () => {
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
-                                <a className="btn red" href="#">Learn more</a>
+                                <a className="btn red"><Link to='/climate'>Learn more</Link></a>
                             </div>
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Weather Updates</a></h1>
@@ -81,7 +82,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src={cartoonWeather}/>
+                            <img className='w-full h-full rounded-xl' src={cartoonWeather}/>
                         </div>
                     </li>
                     
@@ -142,7 +143,7 @@ const Hero = () => {
                         </div>
                         <div class="box">
                             <a class="news-img" href="#">
-                                <img src="images/img-news02.jpg" alt="" />
+                                <img src={stem} alt="" />
                                 <div class="mask"></div>
                             </a>
                             <div class="box-info">
