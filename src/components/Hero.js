@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import child_1 from '../images/child_1.png';
 import child_2 from '../images/child_2.png';
 import child_3 from '../images/child_3.png';
+import child_4 from '../images/homeclimate.jpg';
+import games from '../images/games.jpg';
 
 const Hero = () => {
   return (
@@ -13,7 +15,7 @@ const Hero = () => {
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' alt='' src={child_3}/>
+                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' alt='' src={games}/>
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
@@ -42,11 +44,11 @@ const Hero = () => {
                     </li>
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
-                        <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_1}/>
+                        <div className='w-full h-[850px] md:h-full overflow-hidden bg-center md:py-40 md:rounded-l-full' style={{backgroundImage: `url(${child_4})`}}>
+                            c
                         </div>
                         <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full p-8'>
+                            <div className='flex flex-col items-center justify-center h-full w-full p-8 md:py-24'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Climate Challenge</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                 Discouraging your child to spend their screen time playing educational
@@ -69,7 +71,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src="https://images.pexels.com/photos/13988500/pexels-photo-13988500.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                            <img className='w-full h-full md:rounded-r-full rounded-b-xl' src="https://pixabay.com/get/g0ca4b43bbafef9309cf10f7f558b5906d532a5f93b4728fcbe32d0830bc9cc00a5b5a40a93426f06688b70dde7f0f73bdb91eaca2c4984e4c6fa4330a67d69a166ad3adfb79b174ff1f6f2a46f75bd51_1280.jpg"/>
                         </div>
                     </li>
                     

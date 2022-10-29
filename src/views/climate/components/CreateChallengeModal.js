@@ -18,7 +18,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
     const [category, setCategory] = useState('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [image, setImage] = useState('');
+    const [image, setImage] = useState({image: null});
     const [challengeID, setChallengeID] = useState(43);
 
     const [isLoading, setIsLoading] = useState(false);
@@ -92,8 +92,10 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         console.log(accessToken);
         console.log('uploading');
         const formData = new FormData();
-        formData.append('image', `image=@${image};type=image/jpeg`);
+        formData.append('image', image.image);
+        console.log(formData);
         // formData.append('type', 'image/jpeg');
+        // console.log(formData)
         fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
             {
                 method: 'post',
@@ -102,7 +104,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                     Authorization: `Bearer ${accessToken}`,
                     "Content-Type": 'multipart/form-data'
                 },
-                body: image
+                body: formData
             }
         )
         .then(response => response.json())
@@ -126,7 +128,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                                 isNext?
                                 <div>
                                     <label class="block mb-2 font-medium text-cyan-500 text-xl " for="user_avatar">Upload Challenge Image</label>
-                                    <input onChange={e => setImage(e.target.files[0])} class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer" aria-describedby="user_avatar_help" id="user_avatar" type="file" />
+                                    <input onChange={e => setImage({...image, image: e.target.files[0]})} class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer" aria-describedby="user_avatar_help" id="user_avatar" type="file" />
                                     <div class="py-3 text-sm text-gray-500" id="user_avatar_help">The first picture sowing you doing performing your aim for the challenge will encourage others to partake...</div>
                                 </div>
                                 :
