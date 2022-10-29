@@ -96,8 +96,9 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         const accessToken = JSON.parse(localStorage.getItem('accessToken'));
         console.log(accessToken);
         console.log('uploading');
+
         const formData = new FormData();
-        formData.append('image', image.image);
+        formData.append('image', image, image.name);
         console.log(formData);
         // formData.append('type', 'image/jpeg');
         // console.log(formData)
@@ -105,9 +106,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
             {
                 method: 'post',
                 headers: {
-                    accept: 'application/json',
                     Authorization: `Bearer ${accessToken}`,
-                    "Content-Type": 'multipart/form-data'
                 },
                 body: formData
             }

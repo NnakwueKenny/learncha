@@ -7,16 +7,18 @@ import child_4 from '../images/homeclimate.jpg';
 import games from '../images/games.jpg';
 import cartoonWeather from '../images/cartoon-weather.jpg';
 import welcomeVideo from '../videos/welcomeVideo.mp4';
+import welcomeVideoBg from '../images/welcomeVideoBg.png';
 
 const Hero = () => {
   return (
     <div className='border-t-2 md:border-none border-red-400 rounded-t-xl pt-5 px-2 sm:px-3'>
         <section className="promo pb-8">
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
-                <div className='w-full'>
-                    <video autoplay muted loop>
+                <div className='w-full relative'>
+                    <video className='w-full z-50' autoplay loop>
                         <source src={welcomeVideo} type="video/mp4" />
                     </video>
+                    <div className='absolute top-0 left-0 h-full w-full z-10'><img className='h-full w-full' alt='' src={welcomeVideoBg} /></div>
                 </div>
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
 
