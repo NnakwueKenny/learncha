@@ -1,14 +1,14 @@
 const GameData = [
-    {
-        id: 1,
-        class: 'kiss',
-        src: [
-            'https://images.pexels.com/photos/1024975/pexels-photo-1024975.jpeg?auto=compress&cs=tinysrgb&w=400',
-            'https://media.istockphoto.com/photos/happy-hispanic-mother-and-son-portrait-parents-love-and-unity-concept-picture-id1370979242?b=1&k=20&m=1370979242&s=170667a&w=0&h=rzVYiC3jxoElI1gQDQGOXbNLc0rxeJ5MgSZwm1I2UHc=',
-            'https://images.unsplash.com/photo-1569706548645-8034449f6a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2lzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60',
-            'https://media.istockphoto.com/photos/red-fawn-french-bulldog-dog-with-orange-kiss-lips-photo-prop-in-front-picture-id1295958523?b=1&k=20&m=1295958523&s=170667a&w=0&h=VzA3pgFTDQLGiuDRsczh4Gl3OZNl3FZ5tRWxVqCMESo='
-        ],
-    },
+    // {
+    //     id: 1,
+    //     class: 'kiss',
+    //     src: [
+    //         'https://images.pexels.com/photos/1024975/pexels-photo-1024975.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //         'https://media.istockphoto.com/photos/happy-hispanic-mother-and-son-portrait-parents-love-and-unity-concept-picture-id1370979242?b=1&k=20&m=1370979242&s=170667a&w=0&h=rzVYiC3jxoElI1gQDQGOXbNLc0rxeJ5MgSZwm1I2UHc=',
+    //         'https://images.unsplash.com/photo-1569706548645-8034449f6a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2lzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60',
+    //         'https://media.istockphoto.com/photos/red-fawn-french-bulldog-dog-with-orange-kiss-lips-photo-prop-in-front-picture-id1295958523?b=1&k=20&m=1295958523&s=170667a&w=0&h=VzA3pgFTDQLGiuDRsczh4Gl3OZNl3FZ5tRWxVqCMESo='
+    //     ],
+    // },
     {
         id: 2,
         class: 'family',
@@ -69,16 +69,16 @@ const GameData = [
             'https://images.unsplash.com/uploads/14121010130570e22bcdf/e1730efe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90JTIwc3VtbWVyJTIwc3VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
         ],
     },
-    {
-        id: 8,
-        class: 'hot',
-        src: [
-            'https://images.unsplash.com/photo-1495063378081-52411c3eedf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90JTIwc3VtbWVyJTIwc3VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-            'https://images.pexels.com/photos/2760289/pexels-photo-2760289.jpeg?auto=compress&cs=tinysrgb&w=600',
-            'https://images.unsplash.com/photo-1579904380653-bca3242e4594?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdCUyMHRlYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-            'https://images.pexels.com/photos/87611/sun-fireball-solar-flare-sunlight-87611.jpeg?auto=compress&cs=tinysrgb&w=600'
-        ],
-    },
+    // {
+    //     id: 8,
+    //     class: 'hot',
+    //     src: [
+    //         'https://images.unsplash.com/photo-1495063378081-52411c3eedf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90JTIwc3VtbWVyJTIwc3VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    //         'https://images.pexels.com/photos/2760289/pexels-photo-2760289.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //         'https://images.unsplash.com/photo-1579904380653-bca3242e4594?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdCUyMHRlYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    //         'https://images.pexels.com/photos/87611/sun-fireball-solar-flare-sunlight-87611.jpeg?auto=compress&cs=tinysrgb&w=600'
+    //     ],
+    // },
     {
         id: 9,
         class: 'food',
