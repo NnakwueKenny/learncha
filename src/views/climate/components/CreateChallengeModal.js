@@ -101,7 +101,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         formData.append('image', image, image.name);
         console.log(formData);
         // formData.append('type', 'image/jpeg');
-        // console.log(formData)
+        console.log(formData)
         fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
             {
                 method: 'post',
