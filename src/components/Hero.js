@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import child_1 from '../images/child_1.png';
 import child_2 from '../images/child_2.png';
 import child_3 from '../images/child_3.png';
@@ -12,11 +13,11 @@ const Hero = () => {
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_3}/>
+                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' alt='' src={child_3}/>
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
-                                <h1><a href="#" className='animate animate-pulse text-red-500'>Games for kids</a></h1>
+                                <h1><Link href="/games" className='animate animate-pulse text-red-500'>Games for kids</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                     Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
                                 </p>

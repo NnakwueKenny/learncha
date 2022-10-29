@@ -1,21 +1,35 @@
 import React from 'react';
 import { useState } from 'react';
-import Loader from './Loader'
+import Loader from './Loader';
+
+/*
+    {
+        challenge: '',
+        query = {
+            challenge_type: "Protect the oceans",
+            description: 'To make the water bodies surrounding the lagos Island clean...',
+            id: 43,
+            name: 'operation clean lagos atlantic i'
+        }
+    }
+ */
 
 const CreateChallengeModal = ({toggleChallengeModal}) => {
     const [category, setCategory] = useState('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const [image, setImage] = useState('');
+    const [challengeID, setChallengeID] = useState(43);
 
     const [isLoading, setIsLoading] = useState(false);
-    const [isNext, setIsNext] = useState(false);
+    const [isNext, setIsNext] = useState(true);
     const [responseMessage, setResponseMessage] = useState('');
     let [validReq, setValidReq] = useState(false);
-    
+
 
     const createChallenge = () => {
         if (category.split(' ')[0] === '' || title.split(' ')[0] === '' || description.split(' ')[0] === '') {
-            console.log('')
+            console.log('Empty Values')
         } else {
             setIsLoading(true);
             const createChallengeFormData = {
@@ -56,6 +70,8 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                 console.log(data);
                 setIsNext(true)
                 setIsLoading(false);
+                setChallengeID(data.challenge_link.slice(41));
+                uploadImage(challengeID);
             })
             .catch(err => {
                 console.log(err);
@@ -69,8 +85,29 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         }
     }
 
-    const uploadImage = () => {
+    const uploadImage = (ID) => {
         console.log('Upload Image...');
+        console.log(image)
+        const accessToken = JSON.parse(localStorage.getItem('accessToken'));
+        console.log(accessToken);
+        console.log('uploading');
+        const formData = new FormData();
+        formData.append('image', `image=@${image};type=image/jpeg`);
+        // formData.append('type', 'image/jpeg');
+        fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
+            {
+                method: 'post',
+                headers: {
+                    accept: 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                    "Content-Type": 'multipart/form-data'
+                },
+                body: image
+            }
+        )
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
     }
   return (
     <div style={{fontFamily: 'Gochi Hand'}} className='fixed top-0 flex items-start justify-center items-center py-6 pt-10 px-5 z-50 h-screen w-screen bg-gray-500 bg-opacity-50'>
@@ -85,43 +122,54 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                         </div>
                         :
                         <form>
-                            <div className='uppercase text-2xl text-center pb-4 text-cyan-500'>Create Challenge</div>
-                            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                            {
+                                isNext?
                                 <div>
-                                    <div className='flex gap-1 font-bold'>
-                                        <label for="challenge_type" class="block mb-2 text-xl font-medium text-red-400">Category</label>
-                                        <span className='text-red-500 font-sans'>*</span>
-                                    </div>
-                                    <select onChange={(e) => setCategory(e.target.value)} type="text" id="challenge_type" name='challenge_type' class="create-challenge-name bg-gray-50 border border-gray-300 text-gray-500 text-sm focus:ring-red-300 focus:border-red-300 block w-full p-2.5" placeholder="Type of Challenge" required>
-                                        <option disabled selected></option>
-                                        <option >Protect the oceans</option>
-                                        <option >Severe Fire</option>
-                                        <option >Carbon Emission</option>
-                                        <option >Water Scarcity</option>
-                                        <option >Flooding</option>
-                                        <option >Declining Biodiversity</option>
-                                        <option >Intenze Drought</option>
-                                        <option >Severe Fire</option>
-                                    </select>
-                                    <div><span className='text-red-500'>Category is required!</span></div>
+                                    <label class="block mb-2 font-medium text-cyan-500 text-xl " for="user_avatar">Upload Challenge Image</label>
+                                    <input onChange={e => setImage(e.target.files[0])} class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer" aria-describedby="user_avatar_help" id="user_avatar" type="file" />
+                                    <div class="py-3 text-sm text-gray-500" id="user_avatar_help">The first picture sowing you doing performing your aim for the challenge will encourage others to partake...</div>
                                 </div>
+                                :
                                 <div>
-                                    <div className='flex gap-1 font-bold'>
-                                        <label for="title" class="block mb-2 text-xl font-medium text-red-400">Title</label>
-                                        <span className='text-red-500 font-sans'>*</span>
+                                    <div className='uppercase text-2xl text-center pb-4 text-cyan-500'>Create Challenge</div>
+                                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                        <div>
+                                            <div className='flex gap-1 font-bold'>
+                                                <label for="challenge_type" class="block mb-2 text-xl font-medium text-red-400">Category</label>
+                                                <span className='text-red-500 font-sans'>*</span>
+                                            </div>
+                                            <select onChange={(e) => setCategory(e.target.value)} type="text" id="challenge_type" name='challenge_type' class="create-challenge-name bg-gray-50 border border-gray-300 text-gray-500 text-sm focus:ring-red-300 focus:border-red-300 block w-full p-2.5" placeholder="Type of Challenge" required>
+                                                <option disabled selected></option>
+                                                <option >Protect the oceans</option>
+                                                <option >Severe Fire</option>
+                                                <option >Carbon Emission</option>
+                                                <option >Water Scarcity</option>
+                                                <option >Flooding</option>
+                                                <option >Declining Biodiversity</option>
+                                                <option >Intenze Drought</option>
+                                                <option >Severe Fire</option>
+                                            </select>
+                                            <div className='hidden'><span className='text-red-500'>Category is required!</span></div>
+                                        </div>
+                                        <div>
+                                            <div className='flex gap-1 font-bold'>
+                                                <label for="title" class="block mb-2 text-xl font-medium text-red-400">Title</label>
+                                                <span className='text-red-500 font-sans'>*</span>
+                                            </div>
+                                            <input onChange={(e) => setTitle(e.target.value)} type="text" id="title" name='title' class="create-challenge-title bg-gray-50 border border-gray-300 text-gray-500 text-sm focus:ring-red-300 focus:border-red-300 block w-full p-2.5" placeholder="Title of Challenge" required />
+                                            <div className='hidden'><span className='text-red-500'>Title is required!</span></div>
+                                        </div>
                                     </div>
-                                    <input onChange={(e) => setTitle(e.target.value)} type="text" id="title" name='title' class="create-challenge-title bg-gray-50 border border-gray-300 text-gray-500 text-sm focus:ring-red-300 focus:border-red-300 block w-full p-2.5" placeholder="Title of Challenge" required />
-                                    <div><span className='text-red-500'>Title is required!</span></div>
+                                    <div class="grid mb-4 md:grid-cols-1">
+                                        <div className='flex gap-1 pb-2 font-bold'>
+                                            <label for="description" class="block text-xl font-medium text-red-400">Description</label>
+                                            <span className='text-red-500 font-sans'>*</span>
+                                        </div>
+                                        <textarea onChange={(e) => setDescription(e.target.value)} id="description" name='description' rows="8" class="create-challenge-value mb-1 block px-2 py-3 border-2 focus:border-2 border-gray-300 focus:border-red-400 rounded-lg w-full text-sm text-gray-800 outline-none focus:ring-0" placeholder="Write a description about the challenge..." required></textarea>
+                                        <div className='hidden'><span className='text-red-500'>Description is required!</span></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="grid gap-4 mb-4 md:grid-cols-1">
-                                <div className='flex gap-1 font-bold'>
-                                    <label for="description" class="block text-xl font-medium text-red-400">Description</label>
-                                    <span className='text-red-500 font-sans'>*</span>
-                                </div>
-                                <textarea onChange={(e) => setDescription(e.target.value)} id="description" name='description' rows="8" class="create-challenge-value block px-2 py-3 border-2 focus:border-2 border-gray-300 focus:border-red-400 rounded-lg w-full text-sm text-gray-800 outline-none focus:ring-0" placeholder="Write a description about the challenge..." required></textarea>
-                                <div><span className='text-red-500'>Description is required!</span></div>
-                            </div>
+                        }
                         </form>
                     }
                 </div>
