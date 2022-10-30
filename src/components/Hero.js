@@ -8,6 +8,7 @@ import games from '../images/games.jpg';
 import cartoonWeather from '../images/cartoon-weather.jpg';
 import welcomeVideo from '../videos/welcomeVideo.mp4';
 import welcomeVideoBg from '../images/welcomeVideoBg.png';
+import lego from '../images/lego.jpeg';
 
 const Hero = () => {
   return (
@@ -22,9 +23,9 @@ const Hero = () => {
                 </div>
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl md:rounded-full overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full md:rounded-l-full rounded-t-xl' alt='' src={games}/>
+                            <img className='w-full h-full rounded-xl' alt='' src={games}/>
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
@@ -125,7 +126,7 @@ const Hero = () => {
                     <div className='grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-4'>
                         <div class="box">
                             <a class="news-img" href="#">
-                                <img src="images/img-news01.jpg" alt="" />
+                                <img src={lego} alt="" />
                                 <div class="mask"></div>
                             </a>
                             <div class="box-info">
