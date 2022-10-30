@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import book from '../../images/book.jpg';
 
 const Resources = () => {
 
@@ -26,7 +27,7 @@ const Resources = () => {
                 <div data-aos="fade-right" className='flex flex-col md:flex-row gap-4 px-6 py-4 rounded-xl shadow'>
                     <Link to='/resources/books'>
                         <div className='w-full'>
-                            <img className='w-full h-64 md:h-80' alt='' src='https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                            <img className='w-full h-64 md:h-80' alt='' src={book} />
                         </div>
                         <div className='flex flex-col gap-4 w-full items-center py-4'>
                             <p className='mb-auto font-bold md:text-2xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6</p>

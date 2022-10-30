@@ -7,6 +7,7 @@ import word from '../../images/word.jpg';
 import nums from '../../images/nums.jpg';
 import alpha from '../../images/alpha.jpg';
 import L4Games from '../../images/L4Games.jpg';
+import sentence from '../../images/sentence.jpg';
 
 const TranscribeIndex = () => {
   return (
@@ -45,7 +46,7 @@ const TranscribeIndex = () => {
                         <h3>Transcribe Sentence</h3>
                     </div>
                     <Link to='/transcribers/transcribe-sentences'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/5745014/pexels-photo-5745014.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={sentence} />
                     </Link>
                 </div>
             </div>
