@@ -3,6 +3,9 @@ import { Link, Route, Routes, useParams } from 'react-router-dom';
 import Intro from './components/Intro';
 import MainHead from './components/MainHead';
 import TranscribeNumber from './TranscribeNumbers';
+import word from '../../images/word.jpg';
+import nums from '../../images/nums.jpg';
+import nums from '../../images/alpha.jpg';
 
 const TranscribeIndex = () => {
   return (
@@ -17,7 +20,7 @@ const TranscribeIndex = () => {
                         <h3>Transcribe Numbers</h3>
                     </div>
                     <Link to='/transcribers/transcribe-numbers'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src='https://images.pexels.com/photos/1314536/pexels-photo-1314536.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src={nums} />
                     </Link>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-red-400 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
@@ -25,7 +28,7 @@ const TranscribeIndex = () => {
                         <h3>Transcribe Alphabets</h3>
                     </div>
                     <Link to='/transcribers/transcribe-alphabets'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/1337382/pexels-photo-1337382.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={alpha} />
                     </Link>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-yellow-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
@@ -33,7 +36,7 @@ const TranscribeIndex = () => {
                         <h3>Transcribe Words</h3>
                     </div>
                     <Link to='/transcribers/transcribe-words'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/9085647/pexels-photo-9085647.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={word} />
                     </Link>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-green-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
