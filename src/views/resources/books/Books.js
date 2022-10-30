@@ -50,16 +50,18 @@ const Books = () => {
     }, []);
 
     function downloadFile(url, fileName) {
+        console.log('Started downloading...');
 		fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
         .then(res => res.blob())
         .then(res => {
-        const aElement = document.createElement('a');
-        aElement.setAttribute('download', fileName);
-        const href = URL.createObjectURL(res);
-        aElement.href = href;
-        aElement.setAttribute('target', '_blank');
-        aElement.click();
-        URL.revokeObjectURL(href);
+            const aElement = document.createElement('a');
+            aElement.setAttribute('download', fileName);
+            const href = URL.createObjectURL(res);
+            aElement.href = href;
+            aElement.setAttribute('target', '_blank');
+            aElement.click();
+            URL.revokeObjectURL(href);
+            console.log('Download completed!...');
         });
     };
 
@@ -105,7 +107,7 @@ const Books = () => {
                                                     </div>
                                                     <div className='flex justify-center gap-4 md:gap-8'>
                                                         <a href={book.url} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Read</a>
-                                                        <button onClick={downloadFile(book.url, book.name)} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Download</button>
+                                                        <button onClick={() => downloadFile(book.url, book.name)} className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Download</button>
                                                     </div>
                                                 </div>
                                             )}
