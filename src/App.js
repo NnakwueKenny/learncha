@@ -14,9 +14,9 @@ import TranscribeNumbers from './views/transcribers/TranscribeNumbers';
 import TranscribeWords from './views/transcribers/TranscribeWords';
 import TranscribeSentence from './views/transcribers/TranscribeSentence';
 import TranscribeAlphabets from './views/transcribers/TranscribeAlphabet';
-import Books from './views/resources/Books';
-import Dictionary from './views/resources/Dictionary';
-import BookGrade from './views/resources/BookGrade';
+import Books from './views/resources/books/Books';
+import Dictionary from './views/resources/dictionary/Dictionary';
+import BookGrade from './views/resources/books/BookCat';
 import ClimateIndex from './views/climate/ClimateIndex';
 import ClimateLogin from './views/climate/ClimateLogin';
 import ClimateRegister from './views/climate/ClimateRegister';
@@ -31,7 +31,7 @@ function App() {
         AOS.init();
       }, []);
 
-	const { grade } = useParams();
+	const { category } = useParams();
 
 	return (
 		<div className='scroll-smooth'>
@@ -46,7 +46,7 @@ function App() {
 						{/* Resources Routes */}
 						<Route path="/resources" element={<Resources />} />
 						<Route path="/resources/books" element={<Books />} />
-						<Route path="/resources/books/:grade" element={<BookGrade grade={grade}/>} />
+						<Route path="/resources/books/:grade" element={<BookGrade category={category}/>} />
 						<Route path="/resources/dictionary" element={<Dictionary />} />
 
 						{/* Transcribers Routes*/}
@@ -61,7 +61,7 @@ function App() {
 						<Route path="/climate/login" element={<ClimateLogin />} />
 						<Route path="/climate/register" element={<ClimateRegister />} />
 						<Route path="/climate/challenge" element={<ClimateChallenge />} />
-						<Route path="/climate/challenge/:challenge" element={<SingleChallenge grade={grade}/>} />
+						<Route path="/climate/challenge/:challenge" element={<SingleChallenge category={category}/>} />
 
 						{/* <PrivateRoute path="/climate" component={<ClimateIndex />} /> */}
 

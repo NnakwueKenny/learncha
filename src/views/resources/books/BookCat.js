@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Loader from '../transcribers/components/Loader';
-import Nav from './components/Nav';
+import Loader from '../../transcribers/components/Loader';
+import Nav from '../components/Nav';
 
 const BookGrade = () => {
-    const { grade } = useParams();
+    const { category } = useParams();
     const [isLoading, setIsLoading] = useState(false);
-    const currentGrade = grade.split('_')[1];
+    const currentGrade = category.split('_')[1];
     const colors = {
         one: ['red-100', 'red'],
         two: ['blue-100', 'blue'],
