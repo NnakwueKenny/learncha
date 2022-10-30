@@ -6,6 +6,7 @@ import TranscribeNumber from './TranscribeNumbers';
 import word from '../../images/word.jpg';
 import nums from '../../images/nums.jpg';
 import alpha from '../../images/alpha.jpg';
+import L4Games from '../../images/L4Games.jpg';
 
 const TranscribeIndex = () => {
   return (
@@ -28,7 +29,7 @@ const TranscribeIndex = () => {
                         <h3>Transcribe Alphabets</h3>
                     </div>
                     <Link to='/transcribers/transcribe-alphabets'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={alpha} />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={L4Games} />
                     </Link>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-yellow-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>

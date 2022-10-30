@@ -4,6 +4,7 @@ import Intro from '../climate/components/Intro'
 import MainHead from '../transcribers/components/MainHead';
 
 import imago_quad from './images/imago_quad.png';
+import imago from '../../images/imago.jpg';
 
 const GamesIndex = () => {
 
@@ -19,7 +20,7 @@ const GamesIndex = () => {
                         <h3>Imago Quad</h3>
                     </div>
                     <Link to='/games/imago_quad'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src={imago_quad} />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src={imago} />
                     </Link>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-red-400 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
