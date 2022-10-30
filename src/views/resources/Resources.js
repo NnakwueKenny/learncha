@@ -21,7 +21,7 @@ const Resources = () => {
             <h1>Resources</h1>
         </div>
         <div className='flex flex-col items-center w-full py-8 px-4 md:px-8 gap-4 md:gap-8 xl:gap-12'>
-            <div className='flex flex-col justify-center w-full max-w-5xl items-center py-6 px-4 border-2 rounded-xl overflow-hidden border-dashed border-red-500'>
+            <div className='mb-5 flex flex-col justify-center w-full max-w-5xl items-center py-6 px-4 border-2 rounded-xl overflow-hidden border-dashed border-red-500'>
                 <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-red-400 font-semibold text-5xl pb-4'>Books</h3>
                 <div data-aos="fade-right" className='flex flex-col md:flex-row gap-4 px-6 py-4 rounded-xl shadow'>
                     <Link to='/resources/books'>
