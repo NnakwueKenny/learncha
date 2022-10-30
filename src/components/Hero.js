@@ -80,9 +80,9 @@ const Hero = () => {
             </div>
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full p-8'>
+                            <div className='flex flex-col items-center justify-center h-full w-full px-8'>
                                 <h1><Link href="/games" className='animate animate-pulse text-red-500'>Games for kids</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                     Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
@@ -94,12 +94,12 @@ const Hero = () => {
                             <img className='w-full h-full rounded-xl' alt='' src={games}/>
                         </div>
                     </li>
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className='w-full h-96 overflow-hidden'>
                             <img className='w-full h-full rounded-xl' src={girl}/>
                         </div>
                         <div className="h-96 w-full">
-                            <div className='flex flex-col items-center justify-center h-96 w-full p-8'>
+                            <div className='flex flex-col items-center justify-center h-96 w-full px-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                 Discouraging your child to spend their screen time playing educational
@@ -110,9 +110,9 @@ const Hero = () => {
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full p-8'>
+                            <div className='flex flex-col items-center justify-center h-full w-full px-8'>
                                 <h1><Link href="/games" className='animate animate-pulse text-red-500'>Climate Challenge</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                 Discouraging your child to spend their screen time playing educational
@@ -126,12 +126,12 @@ const Hero = () => {
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className='w-full h-full overflow-hidden'>
                             <img className='w-full h-full rounded-xl' src={cartoonWeather}/>
                         </div>
                         <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full p-8'>
+                            <div className='flex flex-col items-center justify-center h-full w-full px-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Weather Updates</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                 Discouraging your child to spend their screen time playing educational
