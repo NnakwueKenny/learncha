@@ -83,7 +83,6 @@ const Hero = () => {
                 <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8'>
-                                <h1 className='animate animate-pulse text-red-500 text-lg'>About Learncha</h1>
                                 <p className='text-white text-xl text-gray-600 text-center mb-6'>
                                     Learning can be creative and fun, with learncha learning can be become more that fun and creative
                                 </p>
