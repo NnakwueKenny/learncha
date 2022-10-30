@@ -84,7 +84,7 @@ const Hero = () => {
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8'>
                                 <p className='text-white text-xl font-bold text-gray-600 text-center mb-6'>
-                                    <span className="text-red-400 text-4xl">"</span>Learning can be creative and fun, with learncha learning can be become more that fun and creative<span className="text-red-400 text-4xl">"</span>
+                                    <span className="text-red-400 text-2xl">"</span>Learning can be creative and fun, with learncha learning can be become more that fun and creative<span className="text-red-400 text-2xl">"</span>
                                 </p>
                             </div>
                         </div>
