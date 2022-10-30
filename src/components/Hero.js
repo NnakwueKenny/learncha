@@ -44,7 +44,7 @@ const Hero = () => {
                         </div>
                         <div className="h-full max-h-[400px] carousel-item relative float-left w-full">
                             <img src={slide2} className="block w-full object-cover hidden lg:block" alt="..." />
-                            <img src={second3} className="block w-full h-full object-cover lg:hidden" alt="..." />
+                            <img src={second2} className="block w-full h-full object-cover lg:hidden" alt="..." />
                             <div className="hidden flex flex-col lg:flex-row lg:px-8 carousel-caption absolute text-green-500 left-0 top-0 bg-gray-100 bg-opacity-25 w-full">
                                 <div className="w-full lg:w-2/3 h-full flex flex-col lg:flex-row">
                                     <div className="flex flex-col items-center gap-y-4 md:gap-y-6 p-2">
@@ -58,7 +58,7 @@ const Hero = () => {
                         </div>
                         <div className="h-full max-h-[400px] carousel-item relative float-left w-full">
                             <img src={slide3} className="block w-full object-cover hidden lg:block" alt="..." />
-                            <img src={slide3} className="block w-full h-full object-cover lg:hidden" alt="..." />
+                            <img src={second3} className="block w-full h-full object-cover lg:hidden" alt="..." />
                             <div className="hidden flex flex-col lg:flex-row lg:px-8 carousel-caption absolute text-green-500 left-0 top-0 bg-gray-100 bg-opacity-25 w-full">
                                 <div className="w-full lg:w-2/3 h-full flex flex-col lg:flex-row">
                                     <div className="flex flex-col items-center gap-y-4 md:gap-y-6 p-2">
