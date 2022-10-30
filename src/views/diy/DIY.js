@@ -46,6 +46,7 @@ const DIY = () => {
             createNotifier.forEach(notifier => allNotifications.push(notifier.message));
             joinNotifier.forEach(notifier => allNotifications.push(notifier.message));
             setNotifications(allNotifications);
+            setIsLoadingNotif(false)
         })
     }
 
@@ -184,6 +185,7 @@ const DIY = () => {
                             <div className='grid md:grid-cols-3 gap-8'>
                                 {
                                     diyVideos.map(video => {
+                                        HTMLFormControlsCollection.log(video.id)
                                         return (
                                             <div className="">
                                                 <iframe height='315' src={`https://www.youtube.com/embed/${video.id}`} className="w-full rounded-lg"
