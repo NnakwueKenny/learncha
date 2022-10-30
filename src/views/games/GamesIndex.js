@@ -25,19 +25,19 @@ const GamesIndex = () => {
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-red-400 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-red-400 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>L4 Game</h3>
+                        <h3>Forest Game</h3>
                     </div>
-                    <Link to='/transcribers/transcribe-alphabets'>
+                    <a target='_blank' rel='noreferrer' href='https://learncha.mybluemix.net/games/forest_game'>
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/1337382/pexels-photo-1337382.jpeg?auto=compress&cs=tinysrgb&w=600' />
-                    </Link>
+                    </a>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-yellow-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-yellow-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Transcribe Words</h3>
+                        <h3>LD Learn</h3>
                     </div>
-                    <Link to='/transcribers/transcribe-words'>
+                    <a target='_blank' rel='noreferrer' href='https://goeroeg.github.io/ld-learn/apps/learn/ld-learn.html'>
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/9085647/pexels-photo-9085647.jpeg?auto=compress&cs=tinysrgb&w=600' />
-                    </Link>
+                    </a>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
