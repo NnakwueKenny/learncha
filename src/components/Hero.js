@@ -95,7 +95,7 @@ const Hero = () => {
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
-                                <h1><Link href="/games" className='animate animate-pulse text-3xl font-bold text-red-500'>Games for kids</Link></h1>
+                                <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-3xl font-bold text-red-500'>Games for kids</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6 text-xl'>
                                     Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
                                 </p>
@@ -106,7 +106,7 @@ const Hero = () => {
                     <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-96 w-full">
                             <div className='flex flex-col items-center justify-center h-96 w-full px-8 gap-4'>
-                                <h1><a href="#" className='animate animate-pulse text-red-500 text-3xl font-bold'>Education for kids</a></h1>
+                                <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 text-3xl font-bold'>Education for kids</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6 text-xl'>
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
@@ -125,7 +125,7 @@ const Hero = () => {
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
-                                <h1><Link href="/games" className='animate animate-pulse text-red-500 text-3xl font-bold'>Climate Challenge</Link></h1>
+                                <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-red-500 text-3xl font-bold'>Climate Challenge</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6 text-xl'>
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
@@ -138,7 +138,7 @@ const Hero = () => {
                     <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
-                                <h1><a href="#" className='animate animate-pulse text-red-500 text-3xl font-bold'>Weather Updates</a></h1>
+                                <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 text-3xl font-bold'>Weather Updates</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6 text-xl'>
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
