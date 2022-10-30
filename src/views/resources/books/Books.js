@@ -84,22 +84,32 @@ const Books = () => {
                         return (
                             <div className='p-4 md:p-6'>
                                 <div style={{fontFamily: 'Gochi Hand'}} className='shadow uppercase font-semibold py-3 px-2 md:pl-8 mb-3 md:mb-5 text-xl md:text-2xl lg:text-3xl rounded-lg'>
-                                    <h3 className={`text-green-500`}>Category</h3>
+                                    <h3 className={`text-green-500`}>{cat}</h3>
                                 </div>
-                                <div className='grid md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6'>
-                                    <div className='w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl flex flex-col gap-1 px-2 md:px-4 py-3 md:py-4 rounded-xl shadow'>
-                                        <div className='w-full bg-red-400'>
-                                            <img className='w-full h-full' alt='' src='https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600' />
-                                        </div>
-                                        <div className='flex flex-col w-full py-1 px-2'>
-                                            <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>Title</span> : <span></span></p>
-                                            <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>Author</span> : <span></span></p>
-                                            <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>ISBN</span> : <span></span></p>
-                                        </div>
-                                        <div className='flex justify-center'>
-                                            <a href='' className='border-2 border-dashed rounded-md border-green-500 text-green-500 px-2 py-1'>Download</a>
-                                        </div>
-                                    </div>
+                                <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6'>
+                                    {
+                                        books.map(book => {
+                                            if(book.category === cat) {
+                                                return (
+                                                <div className='w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl flex flex-col gap-1 px-2 md:px-4 py-3 md:py-4 rounded-xl shadow'>
+                                                    <div className='w-full bg-red-400'>
+                                                        <img className='w-full h-full' alt='' src='https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                                                    </div>
+                                                    <div className='flex flex-col w-full py-1 px-2'>
+                                                        <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>Title</span> : <span className='capitalize'>{book.name}</span></p>
+                                                        <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>Author</span> : <span className='capitalize'></span></p>
+                                                        <p className='flex items-center'>
+                                                            <span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>ISBN</span>:
+                                                            <span className='pl-1 capitalize'>{book.book_isbn.slice(0,20)}</span>
+                                                        </p>
+                                                    </div>
+                                                    <div className='flex justify-center'>
+                                                        <a href={book.url} target='_blank' rel='noreferrer' className='border-2 border-dashed rounded-md border-green-500 text-green-500 px-2 py-1'>Download</a>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        })
+                                    }
                                 </div>
                             </div>
                         )
