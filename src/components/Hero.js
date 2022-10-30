@@ -10,6 +10,7 @@ import welcomeVideo from '../videos/welcomeVideo.mp4';
 import welcomeVideoBg from '../images/welcomeVideoBg.png';
 import lego from '../images/lego.jpeg';
 import stem from '../images/stem.jpg';
+import last from '../images/last.jpg';
 
 const Hero = () => {
   return (
@@ -157,7 +158,7 @@ const Hero = () => {
                         </div>
                         <div class="box">
                             <a class="news-img" href="#">
-                                <img src="images/img-news03.jpg" alt="" />
+                                <img src={last} alt="" />
                                 <div class="mask"></div>
                             </a>
                             <div class="box-info">
