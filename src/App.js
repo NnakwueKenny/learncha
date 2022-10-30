@@ -24,7 +24,7 @@ import GamesIndex from './views/games/GamesIndex';
 import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
 import ClimateChallenge from './views/climate/ClimateChallenge';
 import SingleChallenge from './views/climate/SingleChallenge';
-import DIY from './views/diy/DIY'
+import DIY from './views/diy/DIY';
 
 function App() {
 	useEffect(() => {
@@ -68,6 +68,7 @@ function App() {
 						{/* Games Routes */}
 						<Route path="/games" element={<GamesIndex />} />
 						<Route path="/games/imago_quad" element={<ImagoQuadIndex />} />
+						<Route path="/games/imago_quad" element={<ImagoQuadIndex />} />6k
 
 						{/* Games Routes */}
 						<Route path="/diy" element={<DIY />} />
