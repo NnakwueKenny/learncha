@@ -23,8 +23,7 @@ const Hero = () => {
                     {/* <div className='absolute top-0 left-0 h-full w-full z-10'><img className='h-full w-full' alt='' src={welcomeVideoBg} /></div> */}
                 </div>
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
-
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='h-96 flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className='w-full h-full overflow-hidden'>
                             <img className='w-full h-full rounded-xl' alt='' src={games}/>
                         </div>
@@ -38,7 +37,7 @@ const Hero = () => {
                             </div>
                         </div>
                     </li>
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='h-96 flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
@@ -54,9 +53,9 @@ const Hero = () => {
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-[850px] md:h-full overflow-hidden bg-center md:py-40 md:rounded-2xl' style={{backgroundImage: `url(${child_4})`}}>
-                            c
+                    <li className='h-96 flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                        <div className='w-full h-full overflow-hidden bg-center md:py-40 md:rounded-2xl' style={{backgroundImage: `url(${child_4})`}}>
+                            
                         </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8 md:py-24'>
@@ -70,7 +69,7 @@ const Hero = () => {
                         </div>
                     </li>
 
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                    <li className='h-96 flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Weather Updates</a></h1>
