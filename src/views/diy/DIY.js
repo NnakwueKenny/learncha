@@ -4,27 +4,13 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthUser from '../climate/AuthUser';
 import DIYHeader from './components/DIYHeader';
-import Loader from './components/Loader'
-
-// {
-//     showChallengeModal && 
-//     <CreateChallengeModal
-//         toggleChallengeModal = {toggleChallengeModal}
-//     />
-// }
-
-// // import images
-// import underground from './images/underground.png';
-
-// // import helper functions
-// import viewChallenge from './functions/viewChallenge';
-// import Loader from './components/Loader';
-
+import Loader from './components/Loader';
 
 const DIY = () => {
 
     const [notifications, setNotifications] = useState([]);
     const [isLoadingNotif, setIsLoadingNotif] = useState(false);
+    const [isLoadingDIY, setIsLoadingDIY] = useState(false);
 
     const getNotifications = (query) => {
         setIsLoadingNotif(true)
@@ -54,15 +40,6 @@ const DIY = () => {
         getNotifications();
     }, [])
 
-    const isActiveUser = AuthUser();
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (!isActiveUser) {
-            console.log('returning: ', isActiveUser);
-            navigate("/climate/login");
-        }
-    });
-
     const [showChallengeModal, setShowChallengeModal] = useState(false);
 
     const toggleChallengeModal = () => {
@@ -91,8 +68,9 @@ const DIY = () => {
     const getDIY = () => {
         const randomQuery = queries[Math.floor(Math.random() * queries.length)];
         console.log(randomQuery);
+        setIsLoadingDIY(true);
         console.log('Fetching  DIY');
-        fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
+        fetch('https://learncha.mybluemix.net/do_it_yourself/youtub',
             {
                 method: 'post',
                 headers: {
@@ -138,7 +116,7 @@ const DIY = () => {
                         </div>
                         <div className={`${showNotif? '': 'hidden'} flex items-center absolute right-0 z-10 mt-2 w-56 md:w-72 lg:w-80 h-56 lg: overflow-auto origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             {
-                                isLoadingNotif?
+                                isLoadingDIY?
                                 <Loader />
                                 :
                                 <div className='p-3'>
