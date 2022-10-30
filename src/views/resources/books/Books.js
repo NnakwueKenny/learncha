@@ -77,7 +77,7 @@ const Books = () => {
                 <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-red-400 font-semibold text-5xl pb-4'>Books</h3>
                 {
                     isLoadingBooks?
-                    <div><Loader /></div>
+                    <div className='flex justify-center items-center h-96'><Loader /></div>
                     :
                     bookCat.map(cat => {
                         console.log(cat)
@@ -86,7 +86,7 @@ const Books = () => {
                                 <div style={{fontFamily: 'Gochi Hand'}} className='shadow uppercase font-semibold py-3 px-2 md:pl-8 mb-3 md:mb-5 text-xl md:text-2xl lg:text-3xl rounded-lg'>
                                     <h3 className={`text-green-500`}>{cat}</h3>
                                 </div>
-                                <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6'>
+                                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'>
                                     {
                                         books.map(book => {
                                             if(book.category === cat) {
@@ -104,7 +104,7 @@ const Books = () => {
                                                         </p>
                                                     </div>
                                                     <div className='flex justify-center'>
-                                                        <a href={book.url} target='_blank' rel='noreferrer' className='border-2 border-dashed rounded-md border-green-500 text-green-500 px-2 py-1'>Download</a>
+                                                        <a href={book.url} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-20 md:w-24 lg:w-28 py-1'>Read</a>
                                                     </div>
                                                 </div>
                                             )}
