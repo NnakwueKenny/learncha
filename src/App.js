@@ -20,11 +20,11 @@ import BookGrade from './views/resources/BookGrade';
 import ClimateIndex from './views/climate/ClimateIndex';
 import ClimateLogin from './views/climate/ClimateLogin';
 import ClimateRegister from './views/climate/ClimateRegister';
-// import PrivateRoute from './views/climate/PrivateRoute';
 import GamesIndex from './views/games/GamesIndex';
 import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
 import ClimateChallenge from './views/climate/ClimateChallenge';
 import SingleChallenge from './views/climate/SingleChallenge';
+import DIY from './views/diy/DIY'
 
 function App() {
 	useEffect(() => {
@@ -68,6 +68,10 @@ function App() {
 						{/* Games Routes */}
 						<Route path="/games" element={<GamesIndex />} />
 						<Route path="/games/imago_quad" element={<ImagoQuadIndex />} />
+
+						{/* Games Routes */}
+						<Route path="/diy" element={<DIY />} />
+
 					</Routes>
 
 				</div>
