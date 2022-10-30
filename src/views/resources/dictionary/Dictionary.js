@@ -13,9 +13,7 @@ const Dictionary = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   const searchWord = () => {
-    console.log(searchValue)
     let isFound = false;
-    console.log('Fetching');
     setIsLoading(true)
     fetch(`https://learncha.mybluemix.net/dictionary/dictionary`,
       {
@@ -34,7 +32,6 @@ const Dictionary = () => {
       return response.json();
     })
     .then(data => {
-      console.log(data.definitions);
       if (isFound) {
         setIsSuccess(true);
         setWord(data.definitions);
@@ -60,7 +57,6 @@ const Dictionary = () => {
       }
       speechSynthesis.speak(speakData);
     } else if (value === 'speakDefinition') {
-      console.log('Hello');
       setIsSpeaking(true)
       if(word.length > 0) {
         speakData.text = word;

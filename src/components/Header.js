@@ -8,7 +8,9 @@ const Header = () => {
   return (
     <header id="header">
       <div className='flex justify-end items-center w-full'>
-        <a className='menu_trigger top-0 m-8 mt-10 sm:m-5 w-full cursor-pointer'></a>
+        <div className='absolute top-0 p-8 pt-10 sm:p-5 w-full flex justify-end items-center'>
+          <a className='menu_trigger relative sm:p-5 cursor-pointer'></a>
+        </div>
       </div>
       <div className="left-part"></div>
       <a id="logo" href="/"></a>
