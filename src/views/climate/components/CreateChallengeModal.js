@@ -153,7 +153,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         {
             isLink?
             <div className='relative w-full bg-white p-5 md:py-6 md:px-8 max-w-2xl rounded-xl'>
-                <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 flex justify-end w-full'><i className='fa fa-times'></i></button>
+                {isLink && <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 absolute top-5 right-8 py-2 px-3'><i className='fa fa-times'></i></button>}
                 <div class="p-6 text-center w-full">
                     <div class='py-3 font-orbitron text-blue-500 text-left'>
                         <span>You have successfully created the challenge...</span>
@@ -192,7 +192,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
             </div>
             :
             <div className='relative w-full bg-white p-5 md:py-6 md:px-8 max-w-2xl rounded-xl'>
-                <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 flex justify-end w-full'><i className='fa fa-times'></i></button>
+                {isLink && <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 absolute top-5 right-8 py-2 px-3'><i className='fa fa-times'></i></button>}
                 <div>
                     {
                         isLoading?

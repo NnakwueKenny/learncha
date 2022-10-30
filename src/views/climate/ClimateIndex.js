@@ -44,7 +44,7 @@ const ClimateIndex = () => {
                     <div id="Clock" className="text-white text-xl font-semibold hidden"></div>
                 </div>
                 <div style={{fontFamily: 'Gochi Hand'}} className="hidden md:flex " id="navbar-sticky">
-                    <ul className="text-4xl flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                    <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 text-lg md:text-xl md:font-medium md:border-0 md:bg-white">
                         <li>
                             <Link data-smooth to="/climate" className="block py-2 pr-4 pl-3 text-red-400 rounded md:bg-transparent md:p-0" aria-current="page">Home</Link>
                         </li>
@@ -78,7 +78,7 @@ const ClimateIndex = () => {
                         {
                             isActiveUser !== null?
                             <div className="py-1" role="none">
-                                <a href="/climate/challenge" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Profile</a>
+                                <Link to="/climate/challenge/profile" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Profile</Link>
                                 <Link to="/climate/challenge" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Challenge</Link>
                             </div>
                             :

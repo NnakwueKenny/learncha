@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleChallenge = () => {
 	const { challenge } = useParams();
@@ -21,7 +21,9 @@ const SingleChallenge = () => {
                 </form>
             </div>
             <div className='flex px-6 py-4 h-full overflow-auto justify-center items-start lg:justify-start gap-4 flex-col lg:flex-row'>
-                Content here
+              <div className='py-2'>
+                <Link to='/climate/challenge' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
+              </div>
             </div>
         </div>
     </section>
