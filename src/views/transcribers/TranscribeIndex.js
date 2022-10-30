@@ -15,7 +15,7 @@ const TranscribeIndex = () => {
         <Intro />
         <div className='w-full flex max-w-5xl'>
             <div class="dvdr"></div>
-            <div className='w-full py-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 p-4 sm:p-6 md:p-8'>
+            <div className='w-full py-5 grid md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 p-4 sm:p-6 md:p-8'>
                 <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
                         <h3>Transcribe Numbers</h3>
