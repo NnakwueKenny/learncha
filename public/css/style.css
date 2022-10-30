@@ -220,7 +220,7 @@ input.white[type=submit]:hover{
 #header {
 	max-width: 1170px;
 	margin: 0 auto 33px;
-	padding: 200px 0 0;
+	padding: 200px 0 0; 
 	position:relative;
 	background: url(../images/bg_header.png) no-repeat 50% 0;
 }

@@ -34,7 +34,7 @@ function App() {
 	const { grade } = useParams();
 
 	return (
-		<div  className='scroll-smooth'>
+		<div className='scroll-smooth'>
 			<div id='wrapper' className='homepage'>
 				<div className='wrapper-holder'>
 					<Header />
