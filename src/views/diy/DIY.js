@@ -70,7 +70,7 @@ const DIY = () => {
         console.log(randomQuery);
         setIsLoadingDIY(true);
         console.log('Fetching  DIY');
-        fetch('https://learncha.mybluemix.net/do_',
+        fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
             {
                 method: 'post',
                 headers: {
@@ -83,7 +83,8 @@ const DIY = () => {
         .then(response => response.json())
         .then(data => {
             setDiyVideos(data.data);
-            console.log(data)
+            console.log(data);
+            setIsLoadingDIY(false);
         })
         .catch(err => console.log(err));
     }
@@ -158,7 +159,7 @@ const DIY = () => {
                                 isLoadingDIY?
                                 <Loader />
                                 :
-                                <div className='grid md:grid-cols-3 gap-8'>
+                                <div className='grid lg:grid-cols-3 gap-8'>
                                 {
                                     diyVideos.map(video => {
                                         console.log(video.id)
@@ -178,7 +179,7 @@ const DIY = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
+                {/*<div className='flex flex-col items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
                     <div className='w-full lg:max-w-3xl h-full py-2 overflow-auto p-3 rounded-xl shadow'>
                         <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>Trending Videos</h3>
                         <div className='border border-gray-400'>
@@ -191,7 +192,7 @@ const DIY = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>*/}
             </div>
         </div>
     </section>
