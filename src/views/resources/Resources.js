@@ -31,10 +31,7 @@ const Resources = () => {
                         <img className='w-full h-64 md:h-80' alt='' src='https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600' />
                     </div>
                     <div className='flex flex-col gap-4 w-full items-center py-4'>
-                        <p className='mb-auto text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus
-                            itaque culpa soluta, optio, deserunt, officia voluptas labore assumenda? Aspernatur, libero. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus itaque culpa soluta ...
-                        </p>
+                        <p className='mb-auto font-bold text-2xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6</p>
                         <Link to='/resources/books'>
                             <a className='btn blue border-2 border-dashed rounded-3xl border-red-400 text-red-500 hover:text-white hover:bg-red-500' >View Books</a>
                         </Link>
@@ -48,10 +45,7 @@ const Resources = () => {
                         <img src='https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=600' />
                     </div>
                     <div className='flex flex-col gap-4 w-full items-center py-4'>
-                        <p className='mb-auto text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus
-                            itaque culpa soluta, optio, deserunt, officia voluptas labore assumenda? Aspernatur, libero. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Neque fugiat quo amet delectus atque eaque non ipsam nihil accusamus itaque culpa soluta ...
-                        </p>
+                        <p className='mb-auto font-bold text-2xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API</p>
                         <Link to='/resources/dictionary' className='btn blue border-2 border-dashed rounded-3xl border-green-400 text-green-500 hover:text-white hover:bg-green-500'>Search</Link>
                     </div>
                 </div>
