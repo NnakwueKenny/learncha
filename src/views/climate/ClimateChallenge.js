@@ -31,7 +31,7 @@ const ClimateChallenge = () => {
             <CreateChallengeModal
                 toggleChallengeModal = {toggleChallengeModal}
             />
-    }
+        }
         <div className='border-b shadow-3xl w-full h-[1px] mb-8 mt-2'></div>
         <div className='relative w-full max-w-6xl border-2 border-dashed rounded-3xl overflow-hidden border-cyan-500'>
             <div className='flex flex-col items-center md:flex-row md:justify-between gap-3 py-4 shadow px-4 md:px-8'>

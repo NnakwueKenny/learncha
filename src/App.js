@@ -24,6 +24,7 @@ import ClimateRegister from './views/climate/ClimateRegister';
 import GamesIndex from './views/games/GamesIndex';
 import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
 import ClimateChallenge from './views/climate/ClimateChallenge';
+import SingleChallenge from './views/climate/SingleChallenge';
 
 function App() {
 	useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
 						<Route path="/climate/login" element={<ClimateLogin />} />
 						<Route path="/climate/register" element={<ClimateRegister />} />
 						<Route path="/climate/challenge" element={<ClimateChallenge />} />
+						<Route path="/climate/challenge/:challenge" element={<SingleChallenge grade={grade}/>} />
 
 						{/* <PrivateRoute path="/climate" component={<ClimateIndex />} /> */}
 

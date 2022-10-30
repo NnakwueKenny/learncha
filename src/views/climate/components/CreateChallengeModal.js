@@ -22,7 +22,8 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
     const [challengeID, setChallengeID] = useState(43);
 
     const [isLoading, setIsLoading] = useState(false);
-    const [isNext, setIsNext] = useState(true);
+    const [isNext, setIsNext] = useState(false);
+    const [isLink, setIsLink] = useState(false);
     const [responseMessage, setResponseMessage] = useState('');
     let [validReq, setValidReq] = useState(false);
 
@@ -76,7 +77,6 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                 setIsNext(true)
                 setIsLoading(false);
                 setChallengeID(data.challenge_link.slice(41));
-                uploadImage(challengeID);
             })
             .catch(err => {
                 console.log(err);
@@ -91,29 +91,26 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
     }
 
     const uploadImage = (ID) => {
-        console.log('Upload Image...');
-        console.log(image)
         const accessToken = JSON.parse(localStorage.getItem('accessToken'));
-        console.log(accessToken);
-        console.log('uploading');
-
-        const formData = new FormData();
-        formData.append('image', image, image.name);
-        console.log(formData);
-        // formData.append('type', 'image/jpeg');
-        console.log(formData)
-        fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
-            {
-                method: 'post',
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
-                body: formData
-            }
-        )
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+        if (image === null) {
+            console.log('No file');
+        } else {
+            console.log('uploading');
+            const formData = new FormData();
+            formData.append('image', image, image.name);
+            fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
+                {
+                    method: 'post',
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                    body: formData
+                }
+            )
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+        }
     }
   return (
     <div style={{fontFamily: 'Gochi Hand'}} className='fixed top-0 flex items-start justify-center items-center py-6 pt-10 px-5 z-50 h-screen w-screen bg-gray-500 bg-opacity-50'>
