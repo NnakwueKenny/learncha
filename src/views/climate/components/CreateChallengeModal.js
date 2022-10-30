@@ -20,16 +20,14 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
     const [challengeID, setChallengeID] = useState(43);
+    const [challengeLink, setChallengeLink] = useState('');
 
     const [isLoading, setIsLoading] = useState(false);
-    const [isNext, setIsNext] = useState(true);
+    const [isNext, setIsNext] = useState(false);
+    const [isLink, setIsLink] = useState(false);
     const [responseMessage, setResponseMessage] = useState('');
     let [validReq, setValidReq] = useState(false);
-
-    const appendImage = (e) => {
-        setImage(e.target.files[0]);
-        console.log(e.target.files[0]);
-    }
+    const [isCopied, setIsCopied] = useState(false);
 
 
     const createChallenge = () => {
@@ -63,7 +61,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                 }, 2000)
             } else {
                 setValidReq(false);
-                setResponseMessage('Invalid credentials!');
+                setResponseMessage('Invalid values!');
                 setTimeout(() => {
                     setResponseMessage('');
                 }, 2000);
@@ -73,10 +71,10 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
             })
             .then(data => {
                 console.log(data);
-                setIsNext(true)
+                setIsNext(true);
                 setIsLoading(false);
+                console.log(data.challenge_link)
                 setChallengeID(data.challenge_link.slice(41));
-                uploadImage(challengeID);
             })
             .catch(err => {
                 console.log(err);
@@ -90,35 +88,111 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
         }
     }
 
-    const uploadImage = (ID) => {
-        console.log('Upload Image...');
-        console.log(image)
-        const accessToken = JSON.parse(localStorage.getItem('accessToken'));
-        console.log(accessToken);
-        console.log('uploading');
+    const appendImage = (e) => {
+        setImage(e.target.files[0]);
+        console.log(e.target.files[0]);
+    }
 
-        const formData = new FormData();
-        formData.append('image', image, image.name);
-        console.log(formData);
-        // formData.append('type', 'image/jpeg');
-        console.log(formData)
-        fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
-            {
-                method: 'post',
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
-                body: formData
-            }
-        )
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+    const uploadImage = (ID) => {
+        const accessToken = JSON.parse(localStorage.getItem('accessToken'));
+        if (image === null) {
+            console.log('No file');
+        } else {
+            console.log('uploading');
+            setIsLoading(true);
+            const formData = new FormData();
+            formData.append('image', image, image.name);
+            fetch(`https://learncha.mybluemix.net/challenge/${challengeID}/progress`,
+                {
+                    method: 'post',
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                    body: formData
+                }
+            )
+            .then(response => {
+                if (response.status === 200) {
+                    setValidReq(true);
+                    setResponseMessage('Picture uploaded successfully!');
+                    setTimeout(() => {
+                        setResponseMessage('');
+                    }, 2000)
+                } else {
+                    setValidReq(false);
+                    setResponseMessage('Picture upload failed!');
+                    setTimeout(() => {
+                        setResponseMessage('');
+                    }, 2000);
+                    setIsLoading(false);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                setIsLink(true);
+                setIsLoading(false);
+                setChallengeLink(`${window.location.href}/challenge_ID=${challengeID}`);
+                console.log(data);
+            })
+            .catch(err => console.log(err));
+        }
+    }
+
+    const copyLink = () => {
+        console.log('Link copied!');
+        setIsCopied(prevValue => !prevValue);
+        setTimeout(() => {
+            setIsCopied(prevValue => !prevValue);
+        }, 2000)
+        navigator.clipboard.writeText(challengeLink);
+        console.log(window.location.href)
     }
   return (
     <div style={{fontFamily: 'Gochi Hand'}} className='fixed top-0 flex items-start justify-center items-center py-6 pt-10 px-5 z-50 h-screen w-screen bg-gray-500 bg-opacity-50'>
-        <div className='relative w-full bg-white p-5 md:py-6 md:px-8 max-w-2xl rounded-xl'>
-            {
+        {
+            isLink?
+            <div className='relative w-full bg-white p-5 md:py-6 md:px-8 max-w-2xl rounded-xl'>
+                <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 flex justify-end w-full'><i className='fa fa-times'></i></button>
+                <div class="p-6 text-center w-full">
+                    <div class='py-3 font-orbitron text-blue-500 text-left'>
+                        <span>You have successfully created the challenge...</span>
+                    </div>
+                    <div class='flex border rounded-lg overflow-hidden'>
+                        <span class='modal-challenge-link flex items-center w-full px-2 md:px-4 text-gray-500 font-semibold truncate'>{challengeLink}</span>
+                        <button onClick={() => copyLink()} type='button' class='h-12 px-4 md:px-5 bg-gray-100'>
+                            <span class='sr-only'>Clipboard button</span>
+                            {
+                                isCopied?
+                                <span class='copy-confirm text-xs font-semibold text-green-500'>Copied!</span>
+                                :
+                                <span class='copy-icon text-blue-600 text-lg'><i class='fa fa-clipboard'></i></span>
+                        }
+                        </button>
+                    </div>
+                    <div class='py-3 text-gray-500 text-left'>
+                        <span>Copy the link above and share with your friends to join the challenge...</span>
+                    </div>
+                    <p class='text-left text-gray-600 py-1 italic'>Or share on social media:</p>
+                    <div class='rounded-lg shadow py-4 px-3 flex gap-2 md:gap-3'>
+                        <button type='button' onclick="shareLink('facebook')">
+                            <span class='sr-only'>Share to facebook button</span>
+                            <span class='text-cyan-700 text-3xl md:text-4xl'><i class='fa-brands fa-facebook'></i></span>
+                        </button>
+                        <button type='button' onclick="shareLink('twitter')">
+                            <span class='sr-only'>Share to twitter button</span>
+                            <span class='text-blue-500 text-3xl md:text-4xl'><i class='fa-brands fa-twitter'></i></span>
+                        </button>
+                        <button type='button' onclick="shareLink('whatsapp')">
+                            <span class='sr-only'>Share to whatsapp button</span>
+                            <span class='text-green-600 text-3xl md:text-4xl'><i class='fa-brands fa-whatsapp'></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            :
+            <div className='relative w-full bg-white p-5 md:py-6 md:px-8 max-w-2xl rounded-xl'>
+                <button onClick={() => {isLink? toggleChallengeModal(): createChallenge()}} className='text-xl hover:text-red-500 flex justify-end w-full'><i className='fa fa-times'></i></button>
                 <div>
                     {
                         isLoading?
@@ -179,21 +253,21 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
                         </form>
                     }
                 </div>
-            }
-            {
-                responseMessage &&
-                <div className='pb-3 pl-2 font-semibold text-base italic'>
-                    <span className={`${validReq? 'text-green-500': 'text-red-400'}`}>{responseMessage}</span>
-                </div>
-            }
-            <div className='flex justify-between px-2 font-sans font-semibold'>
                 {
-                    !isNext &&
-                    <button disabled={`${isLoading? 'disabled': ''}`} onClick={() => { !isLoading? toggleChallengeModal(): console.log('Hello')}} className={`text-white w-20 md:w-24 py-2 rounded-lg ${isLoading? 'bg-gray-400': 'bg-red-400 hover:bg-red-500'}`}>Cancel</button>
+                    responseMessage &&
+                    <div className='pb-3 pl-2 font-semibold text-base italic'>
+                        <span className={`${validReq? 'text-green-500': 'text-red-400'}`}>{responseMessage}</span>
+                    </div>
                 }
-                <button disabled={`${isLoading? 'disabled': ''}`} onClick={isNext? uploadImage: createChallenge} className='bg-green-500 text-white w-20 md:w-24 py-2 rounded-lg hover:bg-green-600'>{isNext? 'Upload': 'Next'}</button>
+                <div className='flex justify-between px-2 font-sans font-semibold'>
+                    {
+                        !isNext &&
+                        <button disabled={`${isLoading? 'disabled': ''}`} onClick={() => { !isLoading? toggleChallengeModal(): console.log('Hello')}} className={`text-white w-20 md:w-24 py-2 rounded-lg ${isLoading? 'bg-gray-400': 'bg-red-400 hover:bg-red-500'}`}>Cancel</button>
+                    }
+                    <button disabled={`${isLoading? 'disabled': ''}`} onClick={isNext? uploadImage: createChallenge} className='bg-green-500 text-white w-20 md:w-24 py-2 rounded-lg hover:bg-green-600'>{isNext? 'Upload': 'Next'}</button>
+                </div>
             </div>
-        </div>
+        }
     </div>
   )
 }
