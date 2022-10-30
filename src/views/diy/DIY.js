@@ -63,6 +63,7 @@ const DIY = () => {
     });
 
     const [showChallengeModal, setShowChallengeModal] = useState(false);
+
     const toggleChallengeModal = () => {
         console.log('Modal toggled')
         setShowChallengeModal(prevValue => !prevValue);
@@ -74,6 +75,43 @@ const DIY = () => {
         console.log('Navugation toggled...');
         setShowNotif(prevValue => !prevValue);
     }
+
+    const queries = [
+        'DIY weather for kids',
+        'DIY climate change for kids',
+        'science for kids',
+        'maths for kids weather forecast',
+        'abc for kids and climate challenge',
+        'numbers for kids and weather',
+        'alphabets for kids and climate'
+    ]
+    const [diyVideos, setDiyVideos] = useState([]);
+
+    const getDIY = () => {
+        const randomQuery = queries[Math.floor(Math.random() * queries.length)];
+        console.log(randomQuery);
+        console.log('Fetching  DIY');
+        fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
+            {
+                method: 'post',
+                headers: {
+                    accept: 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `form=${randomQuery}`
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            setDiyVideos(data.data);
+            console.log(data)
+        })
+        .catch(err => console.log(err));
+    }
+
+    useEffect(() => {
+        getDIY();
+    }, [])
 
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
@@ -126,72 +164,37 @@ const DIY = () => {
                         <label>Filter</label>
                         <select className='w-32 py-1 rounded-lg pl-2'>
                             <option className='py-1'>Climate</option>
-                            <option className='py-1'>Climate</option>
-                            <option className='py-1'>Climate</option>
-                            <option className='py-1'>Climate</option>
+                            <option className='py-1'>Weather</option>
+                            <option className='py-1'>Mathematics</option>
+                            <option className='py-1'>Science</option>
                         </select>
                     </div>
                 </form>
             </div>
-            <div className='flex px-6 h-full overflow-auto justify-center items-start lg:justify-start gap-6 md:gap-10 lg:gap-16 flex-col lg:flex-row'>
+            <div className='flex px-6 h-full overflow-auto justify-center items-start lg:justify-start gap-6 flex-col'>
                 <div className='flex h-full overflow-y-auto flex-col w-full overflow-auto py-4'>
-                    
                     <div className='flex flex-col gap-4 w-full overflow-auto'>
                         <div className='font-sans border rounded-xl shadow p-4 md:px-6 lg:px-8 lg:py-6'>
                             <h2 className='font-semibold text-2xl pb-4'>Challenge Categories</h2>
                             <p className='pb-3 text-base'>There are many categories of the challenges that you can join, create and/or invite family, friends, colleauges to partake of
                             in order to '<span className='font-semibold text-cyan-500 italic'>make the world a better place for us to live in</span>':</p>
                             <div className='grid md:grid-cols-2 xl:grid-cols-3 p-4 gap-5 xl:gap-8'>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Protect the oceans</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/5486961/pexels-photo-5486961.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Severe Fire</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Carbon Emission</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/709563/pexels-photo-709563.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Water Scarcity</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/1739855/pexels-photo-1739855.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Flooding</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/3482724/pexels-photo-3482724.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Declining Biodiversity</span></div>
-                                </div>
-                                <div className='shadow rounded-xl overflow-auto cursor-pointer'>
-                                    <div>
-                                        <img alt='protect the oceans' src='https://images.pexels.com/photos/3345891/pexels-photo-3345891.jpeg?auto=compress&cs=tinysrgb&w=600'/>
-                                    </div>
-                                    <div className='text-center py-2  text-red-600 font-semibold'><span>Intense Drought</span></div>
-                                </div>
+                                <div></div>
                             </div>
-                            <p className='text-base font-semibold'>Create a challenge today by clicking the button below</p>
-                            <button onClick={toggleChallengeModal} className='inline-block text-base font-semibold px-3 py-2 my-3 border border-dashed border-cyan-400 rounded-lg text-cyan-500 hover:text-white hover:bg-cyan-500'>Create Challenge</button>
-                        </div>
-                        <div className='font-sans border rounded-xl shadow p-4'>
-                            <h2 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-2xl pb-4 pt-2'>All Challenges</h2>
-                            <div className='flex justify-center pt-4 pb-2'>
-                                <button className='border-2 border-dashed border-cyan-400 rounded-xl py-1 md:py-2 w-28 lg:w-32 text-cyan-500 hover:text-white hover:bg-cyan-500'>View All <span className='inline-flex animate-bounce'><i className='fa fa-chevron-down'></i></span></button>
+                            <div className='grid md:grid-cols-3 gap-8'>
+                                {
+                                    diyVideos.map(video => {
+                                        return (
+                                            <div className="">
+                                                <iframe height='315' src={`https://www.youtube.com/embed/${video.id}`} className="w-full rounded-lg"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
@@ -200,13 +203,13 @@ const DIY = () => {
                     <div className='w-full lg:max-w-3xl h-full py-2 overflow-auto p-3 rounded-xl shadow'>
                         <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>Trending Videos</h3>
                         <div className='border border-gray-400'>
-                        <div className="" data-aos="zoom-in">
-                            <iframe height="315" src="https://www.youtube.com/embed/JgvDuLcL4yQ" className="w-full rounded-lg"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                            </iframe>
-                        </div>
+                            <div className="" data-aos="zoom-in">
+                                <iframe height="315" src="https://www.youtube.com/embed/JgvDuLcL4yQ" className="w-full rounded-lg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
