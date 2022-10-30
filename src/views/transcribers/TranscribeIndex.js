@@ -5,7 +5,7 @@ import MainHead from './components/MainHead';
 import TranscribeNumber from './TranscribeNumbers';
 import word from '../../images/word.jpg';
 import nums from '../../images/nums.jpg';
-import nums from '../../images/alpha.jpg';
+import alpha from '../../images/alpha.jpg';
 
 const TranscribeIndex = () => {
   return (
