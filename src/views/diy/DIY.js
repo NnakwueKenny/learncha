@@ -14,7 +14,6 @@ const DIY = () => {
 
     const getNotifications = (query) => {
         setIsLoadingNotif(true)
-        console.log('Fetching Notification')
         fetch('https://learncha.mybluemix.net/users/notification',
           {
             headers: {
@@ -25,7 +24,6 @@ const DIY = () => {
         )
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             const createNotifier = data.notifier;
             const joinNotifier = data.notifier_join;
             const allNotifications = [];
@@ -43,14 +41,12 @@ const DIY = () => {
     const [showChallengeModal, setShowChallengeModal] = useState(false);
 
     const toggleChallengeModal = () => {
-        console.log('Modal toggled')
         setShowChallengeModal(prevValue => !prevValue);
     };
 
     const [showNotif, setShowNotif] = useState(false)
 
     const toggleShowNotif = () => {
-        console.log('Navugation toggled...');
         setShowNotif(prevValue => !prevValue);
     }
 
@@ -67,26 +63,23 @@ const DIY = () => {
 
     const getDIY = () => {
         const randomQuery = queries[Math.floor(Math.random() * queries.length)];
-        console.log(randomQuery);
         setIsLoadingDIY(true);
-        console.log('Fetching  DIY');
-        fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
-            {
-                method: 'post',
-                headers: {
-                    accept: 'application/json',
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: `form=${randomQuery}`
-            }
-        )
-        .then(response => response.json())
-        .then(data => {
-            setDiyVideos(data.data);
-            console.log(data);
-            setIsLoadingDIY(false);
-        })
-        .catch(err => console.log(err));
+        // fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
+        //     {
+        //         method: 'post',
+        //         headers: {
+        //             accept: 'application/json',
+        //             'Content-Type': 'application/x-www-form-urlencoded'
+        //         },
+        //         body: `form=${randomQuery}`
+        //     }
+        // )
+        // .then(response => response.json())
+        // .then(data => {
+        //     setDiyVideos(data.data);
+        //     setIsLoadingDIY(false);
+        // })
+        // .catch(err => console.log(err));
     }
 
     useEffect(() => {
@@ -162,7 +155,6 @@ const DIY = () => {
                                 <div className='grid lg:grid-cols-3 gap-8'>
                                 {
                                     diyVideos.map(video => {
-                                        console.log(video.id)
                                         return (
                                             <div className="">
                                                 <iframe height='315' src={`https://www.youtube.com/embed/${video.id}`} className="w-full rounded-lg"
