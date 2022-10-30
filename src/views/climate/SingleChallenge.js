@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 
 const SingleChallenge = () => {
 	const { challenge } = useParams();
-  console.log(challenge)
+  const currentChallenge = challenge.split('=')[1];
+  console.log(currentChallenge);
   
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
