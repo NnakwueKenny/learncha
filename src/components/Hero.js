@@ -81,9 +81,6 @@ const Hero = () => {
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-96 overflow-hidden'>
-                            <img className='w-full h-full rounded-xl' alt='' src={games}/>
-                        </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><Link href="/games" className='animate animate-pulse text-red-500'>Games for kids</Link></h1>
@@ -93,8 +90,14 @@ const Hero = () => {
                                 <a className="btn red" ><Link to='/games'>Learn more</Link></a>
                             </div>
                         </div>
+                        <div className='w-full h-96 overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' alt='' src={games}/>
+                        </div>
                     </li>
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                        <div className='w-full h-96 overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' src={girl}/>
+                        </div>
                         <div className="h-96 w-full">
                             <div className='flex flex-col items-center justify-center h-96 w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
@@ -105,15 +108,9 @@ const Hero = () => {
                                 <a className="btn red"><Link to='/resources'>Learn more</Link></a>
                             </div>
                         </div>
-                        <div className='w-full h-96 overflow-hidden'>
-                        <img className='w-full h-full rounded-xl' src={girl}/>
-                        </div>
                     </li>
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-96 overflow-hidden'>
-                            <img className='w-full h-full rounded-xl' alt='' src={children}/>
-                        </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><Link href="/games" className='animate animate-pulse text-red-500'>Climate Challenge</Link></h1>
@@ -124,9 +121,15 @@ const Hero = () => {
                                 <a className="btn red"><Link to='/climate'>Learn more</Link></a>
                             </div>
                         </div>
+                        <div className='w-full h-96 overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' alt='' src={children}/>
+                        </div>
                     </li>
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
+                        <div className='w-full h-full overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' src={cartoonWeather}/>
+                        </div>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Weather Updates</a></h1>
@@ -136,9 +139,6 @@ const Hero = () => {
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
-                        </div>
-                        <div className='w-full h-full overflow-hidden'>
-                            <img className='w-full h-full rounded-xl' src={cartoonWeather}/>
                         </div>
                     </li>
                     
