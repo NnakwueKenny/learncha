@@ -95,7 +95,7 @@ const Hero = () => {
                         </div>
                     </li>
                     <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-96 overflow-hidden'>
+                        <div className='w-full md:h-96 overflow-hidden'>
                             <img className='w-full h-full rounded-xl' src={girl}/>
                         </div>
                         <div className="h-96 w-full">
