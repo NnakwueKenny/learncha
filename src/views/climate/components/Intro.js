@@ -5,8 +5,7 @@ const Intro = () => {
     <>
       <div className='w-full max-w-5xl px-5 pt-4'>
           <h2 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-2xl text-center'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco (...)
+          All work and no play makes jack a dull boy in school, in learncha you play to learn at the sametime. Have fun playing our exciting STEM Games.
           </h2>
       </div>
     </>
