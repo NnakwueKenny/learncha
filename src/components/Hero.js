@@ -39,7 +39,7 @@ const Hero = () => {
                         </div>
                     </li>
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className="h-full w-full">
+                        <div className="h-96 w-full">
                             <div className='flex flex-col items-center justify-center h-96 w-full p-8'>
                                 <h1><a href="#" className='animate animate-pulse text-red-500'>Education for kids</a></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
