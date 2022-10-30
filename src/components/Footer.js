@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = ({id}) => {
   return (
-    <footer className="w-full h-80 bg-[#85d8e5]">
+    <footer className="w-full bg-[#85d8e5]">
         <div className="">
             <div className="footer-frame">
                 <div className="text-white">
@@ -20,9 +20,6 @@ const Footer = ({id}) => {
                                 <li><a className="twitter" href="#">Twitter</a></li>
                                 <li><a className="pinterest" href="#">Pinterest</a></li>
                             </ul>
-                        </div>
-                        <div className="flex rounded-lg overflow-hidden bg-red-500">
-                            <iframe className='w-96 h-64' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.6476399563853!2d8.558341914296118!3d11.998865638721442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae816ff2a1a097%3A0x49932328c5acdfbf!2s60%20Ahmadu%20Bello%2C%20GRA%20700213%2C%20Kano!5e0!3m2!1sen!2sng!4v1667044816616!5m2!1sen!2sng" style={{border: '0'}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
