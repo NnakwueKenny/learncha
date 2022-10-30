@@ -95,7 +95,7 @@ const Books = () => {
                                                 return (
                                                 <div className='w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl flex flex-col gap-1 px-2 md:px-4 py-3 md:py-4 rounded-xl shadow'>
                                                     <div className='w-full bg-red-400'>
-                                                        <img className='w-full h-full' alt='' src='https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                                                        <img className='w-full h-   full' alt='' src={`${book.thumbnail[0]? book.thumbnail[0].thumbnail_url: 'https://images.pexels.com/photos/3747576/pexels-photo-3747576.jpeg?auto=compress&cs=tinysrgb&w=600'}`} />
                                                     </div>
                                                     <div className='flex flex-col w-full py-1 px-2'>
                                                         <p><span style={{fontFamily: 'Gochi Hand'}} className='text-green-500 text-lg'>Title</span> : <span className='capitalize'>{book.name}</span></p>

@@ -32,7 +32,7 @@ const DIY = () => {
             createNotifier.forEach(notifier => allNotifications.push(notifier.message));
             joinNotifier.forEach(notifier => allNotifications.push(notifier.message));
             setNotifications(allNotifications);
-            setIsLoadingNotif(false)
+            setIsLoadingNotif(false);
         })
     }
 
@@ -70,7 +70,7 @@ const DIY = () => {
         console.log(randomQuery);
         setIsLoadingDIY(true);
         console.log('Fetching  DIY');
-        fetch('https://learncha.mybluemix.net/do_it_yourself/youtub',
+        fetch('https://learncha.mybluemix.net/do_',
             {
                 method: 'post',
                 headers: {
@@ -111,12 +111,12 @@ const DIY = () => {
                         <div>
                             <button onClick={() => toggleShowNotif()} type="button" className="relative inline-flex w-12 h-12 justify-center items-center rounded-full overflow-hidden border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button">
                                 <span className='text-xl'><i className='fa fa-bell'></i></span>
-                                <span className='absolute flex justify-center items-center rounded-full top-1 right-2 text-xs text-white bg-red-500 w-5 h-5'>{notifications.length}</span>
+                                <span className={`absolute flex justify-center items-center rounded-full top-1 right-2 text-xs text-white bg-red-500 w-5 h-5`}>{notifications.length}</span>
                             </button>
                         </div>
                         <div className={`${showNotif? '': 'hidden'} flex items-center absolute right-0 z-10 mt-2 w-56 md:w-72 lg:w-80 h-56 lg: overflow-auto origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             {
-                                isLoadingDIY?
+                                isLoadingNotif?
                                 <Loader />
                                 :
                                 <div className='p-3'>
@@ -154,16 +154,14 @@ const DIY = () => {
                 <div className='flex h-full overflow-y-auto flex-col w-full overflow-auto py-4'>
                     <div className='flex flex-col gap-4 w-full overflow-auto'>
                         <div className='font-sans border rounded-xl shadow p-4 md:px-6 lg:px-8 lg:py-6'>
-                            <h2 className='font-semibold text-2xl pb-4'>Challenge Categories</h2>
-                            <p className='pb-3 text-base'>There are many categories of the challenges that you can join, create and/or invite family, friends, colleauges to partake of
-                            in order to '<span className='font-semibold text-cyan-500 italic'>make the world a better place for us to live in</span>':</p>
-                            <div className='grid md:grid-cols-2 xl:grid-cols-3 p-4 gap-5 xl:gap-8'>
-                                <div></div>
-                            </div>
-                            <div className='grid md:grid-cols-3 gap-8'>
+                            {
+                                isLoadingDIY?
+                                <Loader />
+                                :
+                                <div className='grid md:grid-cols-3 gap-8'>
                                 {
                                     diyVideos.map(video => {
-                                        HTMLFormControlsCollection.log(video.id)
+                                        console.log(video.id)
                                         return (
                                             <div className="">
                                                 <iframe height='315' src={`https://www.youtube.com/embed/${video.id}`} className="w-full rounded-lg"
@@ -176,6 +174,7 @@ const DIY = () => {
                                     })
                                 }
                             </div>
+                            }
                         </div>
                     </div>
                 </div>
