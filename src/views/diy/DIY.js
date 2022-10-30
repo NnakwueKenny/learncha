@@ -2,21 +2,27 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import AuthUser from './AuthUser';
-import AllChallenges from './components/AllChallenges';
-import ClimateHeader from './components/ClimateHeader';
-import CreateChallengeModal from './components/CreateChallengeModal';
-import TrendingChallenge from './components/TrendingChallenge';
+import AuthUser from '../climate/AuthUser';
+import DIYHeader from './components/DIYHeader';
+import Loader from './components/Loader'
 
-// import images
-import underground from './images/underground.png';
+// {
+//     showChallengeModal && 
+//     <CreateChallengeModal
+//         toggleChallengeModal = {toggleChallengeModal}
+//     />
+// }
 
-// import helper functions
-import viewChallenge from './functions/viewChallenge';
-import Loader from './components/Loader';
+// // import images
+// import underground from './images/underground.png';
+
+// // import helper functions
+// import viewChallenge from './functions/viewChallenge';
+// import Loader from './components/Loader';
 
 
-const ClimateChallenge = () => {
+const DIY = () => {
+
     const [notifications, setNotifications] = useState([]);
     const [isLoadingNotif, setIsLoadingNotif] = useState(false);
 
@@ -40,7 +46,6 @@ const ClimateChallenge = () => {
             createNotifier.forEach(notifier => allNotifications.push(notifier.message));
             joinNotifier.forEach(notifier => allNotifications.push(notifier.message));
             setNotifications(allNotifications);
-            setIsLoadingNotif(false);
         })
     }
 
@@ -72,17 +77,11 @@ const ClimateChallenge = () => {
 
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
-        <ClimateHeader title='Climate'/>
-        {
-            showChallengeModal && 
-            <CreateChallengeModal
-                toggleChallengeModal = {toggleChallengeModal}
-            />
-        }
+        <DIYHeader title='DIY'/>
         <div className='border-b shadow-3xl w-full h-[1px] mb-8 mt-2'></div>
         <div className='relative w-full max-w-7xl border-2 border-dashed rounded-3xl overflow-hidden border-cyan-500'>
             <div className='flex flex-col items-center md:flex-row md:justify-between gap-3 py-4 shadow px-4 md:px-8'>
-                <div style={{fontFamily: 'Gochi Hand'}} className='text-cyan-500 font-semibold text-3xl text-center md:text-start'>Climate Challenge</div>
+                <div style={{fontFamily: 'Gochi Hand'}} className='text-cyan-500 font-semibold text-3xl text-center md:text-start'>DO IT YOURSELF</div>
                 <form className='w-full flex gap-4 max-w-md md:max-w-sm'>
                     <div className='relative flex w-full'>
                         <div className='w-full flex justify-center'>
@@ -98,12 +97,10 @@ const ClimateChallenge = () => {
                                 <span className='absolute flex justify-center items-center rounded-full top-1 right-2 text-xs text-white bg-red-500 w-5 h-5'>{notifications.length}</span>
                             </button>
                         </div>
-                        <div className={`${showNotif? '': 'hidden'} absolute right-0 z-10 mt-2 w-56 md:w-72 lg:w-80 h-56 lg: overflow-auto origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div className={`${showNotif? '': 'hidden'} flex items-center absolute right-0 z-10 mt-2 w-56 md:w-72 lg:w-80 h-56 lg: overflow-auto origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             {
                                 isLoadingNotif?
-                                <div className='flex items-center h-full'>
-                                    <Loader />
-                                </div>
+                                <Loader />
                                 :
                                 <div className='p-3'>
                                     {
@@ -122,25 +119,24 @@ const ClimateChallenge = () => {
                     </div>
                 </form>
             </div>
+            <div className='flex justify-center pt-4 pb-2 px-6'>
+                <form className='w-full flex justify-between'>
+                    <Link to='/' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
+                    <div className='flex items-center gap-1'>
+                        <label>Filter</label>
+                        <select className='w-32 py-1 rounded-lg pl-2'>
+                            <option className='py-1'>Climate</option>
+                            <option className='py-1'>Climate</option>
+                            <option className='py-1'>Climate</option>
+                            <option className='py-1'>Climate</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
             <div className='flex px-6 h-full overflow-auto justify-center items-start lg:justify-start gap-6 md:gap-10 lg:gap-16 flex-col lg:flex-row'>
                 <div className='flex h-full overflow-y-auto flex-col w-full overflow-auto py-4'>
-                    <div className='py-2'>
-                        <Link to='/climate' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
-                    </div>
+                    
                     <div className='flex flex-col gap-4 w-full overflow-auto'>
-                        <div className='font-sans border rounded-xl shadow p-4 md:px-6 lg:px-8 lg:py-6'>
-                            <h2 className='font-semibold text-2xl pb-4'>About The Challenge</h2>
-                            <p className='text-justify pb-2'>
-                                Cities and local communities around the world have been focusing on solving their own climate problems.
-                                They are working to build flood defenses, plan for heat waves and higher temperatures, install better-draining
-                                pavements to deal with floods and stormwater, and improve water storage and use.
-                            </p>
-                            <p className='text-justify'>
-                                And the best way to achieve this is by joining forces together because 'Together we can make the world a better place'.
-                                This platform aims at bringing people together, to tackle the various issues faced by our climate today, in order to mitigate
-                                obvious threats that these issues pose to us.
-                            </p>
-                        </div>
                         <div className='font-sans border rounded-xl shadow p-4 md:px-6 lg:px-8 lg:py-6'>
                             <h2 className='font-semibold text-2xl pb-4'>Challenge Categories</h2>
                             <p className='pb-3 text-base'>There are many categories of the challenges that you can join, create and/or invite family, friends, colleauges to partake of
@@ -194,17 +190,24 @@ const ClimateChallenge = () => {
                         </div>
                         <div className='font-sans border rounded-xl shadow p-4'>
                             <h2 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-2xl pb-4 pt-2'>All Challenges</h2>
-                            <AllChallenges />
                             <div className='flex justify-center pt-4 pb-2'>
                                 <button className='border-2 border-dashed border-cyan-400 rounded-xl py-1 md:py-2 w-28 lg:w-32 text-cyan-500 hover:text-white hover:bg-cyan-500'>View All <span className='inline-flex animate-bounce'><i className='fa fa-chevron-down'></i></span></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='flex items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
+                <div className='flex flex-col items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
                     <div className='w-full lg:max-w-3xl h-full py-2 overflow-auto p-3 rounded-xl shadow'>
-                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>Trending Challenges</h3>
-                        <TrendingChallenge />
+                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>Trending Videos</h3>
+                        <div className='border border-gray-400'>
+                        <div className="" data-aos="zoom-in">
+                            <iframe height="315" src="https://www.youtube.com/embed/JgvDuLcL4yQ" className="w-full rounded-lg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            </iframe>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,4 +216,4 @@ const ClimateChallenge = () => {
   )
 }
 
-export default ClimateChallenge
+export default DIY;
