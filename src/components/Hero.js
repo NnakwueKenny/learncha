@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import child_1 from '../images/child_1.png';
-import child_2 from '../images/child_2.png';
+import girl from '../images/girl.jpg';
 import child_3 from '../images/child_3.png';
 import child_4 from '../images/homeclimate.jpg';
 import games from '../images/games.jpg';
@@ -14,6 +14,10 @@ import last from '../images/last.jpg';
 import slide1 from '../images/slide1.jpg';
 import slide2 from '../images/slide2.jpg';
 import slide3 from '../images/slide3.jpg';
+import children from '../images/children.jpg';
+import second1 from '../images/second1.jpg';
+import second2 from '../images/second2.jpg';
+import second3 from '../images/second3.jpg';
 
 const Hero = () => {
   return (
@@ -27,9 +31,9 @@ const Hero = () => {
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" className="active" aria-label="Slide 3" ></button>
                     </div>
                     <div className="carousel-inner relative w-full overflow-hidden">
-                        <div className="h-full max-h-[400px] carousel-item active relative float-left w-full">
+                        <div className="h-full mdmax-h-[400px] carousel-item active relative float-left w-full">
                             <img src={slide1} className="block w-full object-cover hidden lg:block" alt="..." />
-                            <img src={slide1} className="block w-full h-full object-cover lg:hidden" alt="..." />
+                            <img src={second1} className="block w-full h-full object-cover lg:hidden" alt="..." />
                             <div className="hidden flex flex-col lg:flex-row lg:px-8 carousel-caption absolute text-green-700 left-0 top-0 bg-gray-100 bg-opacity-25 w-full">
                                 <div className="w-full lg:w-2/3 h-full flex flex-col lg:flex-row">
                                     <div className="flex flex-col items-center gap-y-4 md:gap-y-6 p-2">
@@ -40,7 +44,7 @@ const Hero = () => {
                         </div>
                         <div className="h-full max-h-[400px] carousel-item relative float-left w-full">
                             <img src={slide2} className="block w-full object-cover hidden lg:block" alt="..." />
-                            <img src={slide2} className="block w-full h-full object-cover lg:hidden" alt="..." />
+                            <img src={second3} className="block w-full h-full object-cover lg:hidden" alt="..." />
                             <div className="hidden flex flex-col lg:flex-row lg:px-8 carousel-caption absolute text-green-500 left-0 top-0 bg-gray-100 bg-opacity-25 w-full">
                                 <div className="w-full lg:w-2/3 h-full flex flex-col lg:flex-row">
                                     <div className="flex flex-col items-center gap-y-4 md:gap-y-6 p-2">
@@ -77,7 +81,7 @@ const Hero = () => {
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-full overflow-hidden'>
+                        <div className='w-full h-96 overflow-hidden'>
                             <img className='w-full h-full rounded-xl' alt='' src={games}/>
                         </div>
                         <div className="h-full w-full">
@@ -102,17 +106,17 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='w-full h-96 overflow-hidden'>
-                        <img className='w-full h-full md:rounded-l-full rounded-t-xl' src={child_2}/>
+                        <img className='w-full h-full rounded-xl' src={girl}/>
                         </div>
                     </li>
 
                     <li className='flex flex-col md:flex-row border-2 border-red-400 p-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full overflow-hidden bg-center md:py-40 md:rounded-2xl' style={{backgroundImage: `url(${child_4})`}}>
-                            
+                        <div className='w-full h-96 overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' alt='' src={children}/>
                         </div>
                         <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full p-8 md:py-24'>
-                                <h1><a href="#" className='animate animate-pulse text-red-500'>Climate Challenge</a></h1>
+                            <div className='flex flex-col items-center justify-center h-full w-full p-8'>
+                                <h1><Link href="/games" className='animate animate-pulse text-red-500'>Climate Challenge</Link></h1>
                                 <p className='text-white text-gray-600 text-center mb-6'>
                                 Discouraging your child to spend their screen time playing educational
                                 Video games for kids in various subjects but can also help transform them into lifelong learners
