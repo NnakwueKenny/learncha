@@ -103,8 +103,9 @@ const Books = () => {
                                                             <span className='pl-1 capitalize'>{book.book_isbn.slice(0,20)}</span>
                                                         </p>
                                                     </div>
-                                                    <div className='flex justify-center'>
-                                                        <a href={book.url} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-20 md:w-24 lg:w-28 py-1'>Read</a>
+                                                    <div className='flex justify-center gap-4 md:gap-8'>
+                                                        <a href={book.url} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Read</a>
+                                                        <button onClick={downloadFile(book.url, book.name)} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Download</button>
                                                     </div>
                                                 </div>
                                             )}
