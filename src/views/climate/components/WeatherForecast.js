@@ -21,6 +21,7 @@ const WeatherForecast = () => {
     const [ month, setMonth ] = useState('');
     const [ todayDate, setTodayDate ] = useState('');
     const [ narrative, setNarrative] = useState('');
+    const [ search, setSearch] = useState('');
 
     // const currentlocation = window.navigator.geolocation.getCurrentPosition(console.log, console.error);
 
@@ -108,14 +109,15 @@ const WeatherForecast = () => {
                 setMonth(date.toLocaleString('en-US', { month: 'long' }));
                 setNarrative(todayWeather[0].narrative);
             })
-        } else if(query === '') {
-            if (navigator.geolocation) {
-                getGeoLocation();
-            } else {
-                alert('Location is required! Reload Page to activate');
-                return false;
-            }
-        }
+        } 
+        // else if(query === '') {
+        //     if (navigator.geolocation) {
+        //         getGeoLocation();
+        //     } else {
+        //         alert('Location is required! Reload Page to activate');
+        //         return false;
+        //     }
+        // }
     }
 
     useEffect(() => {
@@ -138,8 +140,8 @@ const WeatherForecast = () => {
                         <form className='flex justify-center w-full'>
                             <div className='relative w-full max-w-md flex justify-end rounded-2xl overflow-hidden'>
                                 <label className='sr-only'>Search Location</label>
-                                <button className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
-                                <input className='rounded w-full text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Search Location' />
+                                <button onClick={() => getWeather(search)} className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
+                                <input onChange={(e) => setSearch(e.target.value)} className='rounded w-full text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Search Location' />
                             </div>
                         </form>
                     </div>
