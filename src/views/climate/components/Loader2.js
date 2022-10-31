@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import clearWeather from '../images/clearWeather.png';
 
 const Loader2 = () => {
   return (
