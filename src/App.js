@@ -16,6 +16,7 @@ import TranscribeSentence from './views/transcribers/TranscribeSentence';
 import TranscribeAlphabets from './views/transcribers/TranscribeAlphabet';
 import Books from './views/resources/books/Books';
 import Dictionary from './views/resources/dictionary/Dictionary';
+import Eclass from './views/resources/eclass/Eclass';
 import BookGrade from './views/resources/books/BookCat';
 import ClimateIndex from './views/climate/ClimateIndex';
 import ClimateLogin from './views/climate/ClimateLogin';
@@ -48,6 +49,7 @@ function App() {
 						<Route path="/resources/books" element={<Books />} />
 						<Route path="/resources/books/:grade" element={<BookGrade category={category}/>} />
 						<Route path="/resources/dictionary" element={<Dictionary />} />
+						<Route path="/resources/eclass" element={<Eclass />} />
 
 						{/* Transcribers Routes*/}
 						<Route path="/transcribers" element={<TranscribeIndex />} />
