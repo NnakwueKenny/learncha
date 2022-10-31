@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Loader from './Loader';
 
 // import helper functions
@@ -55,7 +56,7 @@ const TrendingChallenge = () => {
                             </p>
                           </div>
                           <div className='flex justify-center py-1'>
-                            <button className='text-cyan-500 hover:underline' onClick={() => viewChallenge(item.id)}>View Challenge</button>
+                            <Link className='text-cyan-500 hover:underline' to={`/climate/challenge/challende_ID=${item.id}`}>View Challenge</Link>
                           </div>
                       </div>
                     )
