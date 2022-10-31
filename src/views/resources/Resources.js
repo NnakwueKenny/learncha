@@ -31,7 +31,7 @@ const Resources = () => {
                         <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src={book} />
                     </Link>
                     <div className='flex flex-col gap-4 w-full items-center py-4'>
-                        <p className='mb-auto font-bold md:text-xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6</p>
+                        <p className='mb-auto font-bold md:text-xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6.</p>
                         <a className='btn blue border-2 border-dashed rounded-3xl border-blue-400 text-blue-500 hover:text-white hover:bg-blue-500' >View Books</a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Resources = () => {
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={dictionary} />
                     </Link>
                     <div className='flex flex-col gap-4 w-full items-center py-2'>
-                        <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API</p>
+                        <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API.</p>
                         <a className='btn blue border-2 border-dashed rounded-3xl border-red-400 text-red-500 hover:text-white hover:bg-red-500'>Let's Go</a>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Resources = () => {
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={book} />
                     </Link>
                     <div className='flex flex-col gap-4 w-full items-center py-2'>
-                        <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API</p>
+                        <p className='mb-auto font-bold md:text-xl text-center'> It is a virtual classroom for kids where they can be able to learn even without being in school, anytime and anywhere. </p>
                         <a className='btn blue border-2 border-dashed rounded-3xl border-yellow-400 text-yellow-500 hover:text-white hover:bg-yellow-500'>Explore</a>
                     </div>
                 </div>
