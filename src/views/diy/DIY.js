@@ -89,15 +89,17 @@ const DIY = () => {
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
         <DIYHeader title='DIY'/>
-        <div className='border-b shadow-3xl w-full h-[1px] mb-8 mt-2'></div>
+        <div style={{fontFamily: 'Gochi Hand'}} className='flex flex-col shadow-3xl w-full text-center text-2xl mb-8 mt-2'>
+            <p>Watch your most favorite STEM videos and learn about climate while you build your own things.</p>
+            <p className='font-bold text-4xl'>WELCOME ONBOARD! </p>
+        </div>
         <div className='relative w-full max-w-7xl border-2 border-dashed rounded-3xl overflow-hidden border-cyan-500'>
-            <div className='flex flex-col items-center md:flex-row md:justify-between gap-3 py-4 shadow px-4 md:px-8'>
-                <div style={{fontFamily: 'Gochi Hand'}} className='text-cyan-500 font-semibold text-3xl text-center md:text-start'>DO IT YOURSELF</div>
-                <form className='w-full flex gap-4 max-w-md md:max-w-sm'>
+            <div className=' w-full items-center justify-center flex flex-col gap-3 py-4 shadow px-4 md:px-8'>
+                <form className='w-full flex gap-4'>
                     <div className='relative flex w-full'>
                         <div className='w-full flex justify-center'>
-                            <label className='sr-only'>Search Climate</label>
-                            <input id='search_challenge' placeholder='Search' className='border rounded-xl w-full py-2.5 px-2' />
+                            <label className='sr-only'>Search DIY</label>
+                            <input id='search_challenge' placeholder='Search DIY' className='border rounded-xl w-full py-2.5 px-2' />
                         </div>
                         <button className='absolute right-0 flex justify-center items-center h-full px-3'><i className='fa fa-search'></i></button>
                     </div>
