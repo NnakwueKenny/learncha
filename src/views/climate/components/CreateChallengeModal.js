@@ -19,7 +19,7 @@ const CreateChallengeModal = ({toggleChallengeModal}) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
-    const [challengeID, setChallengeID] = useState(43);
+    const [challengeID, setChallengeID] = useState(null);
     const [challengeLink, setChallengeLink] = useState('');
 
     const [isLoading, setIsLoading] = useState(false);

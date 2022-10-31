@@ -60,6 +60,12 @@ const SingleChallenge = () => {
         console.log('Modal toggled')
         setShowChallengeModal(prevValue => !prevValue);
     };
+
+  const [showJoinChallengeModal, setShowJoinChallengeModal] = useState(false);
+    const toggleJoinChallengeModal = () => {
+        console.log('Modal toggled')
+        setShowJoinChallengeModal(prevValue => !prevValue);
+    };
   
   
   return (
