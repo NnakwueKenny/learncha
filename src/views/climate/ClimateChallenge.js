@@ -192,18 +192,18 @@ const ClimateChallenge = () => {
                             <p className='text-base font-semibold'>Create a challenge today by clicking the button below</p>
                             <button onClick={toggleChallengeModal} className='inline-block text-base font-semibold px-3 py-2 my-3 border border-dashed border-cyan-400 rounded-lg text-cyan-500 hover:text-white hover:bg-cyan-500'>Create Challenge</button>
                         </div>
-                        <div className='font-sans border rounded-xl shadow p-4'>
+                        {/* <div className='font-sans border rounded-xl shadow p-4'>
                             <h2 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-2xl pb-4 pt-2'>All Challenges</h2>
                             <AllChallenges />
                             <div className='flex justify-center pt-4 pb-2'>
                                 <button className='border-2 border-dashed border-cyan-400 rounded-xl py-1 md:py-2 w-28 lg:w-32 text-cyan-500 hover:text-white hover:bg-cyan-500'>View All <span className='inline-flex animate-bounce'><i className='fa fa-chevron-down'></i></span></button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='flex items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
                     <div className='w-full lg:max-w-3xl h-full py-2 overflow-auto p-3 rounded-xl shadow'>
-                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>Trending Challenges</h3>
+                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>All Challenge</h3>
                         <TrendingChallenge />
                     </div>
                 </div>
