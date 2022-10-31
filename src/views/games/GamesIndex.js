@@ -39,14 +39,6 @@ const GamesIndex = () => {
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/9085647/pexels-photo-9085647.jpeg?auto=compress&cs=tinysrgb&w=600' />
                     </a>
                 </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Transcribe Sentence</h3>
-                    </div>
-                    <Link to='/transcribers/transcribe-sentences'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/5745014/pexels-photo-5745014.jpeg?auto=compress&cs=tinysrgb&w=600' />
-                    </Link>
-                </div>
             </div>
         </div>
     </section>

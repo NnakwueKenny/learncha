@@ -97,11 +97,11 @@ const DIY = () => {
                     <div className='relative flex w-full'>
                         <div className='w-full flex justify-center'>
                             <label className='sr-only'>Search Climate</label>
-                            <input id='search_challenge' placeholder='Search Challenges...' className='border rounded-xl w-full py-2.5 px-2' />
+                            <input id='search_challenge' placeholder='Search' className='border rounded-xl w-full py-2.5 px-2' />
                         </div>
                         <button className='absolute right-0 flex justify-center items-center h-full px-3'><i className='fa fa-search'></i></button>
                     </div>
-                    <div className="relative inline-block">
+                    {/* <div className="relative inline-block">
                         <div>
                             <button onClick={() => toggleShowNotif()} type="button" className="relative inline-flex w-12 h-12 justify-center items-center rounded-full overflow-hidden border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button">
                                 <span className='text-xl'><i className='fa fa-bell'></i></span>
@@ -127,13 +127,13 @@ const DIY = () => {
                                 </div>
                             }
                         </div>
-                    </div>
+                    </div> */}
                 </form>
             </div>
             <div className='flex justify-center pt-4 pb-2 px-6'>
                 <form className='w-full flex justify-between'>
                     <Link to='/' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
-                    <div className='flex items-center gap-1'>
+                    {/* <div className='flex items-center gap-1'>
                         <label>Filter</label>
                         <select className='w-32 py-1 rounded-lg pl-2'>
                             <option className='py-1'>Climate</option>
@@ -141,7 +141,7 @@ const DIY = () => {
                             <option className='py-1'>Mathematics</option>
                             <option className='py-1'>Science</option>
                         </select>
-                    </div>
+                    </div> */}
                 </form>
             </div>
             <div className='flex px-6 h-full overflow-auto justify-center items-start lg:justify-start gap-6 flex-col'>
