@@ -5,6 +5,28 @@ import { Link, useParams } from 'react-router-dom';
 import vid2 from '../../../images/learn2.mp4';
 
 const Eclass = () => {
+    const [ videos, setVideos ] = useState([]);
+
+    const getVideos = () => {
+        fetch('https://learncha.mybluemix.net/books/retrieve_video/all',
+            {
+                headers: {
+                    accept: 'application/json'
+                }
+            }
+        )
+        .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        setVideos(data);
+    })
+    .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+        getVideos();
+    }, {})
+
 
   return (
     <section className="promo flex flex-col items-center justify-center w-full pb-6">
@@ -19,54 +41,20 @@ const Eclass = () => {
             </div>
         </div>
             <div className='w-full py-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 p-4 sm:p-6 md:p-8'>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
-                <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
-                    <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
-                        <h3>Mathematics</h3>
-                    </div>
-                    <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
-                        <source src={vid2} type="video/mp4" />
-                    </video>
-                </div>
+                {
+                    videos.map(video => {
+                        return (
+                            <div className='flex flex-col border-2 border-dashed border-cyan-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
+                                <div className='text-center text-3xl text-cyan-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
+                                    <h3>{video.subject}</h3>
+                                </div>
+                                <video className='w-full h-72 md:h-64 rounded-b-xl' controls>
+                                    <source src={video.video_url} type="video/mp4" />
+                                </video>
+                            </div>
+                        )
+                    })
+                }
             </div>
     </section>
   )
