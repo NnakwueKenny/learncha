@@ -29,11 +29,11 @@ const Resources = () => {
                     </div>
                     <Link to='/resources/books'>
                         <img className='w-full h-72 md:h-64 rounded-b-xl' alt='' src={book} />
+                        <div className='flex flex-col gap-4 w-full items-center py-4'>
+                            <p className='mb-auto font-bold md:text-xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6.</p>
+                            <a className='btn blue border-2 border-dashed rounded-3xl border-blue-400 text-blue-500 hover:text-white hover:bg-blue-500' >View Books</a>
+                        </div>
                     </Link>
-                    <div className='flex flex-col gap-4 w-full items-center py-4'>
-                        <p className='mb-auto font-bold md:text-xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6.</p>
-                        <a className='btn blue border-2 border-dashed rounded-3xl border-blue-400 text-blue-500 hover:text-white hover:bg-blue-500' >View Books</a>
-                    </div>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-red-400 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-red-400 py-2' style={{fontFamily: 'Gochi Hand'}}>
@@ -41,11 +41,11 @@ const Resources = () => {
                     </div>
                     <Link to='/resources/dictionary'>
                         <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={dictionary} />
+                        <div className='flex flex-col gap-4 w-full items-center py-2'>
+                            <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API.</p>
+                            <a className='btn blue border-2 border-dashed rounded-3xl border-red-400 text-red-500 hover:text-white hover:bg-red-500'>Let's Go</a>
+                        </div>
                     </Link>
-                    <div className='flex flex-col gap-4 w-full items-center py-2'>
-                        <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API.</p>
-                        <a className='btn blue border-2 border-dashed rounded-3xl border-red-400 text-red-500 hover:text-white hover:bg-red-500'>Let's Go</a>
-                    </div>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-yellow-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
                     <div className='text-center text-3xl text-yellow-500 py-2' style={{fontFamily: 'Gochi Hand'}}>
