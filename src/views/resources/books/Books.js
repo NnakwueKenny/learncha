@@ -106,7 +106,7 @@ const Books = () => {
                                                         </p>
                                                     </div>
                                                     <div className='flex justify-center gap-4 md:gap-8'>
-                                                        <a href={book.url} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Read</a>
+                                                        <a href={`https${book.url.split('http')[1]}`} target='_blank' rel='noreferrer' className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Read</a>
                                                         <button onClick={() => downloadFile(`https${book.url.split('http')[1]}`, book.name)} className='flex justify-center border-2 border-dashed rounded-md border-green-500 text-green-500 w-full max-w-xs py-1'>Download</button>
                                                     </div>
                                                 </div>
