@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import book from '../../images/book.jpg';
 import dictionary from '../../images/diction.jpg';
+import teach from '../../images/teach.jpg';
 
 const Resources = () => {
 
@@ -52,7 +53,7 @@ const Resources = () => {
                         <h3>e-Classroom</h3>
                     </div>
                     <Link to='/resources/eclass'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={book} />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={teach} />
                         <div className='flex flex-col gap-4 w-full items-center py-2'>
                             <p className='mb-auto font-bold md:text-xl text-center'> It is a virtual classroom for kids where they can be able to learn even without being in school, anytime and anywhere. </p>
                             <a className='btn cyan border-2 border-dashed rounded-3xl border-yellow-400 text-yellow-500 hover:text-white hover:bg-yellow-500'>Explore</a>
