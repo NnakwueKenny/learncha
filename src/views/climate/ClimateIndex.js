@@ -92,31 +92,275 @@ const ClimateIndex = () => {
             </nav>
 
             { /*Weather Forecast*/ }
-            <div className='main-container px-5 md:px-8 lg:px-10 pt-32 w-full'>
+            <div className='main-container px-4 md:px-8 lg:px-10 pt-32 w-full'>
                 <div
                     style={{fontFamily: `'Open Sans', sans-serif`, background: 'linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%)'}}
                     className='bg-gray-400 text-white bg-no-repeat rounded-xl overflow-hidden'>
-                    <div className='flex flex-col w-full items-center'>
-                        <div className='w-full max-w-5xl flex items-baseline justify-between px-4 py-3'>
+                    <div className='flex flex-col w-full items-center px-3 md:px-6 py-5'>
+                        <div className='w-full max-w-5xl flex items-baseline justify-between px-1 py-3'>
                             <div>
                                 <h2 style={{fontFamily: 'Gochi Hand'}} className='text-red-400 text-3xl'>Kano, Nigeria</h2>
                                 <p>Monday 31 October</p>
                             </div>
                             <div>
-                                <p className='text-gray-100'>Based on your location</p>
+                                <p className='text-gray-100 text-xs md:text-base'>Based on your location</p>
                             </div>
                         </div>
-                        <div className='w-full max-w-5xl flex flex-col md:flex-row gap-3 p-2 divide-y-4'>
+                        <div className='w-full max-w-5xl flex flex-col md:flex-row gap-3 p-2 divide-y-2 md:divide-y-0 md:divide-x-2'>
                             <div className='flex justify-center items-center gap-8 md:gap-10 lg:gap-12 py-3 w-full'>
                                 <div className='w-28 h-28 border-4 rounded-full'></div>
                                 <div className='flex flex-col'>
-                                    <span className='text-9xl font-extralight font-sans'>21
-                                        <span></span>
-                                    </span>
+                                    <div className='flex'>
+                                        <span className='text-7xl md:text-8xl font-extralight font-sans'>21</span>
+                                        <span className='block text-5xl'>O</span>
+                                    </div>
                                     <span>Mostly Sunny</span>
                                 </div>
                             </div>
-                            <div className='w-full'>r</div>
+                            <div className='w-full'>
+                                <div className='w-full grid grid-cols-3 place-items-center p-2 gap-2'>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                    <div className='py-3 px-2 w-full flex items-center justify-center '>content</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Today's weather Large screen */}
+                        <div className='hidden md:flex flex-col gap-3 w-full max-w-5xl p-4'>
+                            <h3>Today's Weather</h3>
+                            <div className='grid grid-cols-7 place-items-center gap-6 md:gap-8'>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>3am</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>6 am</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>9 am</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>12 pm</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>3 pm</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>6 pm</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                                <div className='w-full flex flex-col items-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                    <span>8 pm</span>
+                                    <span className='block w-5 h-5 rounded-full border-2'></span>
+                                    <span>14<sup>o</sup></span>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Today's weather Large screen */}
+
+                        <div className='w-full p-3'>
+
+                            {/* Today's weather Small screen */}
+                            <div className='w-full md:hidden md:flex flex-col gap-4 overflow-x-auto'>
+                                <h3 className='pb-2'>Today's Weather</h3>
+                                <div className='grid grid-cols-5 place-items-center gap-2 md:gap-8'>
+                                    <div className='w-full max-w-24 h-full flex flex-col items-center justify-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                        <span>3am</span>
+                                        <span className='block w-5 h-5 rounded-full border-2'></span>
+                                        <span>14<sup>o</sup></span>
+                                    </div>
+                                    <div className='w-full max-w-24 h-full flex flex-col items-center justify-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                        <span>6 am</span>
+                                        <span className='block w-5 h-5 rounded-full border-2'></span>
+                                        <span>14<sup>o</sup></span>
+                                    </div>
+                                    <div className='w-full max-w-24 h-full flex flex-col items-center justify-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                        <span>9 am</span>
+                                        <span className='block w-5 h-5 rounded-full border-2'></span>
+                                        <span>14<sup>o</sup></span>
+                                    </div>
+                                    <div className='w-full max-w-24 h-full flex flex-col items-center justify-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                        <span className='text-sm'>12 pm</span>
+                                        <span className='block w-5 h-5 rounded-full border-2'></span>
+                                        <span>14<sup>o</sup></span>
+                                    </div>
+                                    <div className='w-full max-w-24 h-full flex flex-col items-center justify-center gap-2 py-2 border-2 rounded-lg text-xl'>
+                                        <span>3 pm</span>
+                                        <span className='block w-5 h-5 rounded-full border-2'></span>
+                                        <span>14<sup>o</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Today's weather Small screen */}
+                            <div className='w-full hidden md:flex flex-col gap-3'>
+                                <h3>Next 5 days</h3>
+                                <div className='flex flex-col divide-y border-y'>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                    <div className='grid grid-cols-6 py-3 place-items-center'>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>Tue</span>
+                                            <span className=''>30/10</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='block border-2 w-10 h-10 rounded-full'></span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>10<sup>o</sup></span>
+                                            <span className=''>Low</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>16<sup>o</sup></span>
+                                            <span className=''>High</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>12mph</span>
+                                            <span className=''>Wind</span>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <span className='font-semibold'>0%</span>
+                                            <span className=''>Rain</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
