@@ -321,7 +321,7 @@ input.white[type=submit]:hover{
 	font-family: 'Gochi Hand', cursive;
 	font-size: 48px;
 	text-align: left;
-	text-shadow: 2px 2px 3px #ce5a5d;
+	text-shadow: 1px 1px 2px #ce5a5d;
 	color: #ea6b6e;
 }
 .slide-info a:hover {
