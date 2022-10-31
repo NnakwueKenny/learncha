@@ -93,6 +93,21 @@ const ClimateIndex = () => {
 
             { /*Weather Forecast*/ }
             <WeatherForecast />
+            
+            <div style={{fontFamily: 'Gochi Hand'}} className="bg-secondary py-20 text-center space-y-4 md:space-y-10 mx-10 rounded-3xl relative bg-blue-100">
+                <p className="font-bold md:text-4xl text-3xl md:px-64 px-10 text-blue-400 uppercase text-primary">Help save the planet by
+                challenging
+                yourself to be a solution to climate change</p>
+                <div className="flex items-center justify-center">
+                <Link to="/climate/challenge"
+                    className="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
+                    challenge</Link>
+                </div>
+                <img src={rangoli} className="absolute top-0 left-0 w-32 md:block hidden" alt=""
+                data-aos="zoom-in" />
+                <img src={rangoli} className="absolute bottom-0 right-0 w-32 md:block hidden" alt=""
+                data-aos="zoom-in" />
+            </div>
 
             <div className='flex flex-col items-center w-full'>
                 <div className="w-full bg-gray-50" id="climate">
@@ -320,20 +335,6 @@ const ClimateIndex = () => {
                 </div>
             </div>
 
-            <div style={{fontFamily: 'Gochi Hand'}} className="bg-secondary py-20 text-center space-y-4 md:space-y-10 mx-10 rounded-3xl relative bg-blue-100">
-                <p className="font-bold md:text-4xl text-3xl md:px-64 px-10 text-blue-400 uppercase text-primary">Help save the planet by
-                challenging
-                yourself to be a solution to climate change</p>
-                <div className="flex items-center justify-center">
-                <Link to="/climate/challenge"
-                    className="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
-                    challenge</Link>
-                </div>
-                <img src={rangoli} className="absolute top-0 left-0 w-32 md:block hidden" alt=""
-                data-aos="zoom-in" />
-                <img src={rangoli} className="absolute bottom-0 right-0 w-32 md:block hidden" alt=""
-                data-aos="zoom-in" />
-            </div>
             <div style={{fontFamily: 'Gochi Hand'}}  className="flex flex-col w-full max-w-6xl pb-8 md:mb-10" id="faq">
                 <p className="text-center font-orbitron text-3xl md:text-4xl uppercase py-10 font-semibold text-red-400">more on climate</p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 p-5 md:px-8">
