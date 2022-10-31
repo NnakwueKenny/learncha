@@ -75,7 +75,7 @@ const WeatherForecast = () => {
 
     const getWeather = (query) => {
         console.log(query)
-        if (query !== '') {
+        if (query === '') {
             console.log(`'Getting today's weather`);
             fetch(`https://learncha.mybluemix.net/forecast_weather`,
                 {
@@ -84,7 +84,7 @@ const WeatherForecast = () => {
                         accept: 'application/json',
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: `location=${locationInWords}`
+                    body: `location=kano, nigeria`
                 }
             )
             .then(response => response.json())

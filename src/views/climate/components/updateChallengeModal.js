@@ -7,7 +7,7 @@ const UpdateChallenegeModal = ({toggleChallengeModal}) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
-    const [challengeID, setChallengeID] = useState();
+    const [challengeID, setChallengeID] = useState(43);
     const [challengeLink, setChallengeLink] = useState('');
 
     const [isLoading, setIsLoading] = useState(false);
@@ -136,6 +136,7 @@ const UpdateChallenegeModal = ({toggleChallengeModal}) => {
         navigator.clipboard.writeText(challengeLink);
         console.log(window.location.href)
     }
+    
   return (
     <div style={{fontFamily: 'Gochi Hand'}} className='fixed top-0 flex items-start justify-center items-center py-6 pt-10 px-5 z-50 h-screen w-screen bg-gray-500 bg-opacity-50'>
         {
@@ -160,8 +161,13 @@ const UpdateChallenegeModal = ({toggleChallengeModal}) => {
                         }
                         </form>
                     }
-                    <div className='flex justify-between px-2 font-sans font-semibold'>
-                        <button  onClick={() => { uploadImage()}} className={`text-white w-20 md:w-24 py-2 rounded-lg ${isLoading? 'bg-gray-400': 'bg-red-400 hover:bg-red-500'}`}>Cancel</button>
+                    <div className='flex justify-between'>
+                        <div className='flex justify-between px-2 font-sans font-semibold'>
+                            <button  onClick={() => { toggleChallengeModal()}} className={`text-white w-20 md:w-24 py-2 rounded-lg bg-red-400 hover:bg-red-500'}`}>Cancel</button>
+                        </div>
+                        <div className='flex justify-between px-2 font-sans font-semibold'>
+                            <button  onClick={() => { uploadImage()}} className={`text-white w-20 md:w-24 py-2 bg-green-500 rounded-lg'}`}>Upload</button>
+                        </div>
                     </div>
                 </div>
             </div>
