@@ -97,7 +97,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
                                 <h1><Link href="/games" className='animate animate-pulse text-center w-full flex md:text-3xl text-lg font-bold text-red-500'>Games for kids</Link></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:ext-xl'>
-                                    Discover the best educational games for kids various different subjects areas like Math, Science, Art and more. Educational games are a great alternative for choildren who don't learn best through paper and pencil instructions.
+                                Discover the best educational games for kids and accelerate in subject areas like math, science, art and more.
                                 </p>
                                 <a className="btn red" ><Link to='/games'>Learn more</Link></a>
                             </div>
@@ -108,7 +108,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-96 w-full px-8 gap-4'>
                                 <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Education for kids</a></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
+                                Gain access to our numerous resources, read books online and set on with assignment with our dictionary and transcriber
                                 </p>
                                 <a className="btn red"><Link to='/resources'>Learn more</Link></a>
                             </div>
@@ -126,7 +126,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
                                 <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Climate Challenge</Link></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
+                                Learn about climate and join the climate challenge today and help fight climatic degredation and become a learncha ambassador
                                 </p>
                                 <a className="btn red"><Link to='/climate'>Learn more</Link></a>
                             </div>
@@ -138,7 +138,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
                                 <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg p-4 font-bold'>Weather Updates</a></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
+                                You want to know the latest weather conditions and forecasts in your locality and the world?
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
