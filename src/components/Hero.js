@@ -80,12 +80,14 @@ const Hero = () => {
             </div>
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
-                <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
-                        <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full px-8'>
-                                <p className='text-justify text-white text-xs md:text-xl font-bold text-gray-600 text-center mb-6'>
-                                    <span className="text-red-400 text-xl">"</span>Learning can be creative and fun, With learncha outside classroom learning can be creative and fun<span className="text-red-400 text-xl">"</span>
-                                </p>
+                    <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
+                        <div className="h-full w-full justify-center">
+                            <div className='flex text-center h-full w-full'>
+                                <div className="text-red-400 text-3xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
+                                    <p style={{fontFamily: 'Gochi Hand'}} data-aos="zoom-in" data-aos-duration="3000" className='animate animate-pulse w-full text-white text-xs md:text-2xl font-bold text-gray-500 text-center mb-6 px-2'>
+                                        Learning can be creative and fun, With learncha learning can become more than creative and fun
+                                    </p>
+                                <div className="text-red-400 text-3xl mb-6"><i class="fa-solid fa-quote-right"></i></div>
                             </div>
                         </div>
                     </li>
@@ -158,7 +160,7 @@ const Hero = () => {
                     <a href="#">
                         <div class="box-info experience">
                             <h2>Our experience</h2>
-                            <p>Help your child discover their passion for <span className='font-semibold'>STEM</span>
+                            <p className='text-justify'>Help your child discover their passion for <span className='font-semibold'>STEM</span>
                                 (<span className='font-semibold italic'>Science, Technology, Engineering and Mathematics</span>)
                                 with our engaging offline and online gamifying platform.
                             </p>
@@ -169,7 +171,7 @@ const Hero = () => {
                     <a href="#">
                         <div class="box-info about">
                             <h2>About Learncha</h2>
-                            <p>Learncha is a educational Gamifying Paltform designed for kids that helps to instill the love of learning in a child.
+                            <p className='text-justify'>Learncha is a educational Gamifying Paltform designed for kids that helps to instill the love of learning in a child.
                                 This applies whether they've learning through homeschooling, online learning, offline traditional classroom setting...
                             </p>
                         </div>
@@ -179,7 +181,7 @@ const Hero = () => {
                     <a href="#">
                         <div class="box-info fun">
                             <h2>Big fun for kids!</h2>
-                            <p>Designed by leading learning experts, your child can practice Math, reading, speaking, phonics, Transcribing, Dictionary and more...</p>
+                            <p className='text-justify'>Designed by leading learning experts, your child can practice Math, reading, speaking, phonics, Transcribing, Dictionary and more...</p>
                         </div>
                     </a>
                 </div>
@@ -198,7 +200,7 @@ const Hero = () => {
                                     <time datetime="2014-04-17">17.04.14</time>
                                     <span>Prince Achoja</span>
                                 </div>
-                                <p>Introducing our STEM Learning center in Kano Nigeria. Designed by learning experts, your 
+                                <p className='text-justify'>Introducing our STEM Learning center in Kano Nigeria. Designed by learning experts, your 
                                 child can now practice math, reading phones and more. Step-by-step learning path designed to
                                 help kids learn math, reading, Science and more(...)</p>
                             </div>
@@ -214,7 +216,7 @@ const Hero = () => {
                                     <time datetime="2014-04-16">16.04.14</time>
                                     <span>Salma Gambo</span>
                                 </div>
-                                <p>Join our lego Robotics Hub Hub Classes every Saturday. Find the right instructor for you,
+                                <p className='text-justify'>Join our lego Robotics Hub Hub Classes every Saturday. Find the right instructor for you,
                                     choose from many topics, skill levels and languages(...)</p>
                             </div>
                         </div>
@@ -229,7 +231,7 @@ const Hero = () => {
                                     <time datetime="2014-04-13">13.04.14</time>
                                     <span>Muhammad Abubakar</span>
                                 </div>
-                                <p>We have partnered with Kano state library board to introduce a platform where you can create
+                                <p className='text-justify'>We have partnered with Kano state library board to introduce a platform where you can create
                                 a new picture, storybook, translate a story, adapt a story for a different level and build your
                                 own story collection(...)</p>
                             </div>
