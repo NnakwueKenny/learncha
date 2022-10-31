@@ -1,10 +1,34 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const SingleChallenge = () => {
 	const { challenge } = useParams();
-  const currentChallenge = challenge.split('=')[1];
-  console.log(currentChallenge);
+  const currentChallengeID = challenge.split('=')[1];
+  const [currentChallenge, setCurrentChallenge] = useState([])
+  
+  const getCurrentChallenge = () => {
+    console.log('Getting current challenge');
+    fetch(`https://learncha.mybluemix.net/challenge/progress/${currentChallengeID}`,
+      {
+        headers: {
+          accept: 'application/json'
+        }
+      }
+    )
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      setCurrentChallenge(data);
+    })
+    .catch(err => console.log(err));
+  }
+
+  useEffect(() => {
+    getCurrentChallenge();
+  }, [])
+  
   
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
