@@ -19,6 +19,7 @@ import ocean from './images/ocean.png';
 import plastic from './images/plastic.png';
 import rangoli from './images/rangoli.png';
 import AuthUser from './AuthUser';
+import WeatherForecast from './components/WeatherForecast';
 
 const ClimateIndex = () => {
     const [profileView, setProfileView] = useState(false)
@@ -90,7 +91,38 @@ const ClimateIndex = () => {
                 </div>
             </nav>
 
-            <div className='flex flex-col items-center w-full pt-20'>
+            { /*Weather Forecast*/ }
+            <div className='main-container px-5 md:px-8 lg:px-10 pt-32 w-full'>
+                <div
+                    style={{fontFamily: `'Open Sans', sans-serif`, background: 'linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%)'}}
+                    className='bg-gray-400 text-white bg-no-repeat rounded-xl overflow-hidden'>
+                    <div className='flex flex-col w-full items-center'>
+                        <div className='w-full max-w-5xl flex items-baseline justify-between px-4 py-3'>
+                            <div>
+                                <h2 style={{fontFamily: 'Gochi Hand'}} className='text-red-400 text-3xl'>Kano, Nigeria</h2>
+                                <p>Monday 31 October</p>
+                            </div>
+                            <div>
+                                <p className='text-gray-100'>Based on your location</p>
+                            </div>
+                        </div>
+                        <div className='w-full max-w-5xl flex flex-col md:flex-row gap-3 p-2 divide-y-4'>
+                            <div className='flex justify-center items-center gap-8 md:gap-10 lg:gap-12 py-3 w-full'>
+                                <div className='w-28 h-28 border-4 rounded-full'></div>
+                                <div className='flex flex-col'>
+                                    <span className='text-9xl font-extralight font-sans'>21
+                                        <span></span>
+                                    </span>
+                                    <span>Mostly Sunny</span>
+                                </div>
+                            </div>
+                            <div className='w-full'>r</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='flex flex-col items-center w-full'>
                 <div className="w-full bg-gray-50" id="climate">
                     <div className="grid md:grid-cols-2 gap-9 items-center py-16 md:py-12 lg:py-16  md:px-8 lg:px-12">
                         <div className="">
@@ -106,13 +138,15 @@ const ClimateIndex = () => {
                                 <i className="fa-solid fa-angles-down"></i>
                             </a>
                         </div>
-                        <div className="px-2">
-                            <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8?&autoplay=1" className="w-full rounded-lg"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                            </iframe>
-                        </div>
+                        { /*
+                            <div className="px-2">
+                                <iframe height="315" src="https://www.youtube.com/embed/WkvPdUtYhX8?&autoplay=1" className="w-full rounded-lg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                                </iframe>
+                            </div>
+                        */ }
                     </div>
                 </div>
             </div>
