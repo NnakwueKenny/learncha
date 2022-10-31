@@ -100,7 +100,7 @@ const ClimateIndex = () => {
                 yourself to be a solution to climate change</p>
                 <div className="flex items-center justify-center">
                 <Link to="/climate/challenge"
-                    className="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
+                    className="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-6 py-1 rounded-full font-semibold text-xl">join the
                     challenge</Link>
                 </div>
                 <img src={rangoli} className="absolute top-0 left-0 w-32 md:block hidden" alt=""
