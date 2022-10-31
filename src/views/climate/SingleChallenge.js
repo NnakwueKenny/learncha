@@ -48,16 +48,16 @@ const SingleChallenge = () => {
             <div className='flex px-6 py-4 h-full overflow-auto justify-center items-start lg:justify-start gap-4 flex-col lg:flex-row'>
               <div className='flex w-full py-2'>
                 <Link to='/climate/challenge' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
-                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-4xl text-cyan-500 font-bold capitalize'>{currentChallenge.name}</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-4xl text-cyan-400 font-bold'>Challenge Name</p>
               </div>
             </div>
             <div className='w-full flex flex-col border'>
               <div className='text-xl w-full flex flex-col p-8'>
-                <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-2 text-cyan-400'>Category : Flooding</p>
-                <p style={{fontFamily: 'Gochi Hand'}} className=''><span className='font-bold text-red-400'>Description</span> : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='text-3xl font-bold py-2 text-cyan-500'>Category : Flooding</p>
+                <p className='font-normal text-justify font-sans'><span style={{fontFamily: 'Gochi Hand'}} className='font-bold text-2xl text-red-400'>Description</span> : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
               </div>
               <div className='text-xl w-full flex flex-col p-8'>
-                <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-4 text-cyan-400'>Creator's Progress</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-4 text-cyan-500'>Creator's Progress</p>
                 <div className='overflow-auto w-full flex'>
                   <div className='flex w-40 h-40 gap-4'>
                     <img className='h-full w-full' src={img}/>
@@ -72,7 +72,7 @@ const SingleChallenge = () => {
                 </div>
               </div>
               <div className='text-xl w-full flex flex-col p-8'>
-                <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-2 text-cyan-400'>Participant's Progress</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-2 text-cyan-500'>Participant's Progress</p>
                 <div className='overflow-auto w-full flex'>
                   <div className='flex w-40 h-40 gap-4'>
                     <img className='h-full w-full' src={img}/>
@@ -98,7 +98,7 @@ const SingleChallenge = () => {
                 </div>
               </div>
                 <div className="flex items-center justify-center mb-4">
-                  <p style={{fontFamily: 'Gochi Hand'}} className="uppercase bg-white text-cyan-400 border-2 border-dashed border-cyan-400 hover:bg-cyan-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
+                  <p style={{fontFamily: 'Gochi Hand'}} className="uppercase bg-white text-cyan-500 border-2 border-dashed border-cyan-400 hover:bg-cyan-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
                     challenge
                   </p>
                 </div>
