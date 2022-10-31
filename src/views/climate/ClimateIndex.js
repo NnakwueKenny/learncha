@@ -94,8 +94,8 @@ const ClimateIndex = () => {
             { /*Weather Forecast*/ }
             <WeatherForecast />
             
-            <div style={{fontFamily: 'Gochi Hand'}} className="bg-secondary py-20 text-center space-y-4 md:space-y-10 mx-10 rounded-3xl relative bg-blue-100">
-                <p className="font-bold md:text-4xl text-3xl md:px-64 px-10 text-blue-400 uppercase text-primary">Help save the planet by
+            <div style={{fontFamily: 'Gochi Hand'}} className="bg-secondary py-20 text-center space-y-2 md:space-y-10 mx-10 rounded-3xl relative bg-blue-100">
+                <p className=" md:text-4xl text-2xl md:px-64 px-5 text-blue-400 uppercase text-primary">Help save the planet by
                 challenging
                 yourself to be a solution to climate change</p>
                 <div className="flex items-center justify-center">
