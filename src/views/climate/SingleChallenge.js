@@ -11,7 +11,7 @@ const SingleChallenge = () => {
   
   const getCurrentChallenge = () => {
     console.log('Getting current challenge');
-    fetch(`https://learncha.mycyanmix.net/challenge/progress/${currentChallengeID}`,
+    fetch(`https://learncha.mybluemix.net/challenge/progress/${currentChallengeID}`,
       {
         headers: {
           accept: 'application/json'
@@ -48,7 +48,7 @@ const SingleChallenge = () => {
             <div className='flex px-6 py-4 h-full overflow-auto justify-center items-start lg:justify-start gap-4 flex-col lg:flex-row'>
               <div className='flex w-full py-2'>
                 <Link to='/climate/challenge' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
-                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-4xl text-cyan-400 font-bold'>Challenge Name</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-4xl text-cyan-500 font-bold capitalize'>{currentChallenge.name}</p>
               </div>
             </div>
             <div className='w-full flex flex-col border'>
