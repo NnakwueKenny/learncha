@@ -81,10 +81,10 @@ const Hero = () => {
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
                 <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
                     <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
-                        <div className="h-full w-full">
+                        <div className="h-full w-full justify-center">
                             <div className='flex text-center h-full w-full'>
                                 <div className="text-red-400 text-3xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
-                                    <p data-aos="zoom-in" data-aos-duration="3000" className='animate animate-pulse w-full text-justify text-white text-xs md:text-xl font-bold text-gray-500 text-center mb-6 px-2'>
+                                    <p style={{fontFamily: 'Gochi Hand'}} data-aos="zoom-in" data-aos-duration="3000" className='animate animate-pulse w-full text-white text-xs md:text-2xl font-bold text-gray-500 text-center mb-6 px-2'>
                                         Learning can be creative and fun, With learncha learning can become more than creative and fun
                                     </p>
                                 <div className="text-red-400 text-3xl mb-6"><i class="fa-solid fa-quote-right"></i></div>
