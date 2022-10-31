@@ -111,7 +111,7 @@ const ClimateIndex = () => {
 
             <div className='flex flex-col items-center w-full'>
                 <div className="w-full bg-gray-50" id="climate">
-                    <div className="w-full justify-center grid md:grid-cols-1 gap-9 items-center py-16 md:py-12 lg:py-16  md:px-8 lg:px-12">
+                    <div className="w-full beg justify-center grid md:grid-cols-1 gap-9 items-center py-16 md:py-12 lg:py-16  md:px-8 lg:px-12">
                         <div className="w-1/2">
                             <h2 style={{fontFamily: 'Gochi Hand'}} className="text-center text-3xl md:text-4xl uppercase text-red-400 font-semibold pb-5">what is climate change?</h2>
                             <p className="text-center px-3">
