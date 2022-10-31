@@ -91,7 +91,7 @@ const DIY = () => {
         <DIYHeader title='DIY'/>
         <div style={{fontFamily: 'Gochi Hand'}} className='flex flex-col shadow-3xl w-full text-center text-2xl mb-8 mt-2'>
             <p>Watch your most favorite STEM videos and learn about climate while you build your own things.</p>
-            <p className='font-bold text-4xl'>WELCOME ONBOARD! </p>
+            <p className='text-red-400 font-bold text-4xl py-4'>WELCOME ONBOARD! </p>
         </div>
         <div className='relative w-full max-w-7xl border-2 border-dashed rounded-3xl overflow-hidden border-cyan-500'>
             <div className=' w-full items-center justify-center flex flex-col gap-3 py-4 shadow px-4 md:px-8'>
