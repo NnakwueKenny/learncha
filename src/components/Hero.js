@@ -83,8 +83,8 @@ const Hero = () => {
                 <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8'>
-                                <p className='text-white text-xs md:text-xl font-bold text-gray-600 text-center mb-6'>
-                                    <span className="text-red-400 text-2xl">"</span>Learning can be creative and fun, With learncha outside classroom learning can be creative and fun<span className="text-red-400 text-2xl">"</span>
+                                <p className='text-justify text-white text-xs md:text-xl font-bold text-gray-600 text-center mb-6'>
+                                    <span className="text-red-400 text-xl">"</span>Learning can be creative and fun, With learncha outside classroom learning can be creative and fun<span className="text-red-400 text-xl">"</span>
                                 </p>
                             </div>
                         </div>
@@ -108,8 +108,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-96 w-full px-8 gap-4'>
                                 <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Education for kids</a></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational
-                                Video games for kids in various subjects but can also help transform them into lifelong learners
+                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red"><Link to='/resources'>Learn more</Link></a>
                             </div>
@@ -127,8 +126,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
                                 <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Climate Challenge</Link></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational
-                                Video games for kids in various subjects but can also help transform them into lifelong learners
+                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red"><Link to='/climate'>Learn more</Link></a>
                             </div>
@@ -140,8 +138,7 @@ const Hero = () => {
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
                                 <h1><a href="#" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg p-4 font-bold'>Weather Updates</a></h1>
                                 <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Discouraging your child to spend their screen time playing educational
-                                Video games for kids in various subjects but can also help transform them into lifelong learners
+                                Discouraging your child to spend their screen time playing educational Video games for kids in various subjects but can also help transform them into lifelong learners
                                 </p>
                                 <a className="btn red" href="#">Learn more</a>
                             </div>
