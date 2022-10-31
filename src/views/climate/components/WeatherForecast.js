@@ -22,43 +22,104 @@ const WeatherForecast = () => {
     const [ todayDate, setTodayDate ] = useState('');
     const [ narrative, setNarrative] = useState('');
 
-    const getWeather = () => {
-        console.log(`'Getting today's weather`);
-        fetch(`https://learncha.mybluemix.net/forecast_weather`,
+    // const currentlocation = window.navigator.geolocation.getCurrentPosition(console.log, console.error);
+
+
+    const getGeoLocation = async () => {
+        let currentLocation = {};
+
+        const getLocation = (data) => {
+            // extracting the latitude and longitude from the data
+            let latitude = data.coords.latitude;
+            let longitude = data.coords.longitude;
+            // alert("Your location: " + latitude + ", " + longitude);
+            // setLocation({latt:latitude, long:longitude });
+            console.log(latitude, longitude);
+            getCurrentLocation(latitude, longitude);
+            setLocation({latt: latitude, long: longitude});
+    
+        }
+
+        const getCurrentLocation = (latt, long) => {
+            currentLocation.latt = latt;
+            currentLocation.long = long;
+        }
+
+        window.navigator.geolocation
+            .getCurrentPosition(getLocation, console.error);
+
+        console.log(currentLocation);
+
+        console.log('Getting geolocation');
+
+        fetch('https://learncha.mybluemix.net/forecast_weather/geo_code',
             {
                 method: 'post',
                 headers: {
                     accept: 'application/json',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `location=${locationInWords}`
+                body: `long=${location.long}&latt=${location.latt}`  
             }
         )
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            const todayWeather = [data.day1_day, data.day1_night];
-            setTodayWeatherCondition(todayWeather);
-            console.log(todayWeather[0].orning);
-            const otherDayWeather = [[data.day2_day, data.day2_night], [data.day3_day, data.day3_night], [data.day4_day, data.day4_night]];
-            console.log(otherDayWeather);
-            setNextThreedays(otherDayWeather);
-            setTodayAvgTemperature((todayWeather[0].calendarDayTemperatureMax + todayWeather[1].calendarDayTemperatureMin) / 2);
-            setSunrise(todayWeather[0].sunriseTimeLocal.split('T')[1].slice(0, 5));
-            setSunset(todayWeather[0].sunsetTimeLocal.split('T')[1].slice(0, 5));
-            setTodayMinTemperature(todayWeather[0].calendarDayTemperatureMin);
-            setTodayMaxTemperature(todayWeather[0].calendarDayTemperatureMax);
-            setDayOfWeek(todayWeather[0].dayOfWeek);
-            const date = new Date();
-            setTodayDate(date.getDate());
-            date.setMonth((new Date().getMonth()) - 1);
-            setMonth(date.toLocaleString('en-US', { month: 'long' }));
-            setNarrative(todayWeather[0].narrative);
+        })
+        .catch(err => {
+            
+            console.log(currentLocation);
         })
     }
 
+
+    const getWeather = (query) => {
+        console.log(query)
+        if (query !== '') {
+            console.log(`'Getting today's weather`);
+            fetch(`https://learncha.mybluemix.net/forecast_weather`,
+                {
+                    method: 'post',
+                    headers: {
+                        accept: 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `location=${locationInWords}`
+                }
+            )
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const todayWeather = [data.day1_day, data.day1_night];
+                setTodayWeatherCondition(todayWeather);
+                console.log(todayWeather[0].orning);
+                const otherDayWeather = [[data.day2_day, data.day2_night], [data.day3_day, data.day3_night], [data.day4_day, data.day4_night]];
+                console.log(otherDayWeather);
+                setNextThreedays(otherDayWeather);
+                setTodayAvgTemperature((todayWeather[0].calendarDayTemperatureMax + todayWeather[1].calendarDayTemperatureMin) / 2);
+                setSunrise(todayWeather[0].sunriseTimeLocal.split('T')[1].slice(0, 5));
+                setSunset(todayWeather[0].sunsetTimeLocal.split('T')[1].slice(0, 5));
+                setTodayMinTemperature(todayWeather[0].calendarDayTemperatureMin);
+                setTodayMaxTemperature(todayWeather[0].calendarDayTemperatureMax);
+                setDayOfWeek(todayWeather[0].dayOfWeek);
+                const date = new Date();
+                setTodayDate(date.getDate());
+                date.setMonth((new Date().getMonth()) - 1);
+                setMonth(date.toLocaleString('en-US', { month: 'long' }));
+                setNarrative(todayWeather[0].narrative);
+            })
+        } else if(query === '') {
+            if (navigator.geolocation) {
+                getGeoLocation();
+            } else {
+                alert('Location is required! Reload Page to activate');
+                return false;
+            }
+        }
+    }
+
     useEffect(() => {
-        getWeather();
+        getWeather('');
     }, []);
 
   return (
