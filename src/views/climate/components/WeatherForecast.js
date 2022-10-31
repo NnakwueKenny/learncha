@@ -6,10 +6,14 @@ import Loader2 from './Loader2';
 const WeatherForecast = () => {
     const [ todayWeather, setTodayWeather] = useState([]);
     const [ generalFeeling, setGeneralFeel] = useState('');
-    const [ todayTemperature, setTodayTemperature ] = useState('');
+    const [ todayAvgTemperature, setTodayAvgTemperature ] = useState('');
     const [ todayMinTemperature, setTodayMinTemperature ] = useState('');
     const [ todayMaxTemperature, setTodayMaxTemperature ] = useState('');
+    const [ sunrise, setSunrise] = useState('');
+    const [ sunset, setSunset] = useState('');
     const [ dayOfWeek, setDayOfWeek ] = useState('');
+    const [ month, setMonth ] = useState('');
+    const [ todayDate, setTodayDate ] = useState('');
 
     const getWeather = () => {
         console.log(`'Getting today's weather`);
@@ -27,7 +31,20 @@ const WeatherForecast = () => {
         .then(data => {
             console.log(data);
             const todayWeather = [data.day1_day, data.day1_night];
-            setTodayTemperature(todayWeather[0]);
+            console.log(todayWeather);
+            setTodayAvgTemperature((todayWeather[0].calendarDayTemperatureMax + todayWeather[1].calendarDayTemperatureMin) / 2);
+            setSunrise(todayWeather[0].sunriseTimeLocal.split('T')[1].slice(0, 5));
+            setSunset(todayWeather[0].sunsetTimeLocal.split('T')[1].slice(0, 5));
+            setTodayMinTemperature(todayWeather[0].calendarDayTemperatureMin);
+            setTodayMaxTemperature(todayWeather[0].calendarDayTemperatureMax);
+            console.log(new Date(todayWeather[0].validTimeUtc));
+            setDayOfWeek(todayWeather[0].dayOfWeek);
+            console.log(todayWeather[0].dayOfWeek);
+            const date = new Date();
+            setTodayDate(date.getDate());
+            date.setMonth((new Date().getMonth()) - 1);
+            setMonth(date.toLocaleString('en-US', { month: 'long' }));
+            // console.log(todat)
         })
     }
 
@@ -44,7 +61,7 @@ const WeatherForecast = () => {
                 <div className='w-full max-w-5xl flex flex-col md:flex-row md:items-baseline items-center md:justify-between px-1 py-3'>
                     <div className='flex flex-col items-center w-full md:items-start pb-4 md:pb-0'>
                         <h2 style={{fontFamily: 'Gochi Hand'}} className='text-red-400 text-3xl'>Kano, Nigeria</h2>
-                        <p>Monday 31 October</p>
+                        <p>{dayOfWeek} {todayDate} {month}</p>
                     </div>
                     <div className='w-full'>
                         <p className='text-gray-100 w-full text-center text-xs md:text-base hidden md:block'>Based on your location</p>
@@ -62,7 +79,7 @@ const WeatherForecast = () => {
                         <div className='w-28 h-28 border-4 rounded-full'></div>
                         <div className='flex flex-col'>
                             <div className='flex'>
-                                <span className='text-7xl md:text-8xl font-extralight font-sans'>21 F</span>
+                                <span className='text-7xl md:text-8xl font-extralight font-sans'>{todayAvgTemperature} F</span>
                             </div>
                             <span>{generalFeeling}</span>
                         </div>
@@ -70,7 +87,7 @@ const WeatherForecast = () => {
                     <div className='w-full'>
                         <div className='w-full grid grid-cols-3 place-items-center p-2 gap-2'>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
-                                <span className='font-semibold text-2xl'>23<sup>O</sup></span>
+                                <span className='font-semibold text-2xl'>{todayMaxTemperature} F</span>
                                 <span>High</span>
                             </div>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
@@ -78,19 +95,19 @@ const WeatherForecast = () => {
                                 <span>Wind</span>
                             </div>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
-                                <span className='font-semibold text-2xl'>05:27</span>
+                                <span className='font-semibold text-2xl'>{sunrise}</span>
                                 <span>Sunrise</span>
                             </div>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
-                                <span className='font-semibold text-2xl'>14<sup>O</sup></span>
-                                <span>High</span>
+                                <span className='font-semibold text-2xl'>{todayMinTemperature} F</span>
+                                <span>Low</span>
                             </div>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
                                 <span className='font-semibold text-2xl'>0%</span>
                                 <span>Rain</span>
                             </div>
                             <div className='py-3 px-2 w-full flex flex-col items-center justify-center '>
-                                <span className='font-semibold text-2xl'>23<sup>O</sup></span>
+                                <span className='font-semibold text-2xl'>{sunset}</span>
                                 <span>Sunset</span>
                             </div>
                         </div>
