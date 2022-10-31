@@ -104,6 +104,13 @@ const ClimateIndex = () => {
                             </div>
                             <div>
                                 <p className='text-gray-100 text-xs md:text-base'>Based on your location</p>
+                                <form>
+                                    <div className='relative flex rounded-2xl overflow-hidden'>
+                                        <label className='sr-only'>Search Location</label>
+                                        <button className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
+                                        <input className='rounded w-full max-w-10 text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Search Location' />
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div className='w-full max-w-5xl flex flex-col md:flex-row gap-3 p-2 divide-y-2 md:divide-y-0 md:divide-x-2'>
