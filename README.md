@@ -19,7 +19,7 @@ _Read this in other languages: [English](README.md), [한국어](./docs/README.k
   - [Live demo](#live-demo)
   - [Built with](#built-with)
 
-## Short description
+## Short description.
 Learncha is an online and offline learning resources and a more immersive learning platform for kids using gaming to teach children in remote communities on climate and at same time have access to equitable educational tools and STEM games to enhance outside classroom learning
 ### What's the problem?
 

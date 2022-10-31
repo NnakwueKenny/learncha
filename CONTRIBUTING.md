@@ -1,4 +1,4 @@
-# Contributing
+# Contributing.
 
 When contributing a major change to this repository, please first discuss the change you wish to make via an [issue](contributing/ISSUES.md) or via
 [Slack in the #code-of-conduct channel](https://callforcode.org/slack). Minor issues can simply be addressed by sending by a pull request.
