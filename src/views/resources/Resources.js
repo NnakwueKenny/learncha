@@ -22,31 +22,31 @@ const Resources = () => {
         <div>
             <h1>Resources</h1>
         </div>
-        <div className='flex flex-col items-center w-full py-8 px-4 md:px-8 gap-4 md:gap-8 xl:gap-12'>
-            <div className='mb-5 flex flex-col justify-center w-full max-w-5xl items-center py-6 px-4 border-2 rounded-xl overflow-hidden border-dashed border-red-500'>
+        <div className='md:flex w-full py-8 px-4 md:px-8 gap-4 md:gap-8 xl:gap-12'>
+            <div className='mb-5 flex flex-col justify-center w-full max-w-5xl items-center py-4 px-4 border-2 rounded-xl overflow-hidden border-dashed border-red-500'>
                 <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-red-400 font-semibold text-5xl pb-4'>Books</h3>
                 <div data-aos="fade-right" className='flex flex-col md:flex-row gap-4 px-6 py-4 rounded-xl shadow'>
                     <Link to='/resources/books'>
                         <div className='w-full'>
-                            <img className='w-full h-64 md:h-80' alt='' src={book} />
+                            <img className='w-full h-64 md:h-96' alt='' src={book} />
                         </div>
                         <div className='flex flex-col gap-4 w-full items-center py-4'>
-                            <p className='mb-auto font-bold md:text-2xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6</p>
+                            <p className='mb-auto font-bold md:text-xl text-center'>Go through our various collection of children books ranging from science to mathematics english etc. for children from grade 1-6</p>
                             
                                 <a className='btn blue border-2 border-dashed rounded-3xl border-red-400 text-red-500 hover:text-white hover:bg-red-500' >View Books</a>
                         </div>
                     </Link>
                 </div>
             </div>
-            <div className='flex flex-col justify-center w-full max-w-5xl items-center py-6 px-4 border-2 rounded-xl overflow-hidden border-dashed border-green-500'>
-                <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-green-500 text-4xl pb-4'>Dictionary</h3>
+            <div className='flex flex-col justify-center w-full max-w-5xl items-center px-4 border-2 rounded-xl overflow-hidden border-dashed border-green-500'>
+            <h3 style={{fontFamily: `'Gochi Hand', cursive`}} className='text-green-400 font-semibold text-5xl pb-4'>Dictionary</h3>
                 <div data-aos="fade-right" className='flex flex-col md:flex-row gap-4 px-6 py-4 rounded-xl shadow'>
                     <Link to='/resources/dictionary'>
                         <div className='w-full'>
-                            <img src={dictionary} />
+                            <img className='w-full h-64 md:h-96' src={dictionary} />
                         </div>
-                        <div className='flex flex-col gap-4 w-full items-center py-4'>
-                            <p className='mb-auto font-bold md:text-2xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API</p>
+                        <div className='flex flex-col gap-4 w-full items-center py-2'>
+                            <p className='mb-auto font-bold md:text-xl text-center'>Find the meaning to words and also learn new word in a fun way by using our embedded text to speech API</p>
                             <a className='btn blue border-2 border-dashed rounded-3xl border-green-400 text-green-500 hover:text-white hover:bg-green-500'>Search</a>
                         </div>
                     </Link>
