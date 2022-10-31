@@ -79,7 +79,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
-                <ul className="sliders grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
+                <ul className="slider grid gap-4 md:gap-8 lg:gap-10 max-w-6xl">
                     <li className='flex flex-col md:flex-row px-2 rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex text-center h-full w-full'>
