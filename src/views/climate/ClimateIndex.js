@@ -110,11 +110,11 @@ const ClimateIndex = () => {
             </div>
 
             <div className='flex flex-col items-center w-full'>
-                <div className="w-full bg-gray-50" id="climate">
-                    <div className="w-full beg justify-center grid md:grid-cols-1 gap-9 items-center py-16 md:py-12 lg:py-16  md:px-8 lg:px-12">
-                        <div className="w-1/2">
+                <div className="w-full justify-center flex bg-gray-50" id="climate">
+                    <div className="w-full flex flex-col items-center py-16 md:py-12 lg:py-16 md:px-8 lg:px-12">
+                        <div className="max-w-3xl">
                             <h2 style={{fontFamily: 'Gochi Hand'}} className="text-center text-3xl md:text-4xl uppercase text-red-400 font-semibold pb-5">what is climate change?</h2>
-                            <p className="text-center px-3">
+                            <p className="text-center text-justify px-3">
                                 Climate change involves significant changes in average conditions—such as temperature,
                                 precipitation, wind patterns, and other aspects of climate—that occur over years, decades,
                                 centuries, or longer. Climate change involves longer-term trends, such as shifts toward warmer,
