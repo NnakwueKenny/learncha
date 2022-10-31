@@ -4,7 +4,9 @@ import Intro from '../climate/components/Intro'
 import MainHead from '../transcribers/components/MainHead';
 
 import imago_quad from './images/imago_quad.png';
-import imago from '../../images/imago.jpg';
+import imago from '../../images/imago.webp';
+import LDgame from '../../images/LDgame.png';
+import Animal from '../../images/Animals.png';
 
 const GamesIndex = () => {
 
@@ -28,7 +30,7 @@ const GamesIndex = () => {
                         <h3>Memory Boxes</h3>
                     </div>
                     <a target='_blank' rel='noreferrer' href='https://learncha.mybluemix.net/games/forest_game'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/1337382/pexels-photo-1337382.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={Animal} />
                     </a>
                 </div>
                 <div className='flex flex-col border-2 border-dashed border-yellow-500 rounded-xl shadow-md p-2 overflow-hidden cursor-pointer'>
@@ -36,7 +38,7 @@ const GamesIndex = () => {
                         <h3>Math and Climate</h3>
                     </div>
                     <a target='_blank' rel='noreferrer' href='https://goeroeg.github.io/ld-learn/apps/learn/ld-learn.html'>
-                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src='https://images.pexels.com/photos/9085647/pexels-photo-9085647.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                        <img className='w-full h-72 md:h-64 rounded-b-xl'  alt='' src={LDgame} />
                     </a>
                 </div>
             </div>

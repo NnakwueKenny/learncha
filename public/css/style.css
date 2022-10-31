@@ -321,7 +321,7 @@ input.white[type=submit]:hover{
 	font-family: 'Gochi Hand', cursive;
 	font-size: 48px;
 	text-align: left;
-	text-shadow: 1px 1px 2px #ce5a5d;
+	text-shadow:;
 	color: #ea6b6e;
 }
 .slide-info a:hover {
@@ -1174,7 +1174,7 @@ input.white[type=submit]:hover{
 		width: 350px;
 	}
 	.promo h1{
-		font-size: 36px;
+		font-size: 40px;
 	}
 	.bx-wrapper .bx-pager {
 		bottom: 30px;
@@ -1414,7 +1414,7 @@ input.white[type=submit]:hover{
 		display: none;
 	}
 	.promo h1{
-		font-size: 28px;
+		font-size: 35px;
 	}
 	.widget-boxes .box{
 		width: auto;
