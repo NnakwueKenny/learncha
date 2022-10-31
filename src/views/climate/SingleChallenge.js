@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import img from '../../images/second3.jpg';
 
 const SingleChallenge = () => {
 	const { challenge } = useParams();
@@ -45,9 +46,62 @@ const SingleChallenge = () => {
                 </form>
             </div>
             <div className='flex px-6 py-4 h-full overflow-auto justify-center items-start lg:justify-start gap-4 flex-col lg:flex-row'>
-              <div className='py-2'>
+              <div className='flex w-full py-2'>
                 <Link to='/climate/challenge' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
+                <p className='justify-center w-full flex text-2xl text-blue-400 font-bold'>Challenge Name</p>
               </div>
+            </div>
+            <div className='w-full flex flex-col border'>
+              <div className='text-xl w-full flex flex-col p-8'>
+                <p className='text-2xl font-bold py-4 text-blue-400'>Category : Flooding</p>
+                <p className=''><span className='font-bold text-red-400'>Description</span> : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+              <div className='text-xl w-full flex flex-col p-8'>
+                <p className='text-2xl font-bold py-4 text-blue-400'>Creator's Progress</p>
+                <div className='overflow-auto w-full flex'>
+                  <div className='flex w-40 h-40 gap-4'>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                  </div>
+                </div>
+              </div>
+              <div className='text-xl w-full flex flex-col p-8'>
+                <p className='text-2xl font-bold py-4 text-blue-400'>Participant's Progress</p>
+                <div className='overflow-auto w-full flex'>
+                  <div className='flex w-40 h-40 gap-4'>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                    <img className='h-full w-full' src={img}/>
+                  </div>
+                </div>
+              </div>
+              <div className='text-xl w-full flex flex-col p-8'>
+                <p className='font-bold py-4'>Participants</p>
+                <div className='overflow-auto w-full flex'>
+                  <div class="flex -space-x-4">
+                      <img className="w-10 h-10 rounded-full border-2 border-white" src={img} />
+                      <img className="w-10 h-10 rounded-full border-2 border-white" src={img} />
+                      <img className="w-10 h-10 rounded-full border-2 border-white" src={img} />
+                      <a className="flex justify-center items-center w-10 h-10 text-xs font-medium text-white bg-gray-700 rounded-full border-2 border-white hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>
+                  </div>
+                </div>
+              </div>
+                <div className="flex items-center justify-center mb-4">
+                  <p className="uppercase bg-white text-blue-400 border-2 border-dashed border-blue-400 hover:bg-blue-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">join the
+                    challenge
+                  </p>
+                </div>
             </div>
         </div>
     </section>
