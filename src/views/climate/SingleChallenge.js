@@ -105,13 +105,6 @@ const SingleChallenge = () => {
                 <div className='overflow-auto w-full flex'>
                   <div className='flex w-40 h-40 gap-4'>
                     <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
                   </div>
                 </div>
               </div>
@@ -119,13 +112,6 @@ const SingleChallenge = () => {
                 <p style={{fontFamily: 'Gochi Hand'}} className='text-2xl font-bold py-2 text-cyan-500'>Participant's Progress</p>
                 <div className='overflow-auto w-full flex'>
                   <div className='flex w-40 h-40 gap-4'>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
-                    <img className='h-full w-full' src={img}/>
                     <img className='h-full w-full' src={img}/>
                   </div>
                 </div>
