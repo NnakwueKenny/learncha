@@ -2,6 +2,9 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Loader2 from './Loader2';
+import rainy from '../images/rainy.png';
+import clearWeather from '../images/clearWeather.png';
+import sunnyWeather from '../images/sunnyWeather.png';
 
 const WeatherForecast = () => {
     const [ todayWeather, setTodayWeather] = useState([]);
@@ -14,6 +17,7 @@ const WeatherForecast = () => {
     const [ dayOfWeek, setDayOfWeek ] = useState('');
     const [ month, setMonth ] = useState('');
     const [ todayDate, setTodayDate ] = useState('');
+    const [ narrative, setNarrative] = useState('');
 
     const getWeather = () => {
         console.log(`'Getting today's weather`);
@@ -44,7 +48,8 @@ const WeatherForecast = () => {
             setTodayDate(date.getDate());
             date.setMonth((new Date().getMonth()) - 1);
             setMonth(date.toLocaleString('en-US', { month: 'long' }));
-            // console.log(todat)
+            setNarrative(todayWeather[0].narrative)
+            // const
         })
     }
 
@@ -76,7 +81,17 @@ const WeatherForecast = () => {
                 </div>
                 <div className='w-full max-w-5xl flex flex-col md:flex-row gap-3 p-2 divide-y-2 md:divide-y-0 md:divide-x-2'>
                     <div className='flex justify-around items-center gap-8 md:gap-10 lg:gap-12 py-3 w-full'>
-                        <div className='w-28 h-28 border-4 rounded-full'></div>
+                        <div className='w-20 h-20 overflow-hidden border-2 rounded-full'>
+                            {
+                                narrative.toLowerCase().includes('sunny') || narrative.toLowerCase().includes('sun') | narrative.toLowerCase().includes('sun')?
+                                <img alt='' src={sunnyWeather}/>
+                                :
+                                narrative.includes('Rain') || narrative.includes('Rainy') || narrative.includes('rain') || narrative.includes('rainy')?
+                                <img alt='' src={rainy}/>
+                                :
+                                <img alt='' src={clearWeather}/>
+                            }
+                        </div>
                         <div className='flex flex-col'>
                             <div className='flex'>
                                 <span className='text-7xl md:text-8xl font-extralight font-sans'>{todayAvgTemperature} F</span>
