@@ -43,7 +43,7 @@ const SingleChallenge = () => {
           console.log('Wrong')
         } else {
           setIsChallengeMember(true);
-          console.log('correct')  
+          console.log('correct')
         }
       })
       .catch(err => console.log(err))
@@ -65,8 +65,10 @@ const SingleChallenge = () => {
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
       {
+        showChallengeModal&&
         <UpdateChallenegeModal
         toggleChallengeModal = {toggleChallengeModal}
+        challengeID= {currentChallengeID}
       />
       }
         <div className='border-b shadow-3xl w-full h-[1px] mb-8 mt-2'></div>
