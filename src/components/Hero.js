@@ -119,22 +119,6 @@ const Hero = () => {
                             <img className='w-full h-full rounded-xl' src={girl}/>
                         </div>
                     </li>
-
-                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
-                        <div className='w-full h-96 overflow-hidden'>
-                            <img className='w-full h-full rounded-xl' alt='' src={children}/>
-                        </div>
-                        <div className="h-full w-full">
-                            <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
-                                <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Climate Challenge</Link></h1>
-                                <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
-                                Learn about climate and join the climate challenge today and help fight climatic degredation and become a learncha ambassador
-                                </p>
-                                <a className="btn red"><Link to='/climate'>Learn more</Link></a>
-                            </div>
-                        </div>
-                    </li>
-
                     <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
                         <div className="h-full w-full">
                             <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
@@ -147,6 +131,20 @@ const Hero = () => {
                         </div>
                         <div className='w-full h-full overflow-hidden'>
                             <img className='w-full h-full rounded-xl' src={cartoonWeather}/>
+                        </div>
+                    </li>
+                    <li className='flex flex-col md:flex-row border-2 border-red-400 px-2 border-dashed rounded-2xl overflow-hidden'>
+                        <div className='w-full h-96 overflow-hidden'>
+                            <img className='w-full h-full rounded-xl' alt='' src={children}/>
+                        </div>
+                        <div className="h-full w-full">
+                            <div className='flex flex-col items-center justify-center h-full w-full px-8 gap-4'>
+                                <h1><Link href="/games" className='animate animate-pulse text-center w-full flex text-red-500 md:text-3xl text-lg font-bold'>Climate Challenge</Link></h1>
+                                <p className='text-justify text-white text-gray-600 text-center mb-6 md:text-xl'>
+                                Learn about climate and join the climate challenge today and help fight climatic degredation and become a learncha ambassador
+                                </p>
+                                <a className="btn red"><Link to='/climate'>Learn more</Link></a>
+                            </div>
                         </div>
                     </li>
                     
