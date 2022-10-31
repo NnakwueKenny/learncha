@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import img from '../../images/second3.jpg';
+import UpdateChallenegeModal from './components/updateChallengeModal';
 
 const SingleChallenge = () => {
 	const { challenge } = useParams();
@@ -52,11 +53,23 @@ const SingleChallenge = () => {
 
   useEffect(() => {
     getCurrentChallenge();
-  }, [])
+  }, []);
+
+  const [showChallengeModal, setShowChallengeModal] = useState(false);
+    const toggleChallengeModal = () => {
+        console.log('Modal toggled')
+        setShowChallengeModal(prevValue => !prevValue);
+    };
   
   
   return (
     <section className="promo w-full flex flex-col items-center py-4x">
+      {
+        showChallengeModal &&
+        <UpdateChallenegeModal
+          toggleChallengeModal = {toggleChallengeModal}
+        />
+        }
         <div className='border-b shadow-3xl w-full h-[1px] mb-8 mt-2'></div>
         <div className='relative w-full max-w-6xl border-2 border-dashed rounded-3xl overflow-hidden border-cyan-500'>
             <div className='flex flex-col items-center md:flex-row md:justify-between gap-3 py-4 shadow px-4 md:px-8'>
@@ -128,7 +141,7 @@ const SingleChallenge = () => {
                       challenge
                     </button>
                     :
-                    <button style={{fontFamily: 'Gochi Hand'}} className="uppercase bg-white text-cyan-500 border-2 border-dashed border-cyan-400 hover:bg-cyan-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">
+                    <button style={{fontFamily: 'Gochi Hand'}} onClick={toggleChallengeModal} className="uppercase bg-white text-cyan-500 border-2 border-dashed border-cyan-400 hover:bg-cyan-500 hover:text-white px-10 py-3 rounded-full font-semibold text-xl">
                       Upload progress
                     </button>
                     }
