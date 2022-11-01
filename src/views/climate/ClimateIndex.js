@@ -66,7 +66,7 @@ const ClimateIndex = () => {
                 <div className="relative inline-block">
                     <div>
                         <button onClick={() => toggleProfileView()} type="button" className="inline-flex w-12 h-12 justify-center rounded-full overflow-hidden border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button">
-                            <img className='w-full h-full' alt='' src='https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=600' />
+                            <div className='h-full w-full flex justify-center items-center text-xl'><span><i className='fa fa-bars'></i></span></div>
                         </button>
                     </div>
                     
