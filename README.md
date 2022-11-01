@@ -124,7 +124,7 @@ See the "long description" field in our submission (not in this repo) for the lo
 - [FASTAPI](https://fastapi.tiangolo.com/) - Python Web API used 
 - [Text-To-Speech](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) - API used for text to speech
 - [Speech-Recognition](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) - API used for speech recognition
-- [User Interaction](https://reactjs.org)(https://tailwindcss.com)
+- [User Interaction](https://reactjs.org) (https://tailwindcss.com)
 
 Offline
 - [trivia API](https://the-trivia-api.com/) - API used for Trivia quiz
