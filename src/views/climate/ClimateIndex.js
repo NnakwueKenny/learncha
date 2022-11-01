@@ -76,7 +76,7 @@ const ClimateIndex = () => {
                             isActiveUser !== null?
                             <div className="py-1" role="none">
                                 <Link to="/climate/challenge" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Challenge</Link>
-                                <a href="/climate/logout" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Logout</a>
+                                <Link to="/climate/logout" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Logout</Link>
                             </div>
                             :
                             <div className="py-1" role="none">

@@ -36,9 +36,8 @@ const SingleChallenge = () => {
       console.log(data)
       setCurrentChallenge(data);
       const challengeMembers = data.challenge_members;
-      const currentUser = data.users_table.id;
-      console.log(currentUser);
-      console.log(challengeMembers);
+      const challengeCreator = data.users_table.id;
+      const presentChallenge = data;
       fetch(`https://learncha.mybluemix.net/me`,
         {
           headers: {
@@ -48,8 +47,12 @@ const SingleChallenge = () => {
         }
       )
       .then(response => response.json())
-      .then(data => {
-        if (challengeMembers.some(member => member.user_id === data) === true || currentUser === true) {
+      .then(user => {
+        console.log(user);
+        // challenge
+        console.log(challengeMembers.some(member => member.user_id === user.id))
+        console.log(challengeCreator, user.id)
+        if (challengeMembers.some(member => member.user_id === user.id) !== true || challengeCreator !== user.id) {
           setIsChallengeMember(false);
           console.log('Wrong')
         } else {
@@ -101,9 +104,9 @@ const SingleChallenge = () => {
                 </form>
             </div>
             <div className='flex px-6 py-4 h-full overflow-auto justify-center items-start lg:justify-start gap-4 flex-col lg:flex-row'>
-              <div className='flex w-full py-2'>
+              <div className='flex w-full py-2 gap-2 items-baseline'>
                 <Link to='/climate/challenge' className='text-2xl hover:text-cyan-500'><i className='fa fa-arrow-left'></i></Link>
-                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-4xl text-cyan-400 font-bold'>{currentChallenge.name}</p>
+                <p style={{fontFamily: 'Gochi Hand'}} className='justify-center w-full flex text-xl md:text-2xl lg:text-4xl uppercase text-cyan-500 font-bold'>{currentChallenge.name}</p>
               </div>
             </div>
             <div className='w-full flex flex-col border'>

@@ -203,7 +203,7 @@ const ClimateChallenge = () => {
                 </div>
                 <div className='flex items-start justify-center w-full h-auto lg:h-[768px] lg:max-w-xs self-start py-4'>
                     <div className='w-full lg:max-w-3xl h-full py-2 overflow-auto p-3 rounded-xl shadow'>
-                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>All Challenge</h3>
+                        <h3 style={{fontFamily: 'Gochi Hand'}} className='font-semibold text-xl pb-4 pt-2'>All Challenges</h3>
                         <TrendingChallenge />
                     </div>
                 </div>
