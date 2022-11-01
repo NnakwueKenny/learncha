@@ -5,6 +5,7 @@ import Loader2 from './Loader2';
 import rainy from '../images/rainy.png';
 import clearWeather from '../images/clearWeather.png';
 import sunnyWeather from '../images/sunnyWeather.png';
+import { ScrollRestoration } from 'react-router-dom';
 
 const WeatherForecast = () => {
     const [ location, setLocation] = useState({long: '', latt: ''});
@@ -26,30 +27,23 @@ const WeatherForecast = () => {
     // const currentlocation = window.navigator.geolocation.getCurrentPosition(console.log, console.error);
 
 
-    const getGeoLocation = async () => {
+    const getGeoLocation = async (data) => {
         let currentLocation = {};
+        
+        // extracting the latitude and longitude from the data
+        let latitude = data.coords.latitude;
+        let longitude = data.coords.longitude;
+        
+        console.log(latitude, longitude);
+        // getCurrentLocation(latitude, longitude);
+        setLocation(prevLoc => {
+            return {...prevLoc, latt: latitude, long: longitude}
+        });
 
-        const getLocation = (data) => {
-            // extracting the latitude and longitude from the data
-            let latitude = data.coords.latitude;
-            let longitude = data.coords.longitude;
-            // alert("Your location: " + latitude + ", " + longitude);
-            // setLocation({latt:latitude, long:longitude });
-            console.log(latitude, longitude);
-            getCurrentLocation(latitude, longitude);
-            setLocation({latt: latitude, long: longitude});
-    
-        }
-
-        const getCurrentLocation = (latt, long) => {
-            currentLocation.latt = latt;
-            currentLocation.long = long;
-        }
-
-        window.navigator.geolocation
-            .getCurrentPosition(getLocation, console.error);
-
-        console.log(currentLocation);
+        // const getCurrentLocation = (latt, long) => {
+        //     currentLocation.latt = latt;
+        //     currentLocation.long = long;
+        // }
 
         console.log('Getting geolocation');
 
@@ -60,15 +54,31 @@ const WeatherForecast = () => {
                     accept: 'application/json',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `long=${location.long}&latt=${location.latt}`  
+                body: `long=${longitude}&latt=${latitude}`  
             }
         )
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            const todayWeather = [data.day1_day, data.day1_night];
+            setTodayWeatherCondition(todayWeather);
+            console.log(todayWeather[0].morning);
+            const otherDayWeather = [[data.day2_day, data.day2_night], [data.day3_day, data.day3_night], [data.day4_day, data.day4_night]];
+            console.log(otherDayWeather);
+            setNextThreedays(otherDayWeather);
+            setTodayAvgTemperature((todayWeather[0].calendarDayTemperatureMax + todayWeather[1].calendarDayTemperatureMin) / 2);
+            setSunrise(todayWeather[0].sunriseTimeLocal.split('T')[1].slice(0, 5));
+            setSunset(todayWeather[0].sunsetTimeLocal.split('T')[1].slice(0, 5));
+            setTodayMinTemperature(todayWeather[0].calendarDayTemperatureMin);
+            setTodayMaxTemperature(todayWeather[0].calendarDayTemperatureMax);
+            setDayOfWeek(todayWeather[0].dayOfWeek);
+            const date = new Date();
+            setTodayDate(date.getDate());
+            date.setMonth((new Date().getMonth()));
+            setMonth(date.toLocaleString('en-US', { month: 'long' }));
+            setNarrative(todayWeather[0].narrative);
         })
         .catch(err => {
-            
             console.log(currentLocation);
         })
     }
@@ -77,6 +87,14 @@ const WeatherForecast = () => {
     const getWeather = (query) => {
         console.log(query)
         if (query === '') {
+            if (navigator.geolocation) {
+                window.navigator.geolocation
+                    .getCurrentPosition(getGeoLocation, console.error);
+            } else {
+                // alert('Location is required! Reload Page to activate');
+                // return false;
+            }
+        } else {
             console.log(`'Getting today's weather`);
             fetch(`https://learncha.mybluemix.net/forecast_weather`,
                 {
@@ -85,7 +103,7 @@ const WeatherForecast = () => {
                         accept: 'application/json',
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: `location=kano, nigeria`
+                    body: `location=${query}`
                 }
             )
             .then(response => response.json())
@@ -93,7 +111,7 @@ const WeatherForecast = () => {
                 console.log(data);
                 const todayWeather = [data.day1_day, data.day1_night];
                 setTodayWeatherCondition(todayWeather);
-                console.log(todayWeather[0].orning);
+                console.log(todayWeather[0].morning);
                 const otherDayWeather = [[data.day2_day, data.day2_night], [data.day3_day, data.day3_night], [data.day4_day, data.day4_night]];
                 console.log(otherDayWeather);
                 setNextThreedays(otherDayWeather);
@@ -109,15 +127,7 @@ const WeatherForecast = () => {
                 setMonth(date.toLocaleString('en-US', { month: 'long' }));
                 setNarrative(todayWeather[0].narrative);
             })
-        } 
-        // else if(query === '') {
-        //     if (navigator.geolocation) {
-        //         getGeoLocation();
-        //     } else {
-        //         alert('Location is required! Reload Page to activate');
-        //         return false;
-        //     }
-        // }
+        }
     }
 
     useEffect(() => {
@@ -140,7 +150,7 @@ const WeatherForecast = () => {
                         <form className='flex justify-center w-full'>
                             <div className='relative w-full max-w-md flex justify-end rounded-2xl overflow-hidden'>
                                 <label className='sr-only'>Search Location</label>
-                                <button onClick={() => getWeather(search)} className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
+                                <button type='button' onClick={() => getWeather(search)} className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
                                 <input onChange={(e) => setSearch(e.target.value)} className='rounded w-full text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Search Location' />
                             </div>
                         </form>
