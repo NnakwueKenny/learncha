@@ -5,11 +5,11 @@ import Loader2 from './Loader2';
 import rainy from '../images/rainy.png';
 import clearWeather from '../images/clearWeather.png';
 import sunnyWeather from '../images/sunnyWeather.png';
-import { ScrollRestoration } from 'react-router-dom';
+import { createBrowserRouter, ScrollRestoration } from 'react-router-dom';
 
 const WeatherForecast = () => {
     const [ location, setLocation] = useState({long: '', latt: ''});
-    const [ locationInWords, setLocationInWords ] = useState('kano, nigeria');
+    const [ locationInWords, setLocationInWords ] = useState('');
     const [ todayWeatherCondition, setTodayWeatherCondition] = useState([]);
     const [ generalFeeling, setGeneralFeel] = useState('');
     const [ todayAvgTemperature, setTodayAvgTemperature ] = useState('');
@@ -33,8 +33,7 @@ const WeatherForecast = () => {
         // extracting the latitude and longitude from the data
         let latitude = data.coords.latitude;
         let longitude = data.coords.longitude;
-        
-        console.log(latitude, longitude);
+
         // getCurrentLocation(latitude, longitude);
         setLocation(prevLoc => {
             return {...prevLoc, latt: latitude, long: longitude}
@@ -59,12 +58,10 @@ const WeatherForecast = () => {
         )
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             const todayWeather = [data.day1_day, data.day1_night];
             setTodayWeatherCondition(todayWeather);
-            console.log(todayWeather[0].morning);
             const otherDayWeather = [[data.day2_day, data.day2_night], [data.day3_day, data.day3_night], [data.day4_day, data.day4_night]];
-            console.log(otherDayWeather);
             setNextThreedays(otherDayWeather);
             setTodayAvgTemperature((todayWeather[0].calendarDayTemperatureMax + todayWeather[1].calendarDayTemperatureMin) / 2);
             setSunrise(todayWeather[0].sunriseTimeLocal.split('T')[1].slice(0, 5));
@@ -77,13 +74,29 @@ const WeatherForecast = () => {
             date.setMonth((new Date().getMonth()));
             setMonth(date.toLocaleString('en-US', { month: 'long' }));
             setNarrative(todayWeather[0].narrative);
+            fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=3fc01ec0efd54fec9f12d22b658a4752`,
+                {
+                    method: 'get',
+                    headers: {
+                        accept: 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                }
+            )
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const fetchedLocation = data.results[0].formatted.split(',').slice(-2);
+                setLocationInWords(`${fetchedLocation[0]}, ${fetchedLocation[1]}`)
+            })
+            .catch(err => console.log(err));
         })
         .catch(err => {
             console.log(currentLocation);
         })
     }
 
-
+    // 3fc01ec0efd54fec9f12d22b658a4752
     const getWeather = (query) => {
         console.log(query)
         if (query === '') {
@@ -109,6 +122,7 @@ const WeatherForecast = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
+                setLocationInWords(search);
                 const todayWeather = [data.day1_day, data.day1_night];
                 setTodayWeatherCondition(todayWeather);
                 console.log(todayWeather[0].morning);
@@ -151,7 +165,7 @@ const WeatherForecast = () => {
                             <div className='relative w-full max-w-md flex justify-end rounded-2xl overflow-hidden'>
                                 <label className='sr-only'>Search Location</label>
                                 <button type='button' onClick={() => getWeather(search)} className='absolute top-0 right-0 h-full text-blue-500 flex items-center justify-center px-3'><i className='fa fa-search'></i></button>
-                                <input onChange={(e) => setSearch(e.target.value)} className='rounded w-full text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Search Location' />
+                                <input onChange={(e) => setSearch(e.target.value)} className='rounded w-full text-gray-400 ring-0 outline-none border-0' type='text' placeholder='Abuja, NG' />
                             </div>
                         </form>
                     </div>
