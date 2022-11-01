@@ -46,7 +46,7 @@ Learncha is an online and offline learning resources and a more immersive learni
 
 ## The architecture
 
-![Video transcription/translation app](https://github.com/CaptRaven/LEARNCHA/blob/)
+[Video transcription/translation app](https://github.com/CaptRaven/LEARNCHA/blob/)
 
 1. The user navigates to the site 
 2. the platform is hosted on cloudinary
