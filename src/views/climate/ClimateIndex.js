@@ -40,10 +40,6 @@ const ClimateIndex = () => {
         {/*<Intro />*/}
         <div className="relative w-full max-w-7xl h-full flex flex-col items-center justify-start gap-6 mb-4 mt-6 md:mb-6 border-2 border-red-400 border-dashed rounded-b-3xl overflow-hidden">
             <nav className="flex justify-between bg-white px-4 sm:px-6 md:px-8 py-4 md:py-5 absolute w-full z-20 top-0 left-0 border-b border-gray-200">
-                <div className="flex justify-between md:justify-start items-center">
-                    <Link to='/climate'><i className="fa-solid fa-cloud-sun-rain fa-2x"></i></Link>
-                    <div id="Clock" className="text-white text-xl font-semibold hidden"></div>
-                </div>
                 <div style={{fontFamily: 'Gochi Hand'}} className="hidden md:flex " id="navbar-sticky">
                     <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 text-lg md:text-xl md:font-medium md:border-0 md:bg-white">
                         <li>
