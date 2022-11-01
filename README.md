@@ -42,7 +42,7 @@ Learncha is an online and offline learning resources and a more immersive learni
 
 ## Demo video
 
-[![Watch the video](https://www.youtube.com/watch?v=hI54VopbpZI)
+[Watch the video](https://www.youtube.com/watch?v=hI54VopbpZI)
 
 ## The architecture
 
