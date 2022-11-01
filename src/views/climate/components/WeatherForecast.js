@@ -151,8 +151,8 @@ const WeatherForecast = () => {
   return (
     <div className='main-container px-4 md:px-8 lg:px-10 pt-32 w-full'>
         <div
-            style={{fontFamily: `'Open Sans', sans-serif`, background: 'linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%)'}}
-            className='bg-gray-400 text-white bg-no-repeat rounded-xl overflow-hidden'>
+            style={{fontFamily: `'Open Sans', sans-serif`}}
+            className='bg-gray-400 text-white bg-no-repeat rounded-xl overflow-hidden bg-gradient-to-b from-cyan-500 to-blue-500'>
             <div className='flex flex-col w-full items-center px-3 md:px-6 py-5'>
                 <div className='w-full max-w-5xl flex flex-col md:flex-row md:items-baseline items-center md:justify-between px-1 py-3'>
                     <div className='flex flex-col items-center w-full md:items-start pb-4 md:pb-0'>
