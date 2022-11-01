@@ -137,7 +137,7 @@ const WeatherForecast = () => {
                 setDayOfWeek(todayWeather[0].dayOfWeek);
                 const date = new Date();
                 setTodayDate(date.getDate());
-                date.setMonth((new Date().getMonth()) - 1);
+                date.setMonth((new Date().getMonth()));
                 setMonth(date.toLocaleString('en-US', { month: 'long' }));
                 setNarrative(todayWeather[0].narrative);
             })
