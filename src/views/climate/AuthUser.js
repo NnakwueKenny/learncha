@@ -3,7 +3,7 @@ const AuthUser = () => {
     const fromLocal = JSON.parse(localStorage.getItem('accessToken'));
 
     console.log(fromLocal);
-
+    let requestStatus = '';
     fetch('https://learncha.mybluemix.net/me',
         {
             headers: {
@@ -12,15 +12,20 @@ const AuthUser = () => {
             }
         }
     )
-    .then(response => response.json())
-    .then(data => console.log(data))
+    .then(response => {
+        requestStatus = response.status;
+        console.log(response.status)
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        if (requestStatus === 200) {
+            return true
+        } else {
+            return false;
+        }
+    })
     .catch(err => console.log(err))
-
-    if ( fromLocal != null) {
-        return true
-    } else {
-        return false;
-    }
 }
 
 export default AuthUser;
