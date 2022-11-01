@@ -56,7 +56,7 @@ const TrendingChallenge = () => {
                             </p>
                           </div>
                           <div className='flex justify-center py-1'>
-                            <Link className='text-cyan-500 hover:underline' to={`/climate/challenge/challende_ID=${item.id}`}>View Challenge</Link>
+                            <Link className='text-cyan-500 hover:underline' to={`/climate/challenge/challenge_ID=${item.id}`}>View Challenge</Link>
                           </div>
                       </div>
                     )

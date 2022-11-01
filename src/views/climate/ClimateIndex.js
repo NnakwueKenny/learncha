@@ -68,15 +68,16 @@ const ClimateIndex = () => {
                     
                     <div className={`${profileView? '': 'hidden'} absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                         <div className="py-1" role="none">
-                            <a href="#causes" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Causes</a>
-                            <a href="#faqs" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">FAQS</a>
-                            <a href="#solutions" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Solutions</a>
+                            <a href="#causes" className="text-gray-700 block px-4 py-2 text-sm flex md:hidden" role="menuitem" tabindex="-1" id="menu-item-0">Causes</a>
+                            <a href="#faqs" className="text-gray-700 block px-4 py-2 text-sm flex md:hidden" role="menuitem" tabindex="-1" id="menu-item-1">FAQS</a>
+                            <a href="#solutions" className="text-gray-700 block px-4 py-2 text-sm flex md:hidden" role="menuitem" tabindex="-1" id="menu-item-2">Solutions</a>
                         </div>
                         {
                             isActiveUser !== null?
                             <div className="py-1" role="none">
                                 <Link to="/climate/challenge/profile" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Profile</Link>
                                 <Link to="/climate/challenge" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Challenge</Link>
+                                <Link to="/climate/logout" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Logout</Link>
                             </div>
                             :
                             <div className="py-1" role="none">

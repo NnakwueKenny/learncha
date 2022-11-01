@@ -26,6 +26,7 @@ import ImagoQuadIndex from './views/games/imago_quad/ImagoQuadIndex';
 import ClimateChallenge from './views/climate/ClimateChallenge';
 import SingleChallenge from './views/climate/SingleChallenge';
 import DIY from './views/diy/DIY';
+import ClimateLogout from './views/climate/ClimateLogout';
 
 function App() {
 	useEffect(() => {
@@ -61,6 +62,7 @@ function App() {
 						{/* Climate Routes */}
 						<Route path="/climate" element={<ClimateIndex />} />
 						<Route path="/climate/login" element={<ClimateLogin />} />
+						<Route path="/climate/logout" element={<ClimateLogout />} />
 						<Route path="/climate/register" element={<ClimateRegister />} />
 						<Route path="/climate/challenge" element={<ClimateChallenge />} />
 						<Route path="/climate/challenge/:challenge" element={<SingleChallenge category={category}/>} />
