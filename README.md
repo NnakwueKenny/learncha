@@ -108,8 +108,9 @@ OUR SOLUTION LEARNCHA that provides an online and offline learning resources and
 ## Live demo
 
 You can find a running system to test at [learncha.vercel.app](https://learncha.vercel.app).
-OFFLINE DEMO LINK [learncha-offline](https://github.com/farex4sure/learncha_ussd) simulator sandbox-(https://simulator.africastalking.com/) USSD CODE-*384*220022#
-[Android APK file] - (https://drive.google.com/drive/folders/1PEd1w896QDc1zdrMJEORP88QU2eQbE8m)
+-OFFLINE DEMO LINK [learncha-offline](https://github.com/farex4sure/learncha_ussd) 
+-simulator sandbox-(https://simulator.africastalking.com/) USSD CODE-*384*220022#
+-Android APK file - (https://drive.google.com/drive/folders/1PEd1w896QDc1zdrMJEORP88QU2eQbE8m)
 
 
 See the "long description" field in our submission (not in this repo) for the log-in credentials.
