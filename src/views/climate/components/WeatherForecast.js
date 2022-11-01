@@ -156,7 +156,7 @@ const WeatherForecast = () => {
             <div className='flex flex-col w-full items-center px-3 md:px-6 py-5'>
                 <div className='w-full max-w-5xl flex flex-col md:flex-row md:items-baseline items-center md:justify-between px-1 py-3'>
                     <div className='flex flex-col items-center w-full md:items-start pb-4 md:pb-0'>
-                        <h2 style={{fontFamily: 'Gochi Hand'}} className='text-red-400 text-3xl capitalize'>{locationInWords}</h2>
+                        <h2 style={{fontFamily: 'Gochi Hand'}} className='text-white text-3xl capitalize'>{locationInWords}</h2>
                         <p>{dayOfWeek} {todayDate} {month}</p>
                     </div>
                     <div className='w-full'>
