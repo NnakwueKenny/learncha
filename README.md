@@ -6,9 +6,9 @@ _Read this in other languages: [English](README.md), [한국어](./docs/README.k
 
 ## Contents
 
-- [Learncha](#LEARNCHA)
+- [Learncha](#learncha)
   - [Contents](#contents)
-  - [Short description](#short-description)
+  - [Short description.](#short-description)
     - [What's the problem?](#whats-the-problem)
     - [How can technology help?](#how-can-technology-help)
     - [The idea](#the-idea)
@@ -16,6 +16,9 @@ _Read this in other languages: [English](README.md), [한국어](./docs/README.k
   - [The architecture](#the-architecture)
   - [Long description](#long-description)
   - [Project roadmap](#project-roadmap)
+        - [Learncha currently does the following:](#learncha-currently-does-the-following)
+      - [it currently runs on IBM Cloud Foundary.](#it-currently-runs-on-ibm-cloud-foundary)
+      - [See below for our proposed schedule on next steps after Call for Code 2021 submission.](#see-below-for-our-proposed-schedule-on-next-steps-after-call-for-code-2021-submission)
   - [Live demo](#live-demo)
   - [Built with](#built-with)
 
@@ -90,7 +93,8 @@ Online
 - [PostgreSQL](https://www.postgresql.org/) - Database management system
 - [Cloudinary](https://cloudinary.com/documentation) - Object Storage
 - [FASTAPI](https://fastapi.tiangolo.com/) - Python Web API used 
-- [Text-To-Speech](https://fastapi.tiangolo.com/) - API used for text to speech  
+- [Text-To-Speech](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) - API used for text to speech
+- [Speech-Recognition](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) - API used for speech recognition
 
 Offline
 - [trivia API](https://the-trivia-api.com/) - API used for Trivia quiz
