@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import img from '../../images/second3.jpg';
+import AuthUser from './AuthUser';
 import UpdateChallenegeModal from './components/updateChallengeModal';
 
 const SingleChallenge = () => {
@@ -10,7 +11,17 @@ const SingleChallenge = () => {
   const currentChallengeID = challenge.split('=')[1];
   const [currentChallenge, setCurrentChallenge] = useState([]);
   const [isChallengeMember, setIsChallengeMember] = useState(false);
-  
+
+
+  const isActiveUser = AuthUser();
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!challenge.includes('challenge')) {
+            console.log('returning: ', isActiveUser);
+            navigate("/climate/challenge");
+        }
+    });
+
   const getCurrentChallenge = () => {
     console.log('Getting current challenge');
     fetch(`https://learncha.mybluemix.net/challenge/progress/${currentChallengeID}`,
