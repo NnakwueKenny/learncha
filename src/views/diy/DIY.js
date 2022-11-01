@@ -64,22 +64,22 @@ const DIY = () => {
     const getDIY = () => {
         const randomQuery = queries[Math.floor(Math.random() * queries.length)];
         setIsLoadingDIY(true);
-        // fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
-        //     {
-        //         method: 'post',
-        //         headers: {
-        //             accept: 'application/json',
-        //             'Content-Type': 'application/x-www-form-urlencoded'
-        //         },
-        //         body: `form=${randomQuery}`
-        //     }
-        // )
-        // .then(response => response.json())
-        // .then(data => {
-        //     setDiyVideos(data.data);
-        //     setIsLoadingDIY(false);
-        // })
-        // .catch(err => console.log(err));
+        fetch('https://learncha.mybluemix.net/do_it_yourself/youtube',
+            {
+                method: 'post',
+                headers: {
+                    accept: 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `form=${randomQuery}`
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            setDiyVideos(data.data);
+            setIsLoadingDIY(false);
+        })
+        .catch(err => console.log(err));
     }
 
     useEffect(() => {

@@ -53,7 +53,7 @@ const SingleChallenge = () => {
         console.log(challengeMembers.some(member => member.user_id === user.id))
         console.log(challengeCreator, user.id)
         if (challengeMembers.some(member => member.user_id === user.id) !== true || challengeCreator !== user.id) {
-          setIsChallengeMember(false);
+          setIsChallengeMember(true);
           console.log('Wrong')
         } else {
           setIsChallengeMember(true);
