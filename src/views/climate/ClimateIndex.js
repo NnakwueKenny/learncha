@@ -59,8 +59,8 @@ const ClimateIndex = () => {
                         </li>
                     </ul>
                 </div>  
-                <div className="relative inline-block">
-                    <div>
+                <div className="relative inline-block w-full">
+                    <div className='flex w-full justify-end items-center'>
                         <button onClick={() => toggleProfileView()} type="button" className="inline-flex w-12 h-12 justify-center rounded-full overflow-hidden border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button">
                             <div className='h-full w-full flex justify-center items-center text-xl'><span><i className='fa fa-bars'></i></span></div>
                         </button>
@@ -75,9 +75,8 @@ const ClimateIndex = () => {
                         {
                             isActiveUser !== null?
                             <div className="py-1" role="none">
-                                <Link to="/climate/challenge/profile" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Profile</Link>
                                 <Link to="/climate/challenge" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Challenge</Link>
-                                <Link to="/climate/logout" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Logout</Link>
+                                <a href="/climate/logout" className="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Logout</a>
                             </div>
                             :
                             <div className="py-1" role="none">
