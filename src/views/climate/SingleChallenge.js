@@ -16,7 +16,7 @@ const SingleChallenge = () => {
   const isActiveUser = AuthUser();
     const navigate = useNavigate();
     useEffect(() => {
-        if (!challenge.includes('challenge')) {
+        if (!challenge.includes('challenge_ID')) {
             console.log('returning: ', isActiveUser);
             navigate("/climate/challenge");
         }
