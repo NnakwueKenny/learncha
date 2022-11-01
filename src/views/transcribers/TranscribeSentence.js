@@ -29,8 +29,9 @@ const TranscribeSentence = () => {
       .then((response) => {
         console.log('Transmitting word from database');
         console.log(response);
-        setIsLoading(false)
-        return response;
+        setIsLoading(false);
+        console.log(response.split('.').slice(0,-1)[0])
+        return response.split('.').slice(0,-1)[0].toLowerCase();
       })
       .catch(err => err.json());
       

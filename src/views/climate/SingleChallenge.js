@@ -11,6 +11,7 @@ const SingleChallenge = () => {
   const currentChallengeID = challenge.split('=')[1];
   const [currentChallenge, setCurrentChallenge] = useState([]);
   const [isChallengeMember, setIsChallengeMember] = useState(false);
+  const [ challengeProgress, setChallengeProgress] = useState(true);
 
 
   const isActiveUser = AuthUser();
@@ -53,7 +54,7 @@ const SingleChallenge = () => {
         console.log(challengeMembers.some(member => member.user_id === user.id))
         console.log(challengeCreator, user.id)
         if (challengeMembers.some(member => member.user_id === user.id) !== true || challengeCreator !== user.id) {
-          setIsChallengeMember(true);
+          setIsChallengeMember(false);
           console.log('Wrong')
         } else {
           setIsChallengeMember(true);
