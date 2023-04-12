@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div className='border-t-2 md:border-none border-red-400 rounded-t-xl pt-5 px-2 sm:px-3'>
         <section className="w-full pb-8">
-            <div className='w-full relative my-4 md:my-8'>
+            <div className='w-full relative my-4 md:my-8 hidden'>
                 <div id="carouselExampleCaptions" className="carousel slide relative" data-bs-ride="carousel">
                     <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-label="Slide 1" ></button>
@@ -79,7 +79,7 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <div className='my-carousel-container'>
+            <div className='my-carousel-container hidden'>
                 <input type="radio" name="position" checked className='mycarousel-input' />
                 <input type="radio" name="position" className='mycarousel-input' />
                 <input type="radio" name="position" className='mycarousel-input' />
