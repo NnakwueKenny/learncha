@@ -8,7 +8,7 @@
     justify-items: center;
   }
   
-  main#my-carousel {
+  #my-carousel {
     grid-row: 1 / 2;
     grid-column: 1 / 8;
     width: 100vw;
