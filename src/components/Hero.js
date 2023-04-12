@@ -79,18 +79,18 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <div>
-                <input type="radio" name="position" checked />
-                <input type="radio" name="position" />
-                <input type="radio" name="position" />
-                <input type="radio" name="position" />
-                <input type="radio" name="position" />
-                <main id="carousel">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+            <div className='my-carousel-container'>
+                <input type="radio" name="position" checked className='mycarousel-input' />
+                <input type="radio" name="position" className='mycarousel-input' />
+                <input type="radio" name="position" className='mycarousel-input' />
+                <input type="radio" name="position" className='mycarousel-input' />
+                <input type="radio" name="position" className='mycarousel-input' />
+                <main id="my-carousel">
+                    <div class="my-carousel-item"></div>
+                    <div class="my-carousel-item"></div>
+                    <div class="my-carousel-item"></div>
+                    <div class="my-carousel-item"></div>
+                    <div class="my-carousel-item"></div>
                 </main>
             </div>
             <div className="slider-wrap flex flex-col justify-center items-center gap-4">
